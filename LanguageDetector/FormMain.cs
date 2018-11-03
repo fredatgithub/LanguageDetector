@@ -724,5 +724,11 @@ namespace LanguageDetector
         // do something
       }
     }
+
+    private void buttonPeekFile_Click(object sender, EventArgs e)
+    {
+      string filePeek = PeekFile();
+      textBoxSource.Text = filePeek;
+    }
   }
 }
