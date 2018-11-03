@@ -598,7 +598,7 @@ namespace LanguageDetector
       return container.FirstOrDefault(control => control.Focused);
     }
 
-    private static string PeekDirectory()
+    private static string PeekDirectoryPath()
     {
       string result = string.Empty;
       FolderBrowserDialog fbd = new FolderBrowserDialog();
@@ -610,7 +610,7 @@ namespace LanguageDetector
       return result;
     }
 
-    private string PeekFile()
+    private static string PeekFileName()
     {
       string result = string.Empty;
       OpenFileDialog fd = new OpenFileDialog();
@@ -622,21 +622,21 @@ namespace LanguageDetector
       return result;
     }
 
-    private void SmallToolStripMenuItem_Click(object sender, EventArgs e)
+    private void SmallToolStripMenuItemClick(object sender, EventArgs e)
     {
       UncheckAllOptions();
       SmallToolStripMenuItem.Checked = true;
       AdjustAllControls();
     }
 
-    private void MediumToolStripMenuItem_Click(object sender, EventArgs e)
+    private void MediumToolStripMenuItemClick(object sender, EventArgs e)
     {
       UncheckAllOptions();
       MediumToolStripMenuItem.Checked = true;
       AdjustAllControls();
     }
 
-    private void LargeToolStripMenuItem_Click(object sender, EventArgs e)
+    private void LargeToolStripMenuItemClick(object sender, EventArgs e)
     {
       UncheckAllOptions();
       LargeToolStripMenuItem.Checked = true;
@@ -650,7 +650,7 @@ namespace LanguageDetector
         return;
       }
 
-      int position = listOfControls[0].Width + 33; // 33 is the initial padding
+      int position = listOfControls[0].Width + 33; // 33 is the initial padding, can be increased
       bool isFirstControl = true;
       foreach (Control control in listOfControls)
       {
@@ -668,10 +668,10 @@ namespace LanguageDetector
 
     private void AdjustAllControls()
     {
-      AdjustControls(); // insert here all labels, textboxes and buttons, one method per line of controls
+      AdjustControls(); // Insert here all labels, textboxes and buttons, one method per line of controls
     }
 
-    private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+    private void optionsToolStripMenuItemClick(object sender, EventArgs e)
     {
       FormOptions frmOptions = new FormOptions(_configurationOptions);
 
@@ -683,6 +683,7 @@ namespace LanguageDetector
 
     private static void SetButtonEnabled(Button button, params Control[] controls)
     {
+      // Set buttons enable
       bool result = true;
       foreach (Control ctrl in controls)
       {
@@ -717,7 +718,7 @@ namespace LanguageDetector
       button.Enabled = result;
     }
 
-    private void textBoxName_KeyDown(object sender, KeyEventArgs e)
+    private void textBoxNameKeyDown(object sender, KeyEventArgs e)
     {
       if (e.KeyCode == Keys.Enter)
       {
@@ -727,7 +728,7 @@ namespace LanguageDetector
 
     private void buttonPeekFile_Click(object sender, EventArgs e)
     {
-      string filePeek = PeekFile();
+      string filePeek = PeekFileName();
       textBoxSource.Text = filePeek;
     }
   }
