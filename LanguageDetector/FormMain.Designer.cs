@@ -71,6 +71,9 @@
       this.textBoxSource = new System.Windows.Forms.TextBox();
       this.buttonDetect = new System.Windows.Forms.Button();
       this.labelLanguageDetected = new System.Windows.Forms.Label();
+      this.buttonTraining = new System.Windows.Forms.Button();
+      this.comboBoxLanguages = new System.Windows.Forms.ComboBox();
+      this.listBoxTopWords = new System.Windows.Forms.ListBox();
       this.menuStrip1.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -87,7 +90,7 @@
       this.menuStrip1.Location = new System.Drawing.Point(0, 0);
       this.menuStrip1.Name = "menuStrip1";
       this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-      this.menuStrip1.Size = new System.Drawing.Size(856, 24);
+      this.menuStrip1.Size = new System.Drawing.Size(1010, 24);
       this.menuStrip1.TabIndex = 1;
       this.menuStrip1.Text = "menuStrip1";
       // 
@@ -393,6 +396,7 @@
       // 
       // textBoxSource
       // 
+      this.textBoxSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.textBoxSource.Location = new System.Drawing.Point(38, 100);
       this.textBoxSource.Multiline = true;
       this.textBoxSource.Name = "textBoxSource";
@@ -403,7 +407,7 @@
       // buttonDetect
       // 
       this.buttonDetect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.buttonDetect.Location = new System.Drawing.Point(624, 624);
+      this.buttonDetect.Location = new System.Drawing.Point(39, 624);
       this.buttonDetect.Name = "buttonDetect";
       this.buttonDetect.Size = new System.Drawing.Size(180, 29);
       this.buttonDetect.TabIndex = 5;
@@ -415,17 +419,50 @@
       // 
       this.labelLanguageDetected.AutoSize = true;
       this.labelLanguageDetected.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.labelLanguageDetected.Location = new System.Drawing.Point(35, 624);
+      this.labelLanguageDetected.Location = new System.Drawing.Point(234, 628);
       this.labelLanguageDetected.Name = "labelLanguageDetected";
       this.labelLanguageDetected.Size = new System.Drawing.Size(208, 20);
       this.labelLanguageDetected.TabIndex = 6;
       this.labelLanguageDetected.Text = "Language detected is : ?";
       // 
+      // buttonTraining
+      // 
+      this.buttonTraining.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.buttonTraining.Location = new System.Drawing.Point(821, 624);
+      this.buttonTraining.Name = "buttonTraining";
+      this.buttonTraining.Size = new System.Drawing.Size(100, 29);
+      this.buttonTraining.TabIndex = 7;
+      this.buttonTraining.Text = "Training";
+      this.buttonTraining.UseVisualStyleBackColor = true;
+      this.buttonTraining.Click += new System.EventHandler(this.buttonTraining_Click);
+      // 
+      // comboBoxLanguages
+      // 
+      this.comboBoxLanguages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.comboBoxLanguages.FormattingEnabled = true;
+      this.comboBoxLanguages.Location = new System.Drawing.Point(668, 627);
+      this.comboBoxLanguages.Name = "comboBoxLanguages";
+      this.comboBoxLanguages.Size = new System.Drawing.Size(121, 28);
+      this.comboBoxLanguages.TabIndex = 8;
+      // 
+      // listBoxTopWords
+      // 
+      this.listBoxTopWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.listBoxTopWords.FormattingEnabled = true;
+      this.listBoxTopWords.ItemHeight = 24;
+      this.listBoxTopWords.Location = new System.Drawing.Point(821, 100);
+      this.listBoxTopWords.Name = "listBoxTopWords";
+      this.listBoxTopWords.Size = new System.Drawing.Size(157, 484);
+      this.listBoxTopWords.TabIndex = 9;
+      // 
       // FormMain
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(856, 686);
+      this.ClientSize = new System.Drawing.Size(1010, 686);
+      this.Controls.Add(this.listBoxTopWords);
+      this.Controls.Add(this.comboBoxLanguages);
+      this.Controls.Add(this.buttonTraining);
       this.Controls.Add(this.labelLanguageDetected);
       this.Controls.Add(this.buttonDetect);
       this.Controls.Add(this.textBoxSource);
@@ -490,5 +527,8 @@
     private System.Windows.Forms.TextBox textBoxSource;
     private System.Windows.Forms.Button buttonDetect;
     private System.Windows.Forms.Label labelLanguageDetected;
+    private System.Windows.Forms.Button buttonTraining;
+    private System.Windows.Forms.ComboBox comboBoxLanguages;
+    private System.Windows.Forms.ListBox listBoxTopWords;
   }
 }

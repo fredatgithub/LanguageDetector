@@ -55,6 +55,18 @@ namespace LanguageDetector
       GetWindowValue();
       LoadLanguages();
       SetLanguage(Settings.Default.LastLanguageUsed);
+      LoadLanguagesIntoComboBox();
+    }
+
+    private void LoadLanguagesIntoComboBox()
+    {
+      comboBoxLanguages.Items.Clear();
+      // should be loaded from an XML file
+      comboBoxLanguages.Items.Add("French");
+      comboBoxLanguages.Items.Add("English");
+      comboBoxLanguages.Items.Add("Spanish");
+      comboBoxLanguages.Items.Add("Italian");
+      comboBoxLanguages.SelectedIndex = 0;
     }
 
     private void LoadConfigurationOptions()
@@ -750,6 +762,23 @@ namespace LanguageDetector
     private void buttonDetect_Click(object sender, EventArgs e)
     {
 
+    }
+
+    private void buttonTraining_Click(object sender, EventArgs e)
+    {
+      Dictionary<string, int> sampleDico = new Dictionary<string, int>();
+      sampleDico = CreateDictionary(textBoxSource.Text);
+      // write result into XML
+      listBoxTopWords.Items.Clear();
+      foreach (KeyValuePair<string, int> pair in sampleDico.OrderByDescending(k=>k.Value))
+      {
+        listBoxTopWords.Items.Add($"{pair.Key} - {pair.Value}");
+      }
+    }
+
+    private static IEnumerable<KeyValuePair<string, int>> SortDicoByValue(Dictionary<string, int> sampleDico)
+    {
+      return sampleDico.OrderByDescending(key => key.Value);
     }
   }
 }
