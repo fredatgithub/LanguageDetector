@@ -16,6 +16,7 @@ namespace LanguageDetector
     public FormMain()
     {
       InitializeComponent();
+      // initialize other variables if needed
     }
 
     public readonly Dictionary<string, string> LanguageDicoEn = new Dictionary<string, string>();
@@ -725,6 +726,25 @@ namespace LanguageDetector
     {
       string filePeek = PeekFileName();
       textBoxSource.Text = filePeek;
+    }
+
+    public static Dictionary<string, int> CreateDictionary(string theText)
+    {
+      Dictionary<string, int> result = new Dictionary<string, int>();
+      var tmpWords = theText.Split(' ');
+      foreach (string word in tmpWords)
+      {
+        if (result.ContainsKey(word))
+        {
+          result[word]++;
+        }
+        else
+        {
+          result.Add(word, 1);
+        }
+      }
+
+      return result;
     }
   }
 }
