@@ -1,18 +1,17 @@
 ﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using LanguageDetector;
-
-namespace UnitTestLanguageDetector
+using AIOne;
+namespace UnitTestAIOne
 {
   [TestClass]
-  public class UnitTestCreateDictionary
+  public class UnitTestHelper
   {
     [TestMethod]
     public void TestMethod_CreateDictionary_one_word_once()
     {
       const string source = "a";
-      Dictionary<string, int> expected = new Dictionary<string, int> {{"a", 1}};
-      Dictionary<string, int> result = FormMain.CreateDictionary(source);
+      Dictionary<string, int> expected = new Dictionary<string, int> { { "a", 1 } };
+      Dictionary<string, int> result = Helper.CreateDictionary(source);
       Assert.AreEqual(result.Count, expected.Count);
       //Assert.AreEqual(result.Keys, expected.Keys);
       //Assert.AreEqual(result.Values, expected.Values);
@@ -23,7 +22,7 @@ namespace UnitTestLanguageDetector
     {
       const string source = "a long";
       var expected = new Dictionary<string, int> { { "a", 1 }, { "long", 1 }, };
-      Dictionary<string, int> result = FormMain.CreateDictionary(source);
+      Dictionary<string, int> result = Helper.CreateDictionary(source);
       Assert.AreEqual(result.Count, expected.Count);
     }
 
@@ -36,7 +35,7 @@ namespace UnitTestLanguageDetector
         { "a", 2 }, { "long", 2 }, { "time", 1 }, { "ago", 1 }, { "in", 1 }, { "galaxy", 1 },
         { "far", 2 }, { "away", 1 }
       };
-      Dictionary<string, int> result = FormMain.CreateDictionary(source);
+      Dictionary<string, int> result = Helper.CreateDictionary(source);
       Assert.AreEqual(result.Count, expected.Count);
     }
   }
