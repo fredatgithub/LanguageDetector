@@ -17,7 +17,7 @@ namespace AIOne
       return dico.Count;
     }
 
-    public static Dictionary<string, int> CountLetters(string phrase)
+    public static Dictionary<string, int> SplitLetters(string phrase)
     {
       var dico = new Dictionary<string, int>();
       foreach (var word in phrase)
