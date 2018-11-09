@@ -58,24 +58,5 @@ namespace AIOne
 
       return dico;
     }
-
-    public static Dictionary<string, int> CreateDictionary(string theText)
-    {
-      var result = new Dictionary<string, int>();
-      var tmpWords = theText.Split(' ');
-      foreach (string word in tmpWords)
-      {
-        if (result.ContainsKey(word))
-        {
-          result[word]++;
-        }
-        else
-        {
-          result.Add(word, 1);
-        }
-      }
-
-      return result;
-    }
   }
 }
