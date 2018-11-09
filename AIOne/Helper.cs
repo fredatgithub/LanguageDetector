@@ -13,18 +13,7 @@ namespace AIOne
     public static int CountWords(string phrase)
     {
       var dico = new Dictionary<string, int>();
-      foreach (var word in SplitWords(phrase))
-      {
-        if (dico.ContainsKey(word.Key))
-        {
-          dico[word.Key]++;
-        }
-        else
-        {
-          dico.Add(word.Key, 1);
-        }
-      }
-
+      dico = SplitWords(phrase);
       return dico.Count;
     }
 
