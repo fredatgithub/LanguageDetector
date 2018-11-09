@@ -3,11 +3,17 @@ using System.Linq;
 
 namespace AIOne
 {
-  public static class Helper
+  // ReSharper disable once InconsistentNaming
+  public static class AIHelper
   {
     public static IEnumerable<KeyValuePair<string, int>> SortDicoByValue(Dictionary<string, int> sampleDico)
     {
-      return sampleDico.OrderByDescending(key => key.Value);
+      return sampleDico.OrderByDescending(sortingBy => sortingBy.Value);
+    }
+
+    public static IEnumerable<KeyValuePair<string, int>> SortDicoByKey(Dictionary<string, int> sampleDico)
+    {
+      return sampleDico.OrderByDescending(sortingBy => sortingBy.Key);
     }
 
     public static int CountWords(string phrase)
@@ -57,6 +63,11 @@ namespace AIOne
       }
 
       return dico;
+    }
+
+    public static string RemovePunctuation(string phrase)
+    {
+      return phrase.Replace(",", "").Replace(".", "").Replace(";", "").Replace(":", "");
     }
   }
 }
