@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using AIOne;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestAIOne
 {
   [TestClass]
-  // ReSharper disable once InconsistentNaming
   public class UnitTestSplitWords
   {
     [TestMethod]
@@ -15,8 +15,8 @@ namespace UnitTestAIOne
       Dictionary<string, int> expected = new Dictionary<string, int> { { "a", 1 } };
       Dictionary<string, int> result = AIHelper.SplitWords(source);
       Assert.AreEqual(result.Count, expected.Count);
-      //Assert.AreEqual(result.Keys, expected.Keys);
-      //Assert.AreEqual(result.Values, expected.Values);
+      Assert.AreEqual(result["a"], expected["a"]);
+      Assert.IsTrue(DictionariesAreEqualed(result, expected));
     }
 
     [TestMethod]
@@ -26,6 +26,7 @@ namespace UnitTestAIOne
       var expected = new Dictionary<string, int> { { "a", 1 }, { "long", 1 }, };
       Dictionary<string, int> result = AIHelper.SplitWords(source);
       Assert.AreEqual(result.Count, expected.Count);
+      Assert.IsTrue(DictionariesAreEqualed(result, expected));
     }
 
     [TestMethod]
@@ -39,6 +40,23 @@ namespace UnitTestAIOne
       };
       Dictionary<string, int> result = AIHelper.SplitWords(source);
       Assert.AreEqual(result.Count, expected.Count);
+      Assert.IsTrue(DictionariesAreEqualed(result, expected));
+    }
+
+    public static bool DictionariesAreEqualed(Dictionary<string, int> source, Dictionary<string, int> target)
+    {
+      bool result = true;
+      if (source.Count != target.Count)
+      {
+        return false;
+      }
+
+      if (source.Except(target).Any())
+      {
+        return false;
+      }
+
+      return result;
     }
   }
 }

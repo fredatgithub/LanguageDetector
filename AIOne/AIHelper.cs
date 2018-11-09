@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace AIOne
@@ -63,6 +64,22 @@ namespace AIOne
       }
 
       return dico;
+    }
+
+    public static Dictionary<string, int> SplitWordsTopTen(string phrase, int topTen = 10)
+    {
+      var dico = new Dictionary<string, int>();
+      dico = SplitWords(phrase);
+      dico = (Dictionary<string, int>)SortDicoByValue(dico);
+      IEnumerable<KeyValuePair<string, int>> result = dico.Take(topTen);
+      return (Dictionary<string, int>)result;
+    }
+
+    public static Dictionary<string, int> RemoveDictionaryTail(Dictionary<string, int> dico)
+    {
+      Dictionary<string, int> result = new Dictionary<string, int>();
+      // TODO add code
+      return result;
     }
 
     public static string RemovePunctuation(string phrase)
