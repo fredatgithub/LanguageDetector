@@ -28,6 +28,24 @@ namespace AIOne
       return dico.Count;
     }
 
+    public static Dictionary<string, int> CountLetters(string phrase)
+    {
+      var dico = new Dictionary<string, int>();
+      foreach (var word in phrase)
+      {
+        if (dico.ContainsKey(word.ToString()))
+        {
+          dico[word.ToString()]++;
+        }
+        else
+        {
+          dico.Add(word.ToString(), 1);
+        }
+      }
+
+      return dico;
+    }
+
     public static Dictionary<string, int> SplitWords(string phrase)
     {
       var listOfWords = phrase.Split(' ');
