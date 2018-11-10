@@ -79,6 +79,7 @@ namespace AIOne
     {
       Dictionary<string, int> result = new Dictionary<string, int>();
       // TODO add code
+      result = dico.Take(word => word.Value > 1);
       return result;
     }
 
