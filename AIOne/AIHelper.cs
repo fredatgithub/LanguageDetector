@@ -75,11 +75,11 @@ namespace AIOne
       return (Dictionary<string, int>)result;
     }
 
-    public static Dictionary<string, int> RemoveDictionaryTail(Dictionary<string, int> dico)
+    public static Dictionary<string, int> RemoveDictionaryTail(Dictionary<string, int> dico, int tailValue = 1)
     {
       Dictionary<string, int> result = new Dictionary<string, int>();
       // TODO add code
-      result = dico.Take(word => word.Value > 1);
+      result = dico.Take(word => word.Value >= tailValue);
       return result;
     }
 
