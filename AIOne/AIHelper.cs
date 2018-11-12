@@ -77,9 +77,8 @@ namespace AIOne
 
     public static Dictionary<string, int> RemoveDictionaryTail(Dictionary<string, int> dico, int tailValue = 1)
     {
-      Dictionary<string, int> result = new Dictionary<string, int>();
-      // TODO add code
-      result = (Dictionary<string, int>)dico.Take(tailValue); //word => word.Value >= tailValue);
+      var result = new Dictionary<string, int>();
+      result = (Dictionary<string, int>)dico.Take(tailValue); 
       return result;
     }
 
