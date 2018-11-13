@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIOne", "AIOne\AIOne.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestAIOne", "UnitTestAIOne\UnitTestAIOne.csproj", "{7CAA624C-3930-4280-A335-E65D5953C0BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiTraining", "AiTraining\AiTraining.csproj", "{6FEB9AE2-B205-4FAA-A098-E14019A47B4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7CAA624C-3930-4280-A335-E65D5953C0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CAA624C-3930-4280-A335-E65D5953C0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CAA624C-3930-4280-A335-E65D5953C0BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FEB9AE2-B205-4FAA-A098-E14019A47B4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FEB9AE2-B205-4FAA-A098-E14019A47B4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FEB9AE2-B205-4FAA-A098-E14019A47B4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FEB9AE2-B205-4FAA-A098-E14019A47B4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
