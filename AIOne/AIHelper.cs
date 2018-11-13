@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace AIOne
@@ -85,6 +86,33 @@ namespace AIOne
     public static string RemovePunctuation(string phrase)
     {
       return phrase.Replace(",", "").Replace(".", "").Replace(";", "").Replace(":", "");
+    }
+
+    public static void InitStartFiles()
+    {
+      foreach (string language in Properties.Settings.Default.ListOfLanguages.Split(','))
+      {
+        switch (language)
+        {
+          case "french":
+            if (!File.Exists(Properties.Settings.Default.FrenchFileName))
+            {
+              // create french basic file if not exist
+
+            }
+            break;
+
+          case "english":
+            if (!File.Exists(Properties.Settings.Default.EnglishFileName))
+            {
+              // create English basic file if not exist
+
+            }
+            break;
+
+        }
+      }
+      
     }
   }
 }
