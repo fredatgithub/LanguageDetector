@@ -14,5 +14,10 @@ namespace AiTraining
     {
       Application.Exit();
     }
+
+    private void ButtonTraining_Click(object sender, EventArgs e)
+    {
+
+    }
   }
 }
