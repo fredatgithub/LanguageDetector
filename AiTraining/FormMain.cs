@@ -19,5 +19,16 @@ namespace AiTraining
     {
 
     }
+
+    private void TabPageAITraining_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void FormMain_Load(object sender, EventArgs e)
+    {
+      // verify languages files
+
+    }
   }
 }

@@ -342,6 +342,7 @@
       this.tabPageAITraining.TabIndex = 0;
       this.tabPageAITraining.Text = "Training";
       this.tabPageAITraining.UseVisualStyleBackColor = true;
+      this.tabPageAITraining.Click += new System.EventHandler(this.TabPageAITraining_Click);
       // 
       // listBoxTopWords
       // 
@@ -437,7 +438,7 @@
       this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
       this.tabPage2.Name = "tabPage2";
       this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-      this.tabPage2.Size = new System.Drawing.Size(1502, 1019);
+      this.tabPage2.Size = new System.Drawing.Size(1502, 972);
       this.tabPage2.TabIndex = 1;
       this.tabPage2.Text = "tabPage2";
       this.tabPage2.UseVisualStyleBackColor = true;
@@ -452,6 +453,7 @@
       this.MainMenuStrip = this.menuStripMain;
       this.Name = "FormMain";
       this.Text = "A.I. Training";
+      this.Load += new System.EventHandler(this.FormMain_Load);
       this.menuStripMain.ResumeLayout(false);
       this.menuStripMain.PerformLayout();
       this.tabControlMain.ResumeLayout(false);
