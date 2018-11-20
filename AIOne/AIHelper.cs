@@ -79,7 +79,7 @@ namespace AIOne
     public static Dictionary<string, int> RemoveDictionaryTail(Dictionary<string, int> dico, int tailValue = 1)
     {
       var result = new Dictionary<string, int>();
-      result = (Dictionary<string, int>)dico.Take(tailValue); 
+      result = (Dictionary<string, int>)dico.Take(tailValue);
       return result;
     }
 
@@ -113,17 +113,17 @@ namespace AIOne
             break;
         }
       }
-      
+
     }
 
     public static void CreateFile(string fileName)
     {
       try
       {
-          using(StreamWriter sw = new StreamWriter(fileName))
-          {
+        using (StreamWriter sw = new StreamWriter(fileName))
+        {
 
-          }
+        }
       }
       catch (System.Exception)
       {
@@ -134,37 +134,37 @@ namespace AIOne
     public static string GetBasicWords(string fileName)
     {
       string result = string.Empty;
-      string language = fileName.SubString(0, fileName.Count - 4);
+      string language = fileName.Substring(0, fileName.Length - 4);
       switch (language)
-        {
-          case "french":
-            result = "je,tu,il";
-            break;
+      {
+        case "french":
+          result = "je,tu,il";
+          break;
 
-          case "english":
-            result = "the,of,and,to,a,in,for,is,on,that,by,this,with,i,you,it,not,or,be,are,from,at,as,your,all,have,new,more,an,was,we,will,home,can,us,about,if,page,my,has,search,free,but,our,one,other,do,no,information,time,they,site,he,up,may,what,which,their,news,out,use,any,there,see,only,so,his,when,contact,here,business,who,web,also,now,help,get,pm,view,first,am,been,would,how,were,me,services,some,these,its,like,service,than,find";
-            break;
-        }
+        case "english":
+          result = "the,of,and,to,a,in,for,is,on,that,by,this,with,i,you,it,not,or,be,are,from,at,as,your,all,have,new,more,an,was,we,will,home,can,us,about,if,page,my,has,search,free,but,our,one,other,do,no,information,time,they,site,he,up,may,what,which,their,news,out,use,any,there,see,only,so,his,when,contact,here,business,who,web,also,now,help,get,pm,view,first,am,been,would,how,were,me,services,some,these,its,like,service,than,find";
+          break;
+      }
 
-        return result;
+      return result;
     }
 
-     public static string AddWordsToFile(string fileName, string words)
-     {
-       try
+    public static void AddWordsToFile(string fileName, string words)
+    {
+      try
       {
-          using(StreamWriter sw = new StreamWriter(fileName))
+        using (StreamWriter sw = new StreamWriter(fileName))
+        {
+          foreach (string word in words.Split(','))
           {
-            foreach(string word in words.Split(','))
-            {
-              sw.WriteLine(word);
-            }
+            sw.WriteLine(word);
           }
+        }
       }
       catch (System.Exception)
       {
         // cannot write file
       }
-     }
+    }
   }
 }
