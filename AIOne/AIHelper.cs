@@ -54,13 +54,14 @@ namespace AIOne
           continue;
         }
 
-        if (dico.ContainsKey(word))
+        string  wordToLower = word.ToLower();
+        if (dico.ContainsKey(wordToLower))
         {
-          dico[word]++;
+          dico[wordToLower]++;
         }
         else
         {
-          dico.Add(word, 1);
+          dico.Add(wordToLower, 1);
         }
       }
 

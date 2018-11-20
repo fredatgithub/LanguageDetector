@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AIOne\AIOne.csproj">
+      <Project>{ca761e5a-7d53-4a7c-b47c-188547b29ff2}</Project>
+      <Name>AIOne</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
