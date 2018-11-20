@@ -46,6 +46,8 @@ namespace AiTraining
           MessageBox.Show($"exception while writing the dictionary: {exception.Message}");
         }
 
+        // display listbox from file
+        LoadlistBox(listBoxWordsFromFile, listOfWords);
         return; // end
       }
 
@@ -90,6 +92,18 @@ namespace AiTraining
       catch (Exception exception)
       {
         MessageBox.Show($"exception while writing the dictionary: {exception.Message}");
+      }
+
+      //update listbox from file
+      LoadlistBox(listBoxWordsFromFile, newDico);
+    }
+
+    private static void LoadlistBox(ListBox listBox, Dictionary<string, int> dico)
+    {
+      listBox.Items.Clear();
+      foreach (KeyValuePair<string, int> item in dico.OrderByDescending(k => k.Value))
+      {
+        listBox.Items.Add($"{item.Key}-{item.Value}");
       }
     }
 

@@ -71,6 +71,9 @@
       this.buttonPeekFile = new System.Windows.Forms.Button();
       this.labelPasteOrPeekFile = new System.Windows.Forms.Label();
       this.tabPage2 = new System.Windows.Forms.TabPage();
+      this.listBoxWordsFromFile = new System.Windows.Forms.ListBox();
+      this.labelWordsFromTextBox = new System.Windows.Forms.Label();
+      this.labelWordsFromFile = new System.Windows.Forms.Label();
       this.menuStripMain.SuspendLayout();
       this.tabControlMain.SuspendLayout();
       this.tabPageAITraining.SuspendLayout();
@@ -327,6 +330,9 @@
       // 
       // tabPageAITraining
       // 
+      this.tabPageAITraining.Controls.Add(this.labelWordsFromFile);
+      this.tabPageAITraining.Controls.Add(this.labelWordsFromTextBox);
+      this.tabPageAITraining.Controls.Add(this.listBoxWordsFromFile);
       this.tabPageAITraining.Controls.Add(this.comboBoxLanguagesAvailable);
       this.tabPageAITraining.Controls.Add(this.listBoxTopWords);
       this.tabPageAITraining.Controls.Add(this.comboBoxLanguages);
@@ -358,7 +364,7 @@
       this.listBoxTopWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.listBoxTopWords.FormattingEnabled = true;
       this.listBoxTopWords.ItemHeight = 24;
-      this.listBoxTopWords.Location = new System.Drawing.Point(814, 72);
+      this.listBoxTopWords.Location = new System.Drawing.Point(637, 72);
       this.listBoxTopWords.Name = "listBoxTopWords";
       this.listBoxTopWords.Size = new System.Drawing.Size(157, 460);
       this.listBoxTopWords.TabIndex = 17;
@@ -409,14 +415,14 @@
       this.textBoxSource.Location = new System.Drawing.Point(31, 72);
       this.textBoxSource.Multiline = true;
       this.textBoxSource.Name = "textBoxSource";
-      this.textBoxSource.Size = new System.Drawing.Size(766, 491);
+      this.textBoxSource.Size = new System.Drawing.Size(583, 491);
       this.textBoxSource.TabIndex = 12;
       this.textBoxSource.Text = resources.GetString("textBoxSource.Text");
       // 
       // buttonPeekFile
       // 
       this.buttonPeekFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.buttonPeekFile.Location = new System.Drawing.Point(665, 32);
+      this.buttonPeekFile.Location = new System.Drawing.Point(482, 32);
       this.buttonPeekFile.Name = "buttonPeekFile";
       this.buttonPeekFile.Size = new System.Drawing.Size(132, 29);
       this.buttonPeekFile.TabIndex = 11;
@@ -442,6 +448,36 @@
       this.tabPage2.TabIndex = 1;
       this.tabPage2.Text = "tabPage2";
       this.tabPage2.UseVisualStyleBackColor = true;
+      // 
+      // listBoxWordsFromFile
+      // 
+      this.listBoxWordsFromFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.listBoxWordsFromFile.FormattingEnabled = true;
+      this.listBoxWordsFromFile.ItemHeight = 24;
+      this.listBoxWordsFromFile.Location = new System.Drawing.Point(814, 72);
+      this.listBoxWordsFromFile.Name = "listBoxWordsFromFile";
+      this.listBoxWordsFromFile.Size = new System.Drawing.Size(157, 460);
+      this.listBoxWordsFromFile.TabIndex = 19;
+      // 
+      // labelWordsFromTextBox
+      // 
+      this.labelWordsFromTextBox.AutoSize = true;
+      this.labelWordsFromTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.labelWordsFromTextBox.Location = new System.Drawing.Point(633, 36);
+      this.labelWordsFromTextBox.Name = "labelWordsFromTextBox";
+      this.labelWordsFromTextBox.Size = new System.Drawing.Size(170, 20);
+      this.labelWordsFromTextBox.TabIndex = 20;
+      this.labelWordsFromTextBox.Text = "Words from TextBox";
+      // 
+      // labelWordsFromFile
+      // 
+      this.labelWordsFromFile.AutoSize = true;
+      this.labelWordsFromFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.labelWordsFromFile.Location = new System.Drawing.Point(810, 36);
+      this.labelWordsFromFile.Name = "labelWordsFromFile";
+      this.labelWordsFromFile.Size = new System.Drawing.Size(135, 20);
+      this.labelWordsFromFile.TabIndex = 21;
+      this.labelWordsFromFile.Text = "Words from File";
       // 
       // FormMain
       // 
@@ -509,6 +545,9 @@
     private System.Windows.Forms.Button buttonPeekFile;
     private System.Windows.Forms.Label labelPasteOrPeekFile;
     private System.Windows.Forms.ComboBox comboBoxLanguagesAvailable;
+    private System.Windows.Forms.ListBox listBoxWordsFromFile;
+    private System.Windows.Forms.Label labelWordsFromFile;
+    private System.Windows.Forms.Label labelWordsFromTextBox;
   }
 }
 

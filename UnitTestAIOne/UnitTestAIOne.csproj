@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="UnitTestRemovePunctuation.cs" />
+    <Compile Include="UnitTestCountWordsFromDictionary.cs" />
     <Compile Include="UnitTestSplitWords.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

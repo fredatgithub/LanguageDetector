@@ -25,6 +25,11 @@ namespace AIOne
       return dico.Count;
     }
 
+    public static int CountWordsFromDictionary(Dictionary<string, int> dico)
+    {
+      return dico.Sum(word => word.Value);
+    }
+
     public static Dictionary<string, int> SplitLetters(string phrase)
     {
       var dico = new Dictionary<string, int>();
