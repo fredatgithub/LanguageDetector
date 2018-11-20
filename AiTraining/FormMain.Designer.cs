@@ -359,7 +359,7 @@
       // 
       this.comboBoxLanguages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.comboBoxLanguages.FormattingEnabled = true;
-      this.comboBoxLanguages.Location = new System.Drawing.Point(992, 922);
+      this.comboBoxLanguages.Location = new System.Drawing.Point(812, 915);
       this.comboBoxLanguages.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
       this.comboBoxLanguages.Name = "comboBoxLanguages";
       this.comboBoxLanguages.Size = new System.Drawing.Size(180, 37);
@@ -368,7 +368,7 @@
       // buttonTraining
       // 
       this.buttonTraining.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.buttonTraining.Location = new System.Drawing.Point(1221, 917);
+      this.buttonTraining.Location = new System.Drawing.Point(1041, 910);
       this.buttonTraining.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
       this.buttonTraining.Name = "buttonTraining";
       this.buttonTraining.Size = new System.Drawing.Size(150, 45);
