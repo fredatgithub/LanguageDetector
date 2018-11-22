@@ -77,7 +77,7 @@ namespace AiTraining
       }
 
       // add results to existing file
-      Dictionary<string, int> newDico = AddTwoDictionaries(dicofile, listOfWords);
+      Dictionary<string, int> newDico = AIHelper.AddTwoDictionaries(dicofile, listOfWords);
       File.Delete(frenchFileName);
       try
       {
@@ -105,23 +105,6 @@ namespace AiTraining
       {
         listBox.Items.Add($"{item.Key}-{item.Value}");
       }
-    }
-
-    private static Dictionary<string, int> AddTwoDictionaries(Dictionary<string, int> dico1, Dictionary<string, int> dico2)
-    {
-      foreach (KeyValuePair<string, int> pair in dico2)
-      {
-        if (dico1.ContainsKey(pair.Key))
-        {
-          dico1[pair.Key] = dico1[pair.Key] + pair.Value;
-        }
-        else
-        {
-          dico1.Add(pair.Key, pair.Value);
-        }
-      }
-
-      return dico1;
     }
 
     private static void AddDicoToListBox(ListBox listBox, Dictionary<string, int> listOfWords)

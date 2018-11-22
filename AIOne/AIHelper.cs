@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using AIOne.Properties;
 
 namespace AIOne
 {
@@ -54,7 +56,7 @@ namespace AIOne
       var dico = new Dictionary<string, int>();
       foreach (string word in listOfWords)
       {
-        if (word.Trim() == string.Empty)
+        if (word.Trim() == String.Empty)
         {
           continue;
         }
@@ -96,25 +98,25 @@ namespace AIOne
 
     public static void InitStartFiles()
     {
-      foreach (string language in Properties.Settings.Default.ListOfLanguages.Split(','))
+      foreach (string language in Settings.Default.ListOfLanguages.Split(','))
       {
         switch (language)
         {
           case "french":
-            if (!File.Exists(Properties.Settings.Default.FrenchFileName))
+            if (!File.Exists(Settings.Default.FrenchFileName))
             {
               // create french basic file if not exist
-              CreateFile(Properties.Settings.Default.FrenchFileName);
-              AddWordsToFile(Properties.Settings.Default.FrenchFileName, GetBasicWords(Properties.Settings.Default.FrenchFileName));
+              CreateFile(Settings.Default.FrenchFileName);
+              AddWordsToFile(Settings.Default.FrenchFileName, GetBasicWords(Settings.Default.FrenchFileName));
             }
             break;
 
           case "english":
-            if (!File.Exists(Properties.Settings.Default.EnglishFileName))
+            if (!File.Exists(Settings.Default.EnglishFileName))
             {
               // create English basic file if not exist
-              CreateFile(Properties.Settings.Default.EnglishFileName);
-              AddWordsToFile(Properties.Settings.Default.EnglishFileName, GetBasicWords(Properties.Settings.Default.EnglishFileName));
+              CreateFile(Settings.Default.EnglishFileName);
+              AddWordsToFile(Settings.Default.EnglishFileName, GetBasicWords(Settings.Default.EnglishFileName));
             }
             break;
         }
@@ -131,7 +133,7 @@ namespace AIOne
 
         }
       }
-      catch (System.Exception)
+      catch (Exception)
       {
         // file cannot be created            
       }
@@ -139,7 +141,7 @@ namespace AIOne
 
     public static string GetBasicWords(string fileName)
     {
-      string result = string.Empty;
+      string result = String.Empty;
       string language = fileName.Substring(0, fileName.Length - 4);
       switch (language)
       {
@@ -167,10 +169,27 @@ namespace AIOne
           }
         }
       }
-      catch (System.Exception)
+      catch (Exception)
       {
         // cannot write file
       }
+    }
+
+    public static Dictionary<string, int> AddTwoDictionaries(Dictionary<string, int> dico1, Dictionary<string, int> dico2)
+    {
+      foreach (KeyValuePair<string, int> pair in dico2)
+      {
+        if (dico1.ContainsKey(pair.Key))
+        {
+          dico1[pair.Key] = dico1[pair.Key] + pair.Value;
+        }
+        else
+        {
+          dico1.Add(pair.Key, pair.Value);
+        }
+      }
+
+      return dico1;
     }
   }
 }
