@@ -1,9 +1,9 @@
-﻿using System;
+﻿using AIOne.Properties;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using AIOne.Properties;
 
 namespace AIOne
 {
@@ -61,7 +61,7 @@ namespace AIOne
           continue;
         }
 
-        string  wordToLower = word.ToLower();
+        string wordToLower = word.ToLower();
         if (dico.ContainsKey(wordToLower))
         {
           dico[wordToLower]++;
@@ -100,7 +100,7 @@ namespace AIOne
     {
       foreach (string language in Settings.Default.ListOfLanguages.Split(','))
       {
-        switch (language)
+        switch (language.ToLower())
         {
           case "french":
             if (!File.Exists(Settings.Default.FrenchFileName))
@@ -119,9 +119,10 @@ namespace AIOne
               AddWordsToFile(Settings.Default.EnglishFileName, GetBasicWords(Settings.Default.EnglishFileName));
             }
             break;
+          default:
+            break;
         }
       }
-
     }
 
     public static void CreateFile(string fileName)
@@ -141,7 +142,7 @@ namespace AIOne
 
     public static string GetBasicWords(string fileName)
     {
-      string result = String.Empty;
+      string result = string.Empty;
       string language = fileName.Substring(0, fileName.Length - 4).ToLower();
       switch (language)
       {
@@ -153,8 +154,8 @@ namespace AIOne
           result = "the,of,and,to,a,in,for,is,on,that,by,this,with,i,you,it,not,or,be,are,from,at,as,your,all,have,new,more,an,was,we,will,home,can,us,about,if,page,my,has,search,free,but,our,one,other,do,no,information,time,they,site,he,up,may,what,which,their,news,out,use,any,there,see,only,so,his,when,contact,here,business,who,web,also,now,help,get,pm,view,first,am,been,would,how,were,me,services,some,these,its,like,service,than,find";
           break;
 
-          Default:
-          result = "the,of,and,to,a,in,for,is,on,that,by,this,with,i,you,it,not,or,be,are,from,at,as,your,all,have,new,more,an,was,we,will,home,can,us,about,if,page,my,has,search,free,but,our,one,other,do,no,information,time,they,site,he,up,may,what,which,their,news,out,use,any,there,see,only,so,his,when,contact,here,business,who,web,also,now,help,get,pm,view,first,am,been,would,how,were,me,services,some,these,its,like,service,than,find";
+        default:
+         result = "the,of,and,to,a,in,for,is,on,that,by,this,with,i,you,it,not,or,be,are,from,at,as,your,all,have,new,more,an,was,we,will,home,can,us,about,if,page,my,has,search,free,but,our,one,other,do,no,information,time,they,site,he,up,may,what,which,their,news,out,use,any,there,see,only,so,his,when,contact,here,business,who,web,also,now,help,get,pm,view,first,am,been,would,how,were,me,services,some,these,its,like,service,than,find";
           break;
       }
 
@@ -198,28 +199,22 @@ namespace AIOne
 
     public static string[] DetectLanguage(Dictionary<string, int> listOfWordsToBeDetected)
     {
-      string[] result = string[2];
-      result[0] = "not found";
-      result[1] = "unknown";
-      Dictionary<string, int> languageWordsFound = new Dictionary<string, int>();
+      string[] result = { "not found", "unknown" };
+      var languageWordsFound = new Dictionary<string, int>();
       // get a list of languages in xml files
-      List<string> ListOfLanguagesAvailable = new List<string>();
-      foreach (string oneLanguage in Properties.Default.Settings.listOfWords.Split(','))
-      {
-        ListOfLanguagesAvailable.Add(oneLanguage);
-      }
+      var listOfLanguagesAvailable = Settings.Default.ListOfLanguages.Split(',').ToList();
 
       // for each language calculate the number of words found
-      foreach (string language in ListOfLanguagesAvailable)
+      foreach (string language in listOfLanguagesAvailable)
       {
         string fileName = $"{language}.txt";
-        if(!File.Exists(fileName))
+        if (!File.Exists(fileName))
         {
-          AddWordsToFile(filename, GetBasicWords(fileName));
+          AddWordsToFile(fileName, GetBasicWords(fileName));
         }
       }
 
-      
+
 
 
       return result;
