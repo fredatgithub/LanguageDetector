@@ -32,7 +32,7 @@ namespace AIOne
       return dico.Sum(word => word.Value);
     }
 
-    public static Dictionary<string, int> SplitLetters(string phrase)
+    public static Dictionary<string, int> SplitLetters(string phrase) // why this method name?
     {
       var dico = new Dictionary<string, int>();
       foreach (var word in phrase)
@@ -140,10 +140,10 @@ namespace AIOne
       }
     }
 
-    public static string GetBasicWords(string fileName)
+    public static string GetBasicWords(string language)
     {
       string result = string.Empty;
-      string language = fileName.Substring(0, fileName.Length - 4).ToLower();
+      //string language = fileName.Substring(0, fileName.Length - 4).ToLower();
       switch (language)
       {
         case "french":
@@ -218,6 +218,25 @@ namespace AIOne
 
 
       return result;
+    }
+
+    public static double PercentageOfWordsFound(Dictionary<string, int> listOfWords)
+    {
+      // number of words found divided by total number of words equals percentage of words found
+      double result = 0.00;
+      Dictionary<string, double> wordsFound = new Dictionary<string, int>();
+      // init dictionaries
+      var listOfLanguagesAvailable = Settings.Default.ListOfLanguages.Split(',').ToList();
+      // for each language calculate the number of words found
+      foreach (string language in listOfLanguagesAvailable)
+      {
+        wordsFound.Add(language, 0.0);
+      }
+
+
+
+      return result;
+
     }
   }
 }
