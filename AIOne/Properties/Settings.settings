@@ -18,7 +18,7 @@
       <Value Profile="(Default)">french.txt</Value>
     </Setting>
     <Setting Name="ListOfLanguages" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">french, english, spanish, italian, german</Value>
+      <Value Profile="(Default)">french,english</Value>
     </Setting>
     <Setting Name="EnglishFileName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">english.txt</Value>

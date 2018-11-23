@@ -152,6 +152,10 @@ namespace AIOne
         case "english":
           result = "the,of,and,to,a,in,for,is,on,that,by,this,with,i,you,it,not,or,be,are,from,at,as,your,all,have,new,more,an,was,we,will,home,can,us,about,if,page,my,has,search,free,but,our,one,other,do,no,information,time,they,site,he,up,may,what,which,their,news,out,use,any,there,see,only,so,his,when,contact,here,business,who,web,also,now,help,get,pm,view,first,am,been,would,how,were,me,services,some,these,its,like,service,than,find";
           break;
+
+          Default:
+          result = "the,of,and,to,a,in,for,is,on,that,by,this,with,i,you,it,not,or,be,are,from,at,as,your,all,have,new,more,an,was,we,will,home,can,us,about,if,page,my,has,search,free,but,our,one,other,do,no,information,time,they,site,he,up,may,what,which,their,news,out,use,any,there,see,only,so,his,when,contact,here,business,who,web,also,now,help,get,pm,view,first,am,been,would,how,were,me,services,some,these,its,like,service,than,find";
+          break;
       }
 
       return result;
@@ -190,6 +194,35 @@ namespace AIOne
       }
 
       return dico1;
+    }
+
+    public static string[] DetectLanguage(Dictionary<string, int> listOfWordsToBeDetected)
+    {
+      string[] result = string[2];
+      result[0] = "not found";
+      result[1] = "unknown";
+      Dictionary<string, int> languageWordsFound = new Dictionary<string, int>();
+      // get a list of languages in xml files
+      List<string> ListOfLanguagesAvailable = new List<string>();
+      foreach (string oneLanguage in Properties.Default.Settings.listOfWords.Split(','))
+      {
+        ListOfLanguagesAvailable.Add(oneLanguage);
+      }
+
+      // for each language calculate the number of words found
+      foreach (string language in ListOfLanguagesAvailable)
+      {
+        string fileName = $"{language}.txt";
+        if(!File.Exists(fileName))
+        {
+          AddWordsToFile(filename, GetBasicWords(fileName));
+        }
+      }
+
+      
+
+
+      return result;
     }
   }
 }
