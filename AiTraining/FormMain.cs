@@ -21,13 +21,17 @@ namespace AiTraining
 
     private void ButtonTraining_Click(object sender, EventArgs e)
     {
+      // getting words from text to study
       var listOfWords = AIHelper.SplitWords(AIHelper.RemovePunctuation(textBoxSource.Text));
       listBoxTopWords.Items.Clear();
+      // displaying number of words found
       foreach (KeyValuePair<string, int> item in listOfWords.OrderByDescending(k => k.Value))
       {
         listBoxTopWords.Items.Add($"{item.Key.ToLower()}-{item.Value}");
       }
 
+      //is the text is written in French
+      // for each language file available, check if language does match
       string frenchFileName = "french-words.txt";
       if (!File.Exists(frenchFileName))
       {
