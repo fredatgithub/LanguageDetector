@@ -134,5 +134,10 @@ namespace AiTraining
       comboBoxLanguagesAvailable.Items.AddRange(listOfLanguages);
       comboBoxLanguagesAvailable.SelectedIndex = 0;
     }
+
+    private void CopierToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+
+    }
   }
 }

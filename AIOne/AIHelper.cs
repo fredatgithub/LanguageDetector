@@ -56,19 +56,26 @@ namespace AIOne
       var dico = new Dictionary<string, int>();
       foreach (string word in listOfWords)
       {
-        if (word.Trim() == String.Empty)
+        string cleanedWord = word.ToLower().Trim('"').Trim('!').Trim('\'').Trim('(').Trim(')').Trim();
+        // no empty string
+        if (cleanedWord == string.Empty || cleanedWord == Environment.NewLine)
         {
           continue;
         }
 
-        string wordToLower = word.ToLower();
-        if (dico.ContainsKey(wordToLower))
+        // no word length equal to 1
+        if (cleanedWord.Length == 1)
         {
-          dico[wordToLower]++;
+          continue;
+        }
+
+        if (dico.ContainsKey(cleanedWord))
+        {
+          dico[cleanedWord]++;
         }
         else
         {
-          dico.Add(wordToLower, 1);
+          dico.Add(cleanedWord, 1);
         }
       }
 
