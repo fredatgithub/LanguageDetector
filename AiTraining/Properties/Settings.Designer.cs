@@ -70,5 +70,17 @@ namespace AiTraining.Properties {
                 this["WindowTop"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int comboBoxLanguagesAvailableIndex {
+            get {
+                return ((int)(this["comboBoxLanguagesAvailableIndex"]));
+            }
+            set {
+                this["comboBoxLanguagesAvailableIndex"] = value;
+            }
+        }
     }
 }

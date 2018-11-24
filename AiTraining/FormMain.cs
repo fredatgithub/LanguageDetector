@@ -29,6 +29,7 @@ namespace AiTraining
       Settings.Default.WindowWidth = Width;
       Settings.Default.WindowLeft = Left;
       Settings.Default.WindowTop = Top;
+      Settings.Default.comboBoxLanguagesAvailableIndex = comboBoxLanguagesAvailable.SelectedIndex;
       Settings.Default.Save();
     }
 
@@ -138,7 +139,6 @@ namespace AiTraining
       // verify languages files
       LoadLanguages();
       LoadSettingsAtStartup();
-
     }
 
     private void LoadSettingsAtStartup()
@@ -153,6 +153,7 @@ namespace AiTraining
       Height = Settings.Default.WindowHeight;
       Top = Settings.Default.WindowTop < 0 ? 0 : Settings.Default.WindowTop;
       Left = Settings.Default.WindowLeft < 0 ? 0 : Settings.Default.WindowLeft;
+      comboBoxLanguagesAvailable.SelectedIndex = Settings.Default.comboBoxLanguagesAvailableIndex;
     }
 
     private void DisplayTitle()
@@ -173,7 +174,7 @@ namespace AiTraining
 
     private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      Control focusedControl = FindFocusedControl(new List<Control> { }); // add your controls in the List
+      Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource }); 
       var tb = focusedControl as TextBox;
       if (tb != null)
       {
@@ -183,7 +184,7 @@ namespace AiTraining
 
     private void CutToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      Control focusedControl = FindFocusedControl(new List<Control> { }); // add your controls in the List
+      Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource }); 
       var tb = focusedControl as TextBox;
       if (tb != null)
       {
@@ -196,13 +197,13 @@ namespace AiTraining
       if (tb != ActiveControl) return;
       if (tb.Text == string.Empty)
       {
-        DisplayMessage("There Is " + errorMessage + " To Cut ", errorMessage, MessageBoxButtons.OK);
+        DisplayMessage("There is " + errorMessage + " to cut ", errorMessage, MessageBoxButtons.OK);
         return;
       }
 
       if (tb.SelectedText == string.Empty)
       {
-        DisplayMessage("No Text Has Been Selected", errorMessage, MessageBoxButtons.OK);
+        DisplayMessage("No text has been selected", errorMessage, MessageBoxButtons.OK);
         return;
       }
 
@@ -217,7 +218,7 @@ namespace AiTraining
 
     private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      Control focusedControl = FindFocusedControl(new List<Control> { }); // add your controls in the List
+      Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource }); 
       var tb = focusedControl as TextBox;
       if (tb != null)
       {
@@ -253,9 +254,9 @@ namespace AiTraining
 
     private void SelectAllToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      Control focusedControl = FindFocusedControl(new List<Control> { }); // add your controls in the List
+      Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource }); 
       TextBox control = focusedControl as TextBox;
-      if (control != null) control.SelectAll();
+      control?.SelectAll();
     }
 
     private static Control FindFocusedControl(List<Control> container)
