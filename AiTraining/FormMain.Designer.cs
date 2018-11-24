@@ -224,6 +224,7 @@
       this.couperToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
       this.couperToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
       this.couperToolStripMenuItem.Text = "&Couper";
+      this.couperToolStripMenuItem.Click += new System.EventHandler(this.CutToolStripMenuItem_Click);
       // 
       // copierToolStripMenuItem
       // 
@@ -233,7 +234,7 @@
       this.copierToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
       this.copierToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
       this.copierToolStripMenuItem.Text = "Co&pier";
-      this.copierToolStripMenuItem.Click += new System.EventHandler(this.CopierToolStripMenuItem_Click);
+      this.copierToolStripMenuItem.Click += new System.EventHandler(this.CopyToolStripMenuItem_Click);
       // 
       // collerToolStripMenuItem
       // 
@@ -243,6 +244,7 @@
       this.collerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
       this.collerToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
       this.collerToolStripMenuItem.Text = "Co&ller";
+      this.collerToolStripMenuItem.Click += new System.EventHandler(this.PasteToolStripMenuItem_Click);
       // 
       // toolStripSeparator4
       // 
@@ -254,6 +256,7 @@
       this.sélectionnertoutToolStripMenuItem.Name = "sélectionnertoutToolStripMenuItem";
       this.sélectionnertoutToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
       this.sélectionnertoutToolStripMenuItem.Text = "Sélectio&nner tout";
+      this.sélectionnertoutToolStripMenuItem.Click += new System.EventHandler(this.SelectAllToolStripMenuItem_Click);
       // 
       // outilsToolStripMenuItem
       // 
@@ -267,13 +270,13 @@
       // personnaliserToolStripMenuItem
       // 
       this.personnaliserToolStripMenuItem.Name = "personnaliserToolStripMenuItem";
-      this.personnaliserToolStripMenuItem.Size = new System.Drawing.Size(199, 30);
+      this.personnaliserToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
       this.personnaliserToolStripMenuItem.Text = "&Personnaliser";
       // 
       // optionsToolStripMenuItem
       // 
       this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-      this.optionsToolStripMenuItem.Size = new System.Drawing.Size(199, 30);
+      this.optionsToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
       this.optionsToolStripMenuItem.Text = "&Options";
       // 
       // aideToolStripMenuItem

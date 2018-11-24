@@ -1,9 +1,12 @@
-﻿using System;
+﻿using AIOne;
+using AiTraining.Properties;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
-using AIOne;
 
 namespace AiTraining
 {
@@ -16,7 +19,17 @@ namespace AiTraining
 
     private void QuitterToolStripMenuItem_Click(object sender, EventArgs e)
     {
+      SaveWindowValue();
       Application.Exit();
+    }
+
+    private void SaveWindowValue()
+    {
+      Settings.Default.WindowHeight = Height;
+      Settings.Default.WindowWidth = Width;
+      Settings.Default.WindowLeft = Left;
+      Settings.Default.WindowTop = Top;
+      Settings.Default.Save();
     }
 
     private void ButtonTraining_Click(object sender, EventArgs e)
@@ -124,6 +137,29 @@ namespace AiTraining
     {
       // verify languages files
       LoadLanguages();
+      LoadSettingsAtStartup();
+
+    }
+
+    private void LoadSettingsAtStartup()
+    {
+      DisplayTitle();
+      GetWindowValue();
+    }
+
+    private void GetWindowValue()
+    {
+      Width = Settings.Default.WindowWidth;
+      Height = Settings.Default.WindowHeight;
+      Top = Settings.Default.WindowTop < 0 ? 0 : Settings.Default.WindowTop;
+      Left = Settings.Default.WindowLeft < 0 ? 0 : Settings.Default.WindowLeft;
+    }
+
+    private void DisplayTitle()
+    {
+      Assembly assembly = Assembly.GetExecutingAssembly();
+      FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
+      Text += $@" V{fvi.FileMajorPart}.{fvi.FileMinorPart}.{fvi.FileBuildPart}.{fvi.FilePrivatePart}";
 
     }
 
@@ -135,9 +171,118 @@ namespace AiTraining
       comboBoxLanguagesAvailable.SelectedIndex = 0;
     }
 
-    private void CopierToolStripMenuItem_Click(object sender, EventArgs e)
+    private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
     {
+      Control focusedControl = FindFocusedControl(new List<Control> { }); // add your controls in the List
+      var tb = focusedControl as TextBox;
+      if (tb != null)
+      {
+        CopyToClipboard(tb);
+      }
+    }
 
+    private void CutToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      Control focusedControl = FindFocusedControl(new List<Control> { }); // add your controls in the List
+      var tb = focusedControl as TextBox;
+      if (tb != null)
+      {
+        CutToClipboard(tb);
+      }
+    }
+
+    private void CutToClipboard(TextBoxBase tb, string errorMessage = "nothing")
+    {
+      if (tb != ActiveControl) return;
+      if (tb.Text == string.Empty)
+      {
+        DisplayMessage("There Is " + errorMessage + " To Cut ", errorMessage, MessageBoxButtons.OK);
+        return;
+      }
+
+      if (tb.SelectedText == string.Empty)
+      {
+        DisplayMessage("No Text Has Been Selected", errorMessage, MessageBoxButtons.OK);
+        return;
+      }
+
+      Clipboard.SetText(tb.SelectedText);
+      tb.SelectedText = string.Empty;
+    }
+
+    private void DisplayMessage(string message, string title, MessageBoxButtons buttons)
+    {
+      MessageBox.Show(this, message, title, buttons);
+    }
+
+    private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      Control focusedControl = FindFocusedControl(new List<Control> { }); // add your controls in the List
+      var tb = focusedControl as TextBox;
+      if (tb != null)
+      {
+        PasteFromClipboard(tb);
+      }
+    }
+
+    private void PasteFromClipboard(TextBoxBase tb)
+    {
+      if (tb != ActiveControl) return;
+      var selectionIndex = tb.SelectionStart;
+      tb.SelectedText = Clipboard.GetText();
+      tb.SelectionStart = selectionIndex + Clipboard.GetText().Length;
+    }
+
+    private void CopyToClipboard(TextBoxBase tb, string message = "nothing")
+    {
+      if (tb != ActiveControl) return;
+      if (tb.Text == string.Empty)
+      {
+        DisplayMessage("ThereIsNothingToCopy", message, MessageBoxButtons.OK);
+        return;
+      }
+
+      if (tb.SelectedText == string.Empty)
+      {
+        DisplayMessage("NoTextHasBeenSelected", message, MessageBoxButtons.OK);
+        return;
+      }
+
+      Clipboard.SetText(tb.SelectedText);
+    }
+
+    private void SelectAllToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+      Control focusedControl = FindFocusedControl(new List<Control> { }); // add your controls in the List
+      TextBox control = focusedControl as TextBox;
+      if (control != null) control.SelectAll();
+    }
+
+    private static Control FindFocusedControl(List<Control> container)
+    {
+      return container.FirstOrDefault(control => control.Focused);
+    }
+
+    private static Control FindFocusedControl(params Control[] container)
+    {
+      return container.FirstOrDefault(control => control.Focused);
+    }
+
+    private static Control FindFocusedControl(IEnumerable<Control> container)
+    {
+      return container.FirstOrDefault(control => control.Focused);
+    }
+
+    private static string PeekDirectory()
+    {
+      string result = string.Empty;
+      FolderBrowserDialog fbd = new FolderBrowserDialog();
+      if (fbd.ShowDialog() == DialogResult.OK)
+      {
+        result = fbd.SelectedPath;
+      }
+
+      return result;
     }
   }
 }
