@@ -1,6 +1,5 @@
 ﻿using AIOne.Properties;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -50,13 +49,13 @@ namespace AIOne
       return dico;
     }
 
-    public static Dictionary<string, int> SplitWords(string phrase)
+    public static Dictionary<string, int> SplitWords(string phrases)
     {
-      var listOfWords = phrase.Split(' ');
+      var listOfWords = phrases.Split(' ');
       var dico = new Dictionary<string, int>();
       foreach (string word in listOfWords)
       {
-        string cleanedWord = word.ToLower().Trim('"').Trim('!').Trim('\'').Trim('(').Trim(')').Trim();
+        string cleanedWord = word.ToLower().Trim('"').Trim('!').Trim('\'').Trim('(').Trim(')').Trim().Trim('"');
         // no empty string
         if (cleanedWord == string.Empty || cleanedWord == Environment.NewLine)
         {
@@ -100,7 +99,7 @@ namespace AIOne
 
     public static string RemovePunctuation(string phrase)
     {
-      return phrase.Replace(",", "").Replace(".", "").Replace(";", "").Replace(":", "");
+      return phrase.Replace(",", " ").Replace(".", " ").Replace(";", " ").Replace(":", " ").Replace("?", " ");
     }
 
     public static void InitStartFiles()

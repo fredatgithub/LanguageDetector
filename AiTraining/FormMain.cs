@@ -44,7 +44,7 @@ namespace AiTraining
         listBoxTopWords.Items.Add($"{item.Key.ToLower()}-{item.Value}");
       }
 
-      //is the text is written in French
+      // is the text is written in French
       // for each language file available, check if language does match
       string languageSelectedFileName = $"{comboBoxLanguagesAvailable.SelectedItem}-words.txt";
       if (!File.Exists(languageSelectedFileName))
@@ -56,6 +56,7 @@ namespace AiTraining
             foreach (KeyValuePair<string, int> item in listOfWords.OrderByDescending(k => k.Value))
             {
               sw.WriteLine($"{item.Key},{item.Value}");
+              //sw.WriteLine($"{item.Key}"); //use to create list of most used words
             }
           }
         }
