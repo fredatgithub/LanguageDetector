@@ -32,12 +32,12 @@ namespace AiTraining
 
       //is the text is written in French
       // for each language file available, check if language does match
-      string frenchFileName = "french-words.txt";
-      if (!File.Exists(frenchFileName))
+      string languageSelectedFileName = $"{comboBoxLanguagesAvailable.SelectedItem}-words.txt";
+      if (!File.Exists(languageSelectedFileName))
       {
         try
         {
-          using (StreamWriter sw = new StreamWriter(frenchFileName))
+          using (StreamWriter sw = new StreamWriter(languageSelectedFileName))
           {
             foreach (KeyValuePair<string, int> item in listOfWords.OrderByDescending(k => k.Value))
             {
@@ -61,7 +61,7 @@ namespace AiTraining
       Dictionary<string, int> dicofile = new Dictionary<string, int>();
       try
       {
-        using (StreamReader sw = new StreamReader(frenchFileName))
+        using (StreamReader sw = new StreamReader(languageSelectedFileName))
         {
           while (!sw.EndOfStream)
           {
@@ -82,10 +82,10 @@ namespace AiTraining
 
       // add results to existing file
       Dictionary<string, int> newDico = AIHelper.AddTwoDictionaries(dicofile, listOfWords);
-      File.Delete(frenchFileName);
+      File.Delete(languageSelectedFileName);
       try
       {
-        using (StreamWriter sw = new StreamWriter(frenchFileName))
+        using (StreamWriter sw = new StreamWriter(languageSelectedFileName))
         {
           foreach (KeyValuePair<string, int> item in newDico.OrderByDescending(k => k.Value))
           {

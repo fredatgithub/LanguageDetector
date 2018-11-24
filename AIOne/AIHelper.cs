@@ -224,7 +224,8 @@ namespace AIOne
     {
       // number of words found divided by total number of words equals percentage of words found
       double result = 0.00;
-      Dictionary<string, double> wordsFound = new Dictionary<string, int>();
+      Dictionary<string, double> wordsFound = new Dictionary<string, double>();
+
       // init dictionaries
       var listOfLanguagesAvailable = Settings.Default.ListOfLanguages.Split(',').ToList();
       // for each language calculate the number of words found
