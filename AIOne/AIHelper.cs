@@ -157,15 +157,162 @@ namespace AIOne
           break;
 
         case "english":
-          result = "the,of,and,to,a,in,for,is,on,that,by,this,with,i,you,it,not,or,be,are,from,at,as,your,all,have,new,more,an,was,we,will,home,can,us,about,if,page,my,has,search,free,but,our,one,other,do,no,information,time,they,site,he,up,may,what,which,their,news,out,use,any,there,see,only,so,his,when,contact,here,business,who,web,also,now,help,get,pm,view,first,am,been,would,how,were,me,services,some,these,its,like,service,than,find";
+          result = "the,and,of,to,in,it,his,you,was,he,that,is,my,with,as,at,have,be,which,not,had,for,she,but,me,from,there,said,this,your,up,then,on,do,who,are,will,one,by,what,her,all,into,an,were,has,or,man,so
+          ,if
+          ,down
+          ,upon
+          ,been
+          ,when
+          ,very
+          ,could
+          ,we
+          ,out
+          ,am
+          ,may
+          ,him
+          ,own
+          ,would
+          ,some
+          ,must
+          ,how
+          ,street
+          ,see
+          ,know
+          ,before
+          ,should
+          ,most
+          ,little
+          ,now
+          ,just
+          ,no
+          ,house
+          ,minutes
+          ,other
+          ,eyes
+          ,our
+          ,indeed
+          ,two
+          ,matter
+          ,they
+          ,such
+          ,more
+          ,yet
+          ,door
+          ,looked
+          ,good
+          ,quite
+          ,majesty
+          ,three
+          ,case
+          ,think
+          ,half
+          ,only
+          ,face
+          ,nothing
+          ,once
+          ,five
+          ,found
+          ,briony
+          ,lodge
+          ,front
+          ,heard
+          ,under
+          ,mind
+          ,seen
+          ,might
+          ,than
+          ,while
+          ,every
+          ,still
+          ,time
+          ,their
+          ,part
+          ,fire
+          ,over
+          ,remarked
+          ,too
+          ,where
+          ,gentleman
+          ,myself
+          ,well
+          ,note
+          ,without
+          ,paper
+          ,window
+          ,come
+          ,understand
+          ,about
+          ,them
+          ,shall
+          ,church
+          ,woman
+          ,name
+          ,himself
+          ,doubt
+          ,us
+          ,soul
+          ,however
+          ,knew
+          ,friend
+          ,again
+          ,twice
+          ,room
+          ,work
+          ,seven
+          ,tell
+          ,much
+          ,came
+          ,long
+          ,left
+          ,right
+          ,address
+          ,o'clock
+          ,visitor
+          ,mask
+          ,small
+          ,make
+          ,asked
+          ,rather
+          ,german
+          ,its
+          ,made
+          ,hand
+          ,whom
+          ,back
+          ,none
+          ,say
+          ,end
+          ,person
+          ,king
+          ,men
+          ,godfrey
+          ,norton
+          ,take
+          ,throw
+          ,nature
+          ,baker
+          ,those
+          ,these
+          ,returned
+          ,dark
+          ,armchair
+          ,answered
+          ,six
+          ,side
+          ,give
+          ,clear
+          ,times
+          ,interested
+          ,enough
+          ,open
+          ,importance";
           break;
 
         default:
          result = "the,of,and,to,a,in,for,is,on,that,by,this,with,i,you,it,not,or,be,are,from,at,as,your,all,have,new,more,an,was,we,will,home,can,us,about,if,page,my,has,search,free,but,our,one,other,do,no,information,time,they,site,he,up,may,what,which,their,news,out,use,any,there,see,only,so,his,when,contact,here,business,who,web,also,now,help,get,pm,view,first,am,been,would,how,were,me,services,some,these,its,like,service,than,find";
           break;
       }
-
-      return result;
+            return result;
     }
 
     public static void AddWordsToFile(string fileName, string words)
