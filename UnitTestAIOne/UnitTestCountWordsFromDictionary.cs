@@ -34,5 +34,14 @@ namespace UnitTestAIOne
       int result = AIHelper.CountWordsFromDictionary(source);
       Assert.AreEqual(result, expected);
     }
+    
+     [TestMethod]
+    public void TestMethod_CountWordsFromDictionary_three_words_one_each()
+    {
+      Dictionary<string, int> source = new Dictionary<string, int> { { "man", 2 }, { "men", 2 }, { "girl", 2 } };
+      const int expected = 6;
+      int result = AIHelper.CountWordsFromDictionary(source);
+      Assert.AreEqual(result, expected);
+    }
   }
 }
