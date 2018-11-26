@@ -12,7 +12,7 @@ namespace AIOne.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.8.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -71,19 +71,19 @@ namespace AIOne.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("french, english, spanish, italian, german")]
-        public string ListOfLanguages {
+        [global::System.Configuration.DefaultSettingValueAttribute("english.txt")]
+        public string EnglishFileName {
             get {
-                return ((string)(this["ListOfLanguages"]));
+                return ((string)(this["EnglishFileName"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("english.txt")]
-        public string EnglishFileName {
+        [global::System.Configuration.DefaultSettingValueAttribute("french, english, spanish, italian, german")]
+        public string ListOfLanguages {
             get {
-                return ((string)(this["EnglishFileName"]));
+                return ((string)(this["ListOfLanguages"]));
             }
         }
     }

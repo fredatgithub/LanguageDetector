@@ -44,7 +44,7 @@ namespace AiTraining
         listBoxTopWords.Items.Add($"{item.Key.ToLower()}-{item.Value}");
       }
 
-      // is the text is written in French
+      // is the text written in French
       // for each language file available, check if language does match
       string languageSelectedFileName = $"{comboBoxLanguagesAvailable.SelectedItem}-words.txt";
       if (!File.Exists(languageSelectedFileName))
@@ -285,6 +285,18 @@ namespace AiTraining
       }
 
       return result;
+    }
+
+    private void ButtonDetect_Click(object sender, EventArgs e)
+    {
+      var languageFrequencyFound = new Dictionary<string, double>();
+      //var languageFrequencyFound = Properties.Settings.Default.ListOfLanguages.Split(',').ToDictionary(language => language, language => 0.0);
+      foreach (string language in Properties.Settings.Default.ListOfLanguages.Split(','))
+      {
+        languageFrequencyFound.Add(language, 0.0);
+      }
+
+
     }
   }
 }

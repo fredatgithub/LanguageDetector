@@ -453,6 +453,7 @@
       this.buttonDetect.TabIndex = 13;
       this.buttonDetect.Text = "Detect Language";
       this.buttonDetect.UseVisualStyleBackColor = true;
+      this.buttonDetect.Click += new System.EventHandler(this.ButtonDetect_Click);
       // 
       // textBoxSource
       // 

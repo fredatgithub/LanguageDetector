@@ -23,63 +23,57 @@ namespace AiTraining.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("640")]
         public int WindowHeight {
             get {
                 return ((int)(this["WindowHeight"]));
             }
-            set {
-                this["WindowHeight"] = value;
-            }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1024")]
         public int WindowWidth {
             get {
                 return ((int)(this["WindowWidth"]));
             }
-            set {
-                this["WindowWidth"] = value;
-            }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public int WindowLeft {
             get {
                 return ((int)(this["WindowLeft"]));
             }
-            set {
-                this["WindowLeft"] = value;
-            }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public int WindowTop {
             get {
                 return ((int)(this["WindowTop"]));
             }
-            set {
-                this["WindowTop"] = value;
-            }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public int comboBoxLanguagesAvailableIndex {
             get {
                 return ((int)(this["comboBoxLanguagesAvailableIndex"]));
             }
-            set {
-                this["comboBoxLanguagesAvailableIndex"] = value;
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("french, english")]
+        public string ListOfLanguages {
+            get {
+                return ((string)(this["ListOfLanguages"]));
             }
         }
     }
