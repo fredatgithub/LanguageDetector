@@ -289,14 +289,54 @@ namespace AiTraining
 
     private void ButtonDetect_Click(object sender, EventArgs e)
     {
-      var languageFrequencyFound = new Dictionary<string, double>();
+      var languageDetected = new Dictionary<string, double>();
       //var languageFrequencyFound = Properties.Settings.Default.ListOfLanguages.Split(',').ToDictionary(language => language, language => 0.0);
-      foreach (string language in Properties.Settings.Default.ListOfLanguages.Split(','))
+      foreach (string language in Settings.Default.ListOfLanguages.Split(','))
       {
-        languageFrequencyFound.Add(language, 0.0);
+        languageDetected.Add(language, 0.0);
       }
 
+      var listOfWords = AIHelper.SplitWords(AIHelper.RemovePunctuation(textBoxSource.Text));
 
+      foreach (KeyValuePair<string, double> pair in languageDetected)
+      {
+        // count match
+        if (!File.Exists($"{pair.Key}Words.txt"))
+        {
+          try
+          {
+            using (StreamWriter sw = new StreamWriter($"{pair.Key}Words.txt"))
+            {
+              foreach (string word in GetWords(pair.Key))
+              {
+                sw.WriteLine(word);
+              }
+            }
+          }
+          catch (Exception)
+          {
+            // ignored
+          }
+        }
+
+
+      }
+    }
+
+    private static List<string> GetWords(string language)
+    {
+      List<string> result = new List<string>();
+      switch (language.ToLower())
+      {
+        case "french":
+          result = Settings.Default.FrenchWords.Split(',').ToList();
+          break;
+        case "english":
+          result = Settings.Default.EnglishWords.Split(',').ToList();
+          break;
+      }
+
+      return result;
     }
   }
 }
