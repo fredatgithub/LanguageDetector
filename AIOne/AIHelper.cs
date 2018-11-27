@@ -148,7 +148,7 @@ namespace AIOne
 
     public static string GetBasicWords(string language)
     {
-      string result = string.Empty;
+      string result = String.Empty;
       //string language = fileName.Substring(0, fileName.Length - 4).ToLower();
       switch (language)
       {
@@ -242,6 +242,22 @@ namespace AIOne
 
       return result;
 
+    }
+
+    public static double CountFoundWords(List<string> referenceLanguageWords, Dictionary<string, int> listOfWordsToBeDetected)
+    {
+      double result = 0.0;
+      int numberOfWordsFound = 0;
+      foreach (var wordKeyPair in listOfWordsToBeDetected)
+      {
+        if (referenceLanguageWords.Contains(wordKeyPair.Key))
+        {
+          numberOfWordsFound++;
+        }
+      }
+
+      result = numberOfWordsFound / referenceLanguageWords.Count;
+      return result;
     }
   }
 }

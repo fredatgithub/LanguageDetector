@@ -175,7 +175,7 @@ namespace AiTraining
 
     private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource }); 
+      Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource });
       var tb = focusedControl as TextBox;
       if (tb != null)
       {
@@ -185,7 +185,7 @@ namespace AiTraining
 
     private void CutToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource }); 
+      Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource });
       var tb = focusedControl as TextBox;
       if (tb != null)
       {
@@ -219,7 +219,7 @@ namespace AiTraining
 
     private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource }); 
+      Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource });
       var tb = focusedControl as TextBox;
       if (tb != null)
       {
@@ -255,7 +255,7 @@ namespace AiTraining
 
     private void SelectAllToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource }); 
+      Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource });
       TextBox control = focusedControl as TextBox;
       control?.SelectAll();
     }
@@ -297,33 +297,23 @@ namespace AiTraining
       }
 
       var listOfWords = AIHelper.SplitWords(AIHelper.RemovePunctuation(textBoxSource.Text));
-
+      var languageDetectedTmp = new Dictionary<string, double>();
       foreach (KeyValuePair<string, double> pair in languageDetected)
       {
-        // count match
-        if (!File.Exists($"{pair.Key}Words.txt"))
-        {
-          try
-          {
-            using (StreamWriter sw = new StreamWriter($"{pair.Key}Words.txt"))
-            {
-              foreach (string word in GetWords(pair.Key))
-              {
-                sw.WriteLine(word);
-              }
-            }
-          }
-          catch (Exception)
-          {
-            // ignored
-          }
-        }
-
-
+        languageDetectedTmp[pair.Key] = AIHelper.CountFoundWords(GetLanguageWords(pair.Key), listOfWords);
       }
+
+      double closestBestLanguage = languageDetected.OrderByDescending(k => k.Value).Max(k=>k.Value);
+      string languageDetectedGuess = "unknown";
+      if (languageDetected.OrderByDescending(k => k.Value).Max(k => k.Value) != 0.0)
+      {
+        //languageDetectedGuess = languageDetected(languageDetected.OrderByDescending(k => k.Value).Max(k => k.Value).ToString();
+      }
+      var debug = "test";
+      labelLanguageDetected.Text = $"Language detected is : {languageDetectedGuess}";
     }
 
-    private static List<string> GetWords(string language)
+    private static List<string> GetLanguageWords(string language)
     {
       List<string> result = new List<string>();
       switch (language.ToLower())
