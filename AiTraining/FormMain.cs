@@ -308,6 +308,8 @@ namespace AiTraining
       if (languageDetected.OrderByDescending(k => k.Value).Max(k => k.Value) != 0.0)
       {
         //languageDetectedGuess = languageDetected(languageDetected.OrderByDescending(k => k.Value).Max(k => k.Value).ToString();
+        //var myKey = types.FirstOrDefault(x => x.Value == "one").Key;
+        languageDetectedGuess = languageDetected.FirstOrDefault(x => x.Value == languageDetected.OrderByDescending(k => k.Value).Max(k => k.Value)).Key
       }
       var debug = "test";
       labelLanguageDetected.Text = $"Language detected is : {languageDetectedGuess}";
