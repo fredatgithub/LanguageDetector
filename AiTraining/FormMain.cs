@@ -240,13 +240,13 @@ namespace AiTraining
       if (tb != ActiveControl) return;
       if (tb.Text == string.Empty)
       {
-        DisplayMessage("ThereIsNothingToCopy", message, MessageBoxButtons.OK);
+        DisplayMessage("There is nothing to copy", message, MessageBoxButtons.OK);
         return;
       }
 
       if (tb.SelectedText == string.Empty)
       {
-        DisplayMessage("NoTextHasBeenSelected", message, MessageBoxButtons.OK);
+        DisplayMessage("No text has been selected", message, MessageBoxButtons.OK);
         return;
       }
 
@@ -309,7 +309,8 @@ namespace AiTraining
       {
         //languageDetectedGuess = languageDetected(languageDetected.OrderByDescending(k => k.Value).Max(k => k.Value).ToString();
         //var myKey = types.FirstOrDefault(x => x.Value == "one").Key;
-        languageDetectedGuess = languageDetected.FirstOrDefault(x => x.Value == languageDetected.OrderByDescending(k => k.Value).Max(k => k.Value)).Key
+        languageDetectedGuess = languageDetected
+          .FirstOrDefault(x => x.Value == languageDetected.OrderByDescending(k => k.Value).Max(k => k.Value)).Key;
       }
       var debug = "test";
       labelLanguageDetected.Text = $"Language detected is : {languageDetectedGuess}";
@@ -329,6 +330,14 @@ namespace AiTraining
       }
 
       return result;
+    }
+
+    private void textBoxSource_TextChanged(object sender, EventArgs e)
+    {
+      if (textBoxSource.Text.Trim() == string.Empty)
+      {
+        labelLanguageDetected.Text = "Language detected is : unknown";
+      }
     }
   }
 }

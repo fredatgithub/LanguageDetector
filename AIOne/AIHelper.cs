@@ -256,7 +256,11 @@ namespace AIOne
         }
       }
 
-      result = numberOfWordsFound / referenceLanguageWords.Count;
+      if (referenceLanguageWords.Count != 0 && numberOfWordsFound != 0)
+      {
+        result = numberOfWordsFound / referenceLanguageWords.Count;
+      }
+      
       return result;
     }
   }
