@@ -70,11 +70,14 @@ namespace AIOne
         }
 
         // if word contains only numbers then continue
-        Regex pattern  = new Regex(@"^\d$");
         if (cleanedWord.All(char.IsDigit))
         {
           continue;
         }
+
+        // remove numbers in any word
+        // TODO 
+        Regex pattern = new Regex(@"^\d$");
 
         if (dico.ContainsKey(cleanedWord))
         {
