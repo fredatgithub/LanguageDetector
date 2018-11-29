@@ -117,7 +117,7 @@
       this.nouveauToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
       this.nouveauToolStripMenuItem.Name = "nouveauToolStripMenuItem";
       this.nouveauToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-      this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+      this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(213, 30);
       this.nouveauToolStripMenuItem.Text = "&Nouveau";
       // 
       // ouvrirToolStripMenuItem
@@ -349,7 +349,7 @@
       this.tabPageAITraining.Controls.Add(this.labelPasteOrPeekFile);
       this.tabPageAITraining.Location = new System.Drawing.Point(4, 22);
       this.tabPageAITraining.Name = "tabPageAITraining";
-      this.tabPageAITraining.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+      this.tabPageAITraining.Padding = new System.Windows.Forms.Padding(3);
       this.tabPageAITraining.Size = new System.Drawing.Size(999, 625);
       this.tabPageAITraining.TabIndex = 0;
       this.tabPageAITraining.Text = "Training";
@@ -451,6 +451,7 @@
       this.textBoxSource.Location = new System.Drawing.Point(31, 72);
       this.textBoxSource.Multiline = true;
       this.textBoxSource.Name = "textBoxSource";
+      this.textBoxSource.ScrollBars = System.Windows.Forms.ScrollBars.Both;
       this.textBoxSource.Size = new System.Drawing.Size(583, 491);
       this.textBoxSource.TabIndex = 12;
       this.textBoxSource.Text = resources.GetString("textBoxSource.Text");
@@ -480,8 +481,8 @@
       // 
       this.tabPage2.Location = new System.Drawing.Point(4, 22);
       this.tabPage2.Name = "tabPage2";
-      this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-      this.tabPage2.Size = new System.Drawing.Size(999, 627);
+      this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+      this.tabPage2.Size = new System.Drawing.Size(999, 625);
       this.tabPage2.TabIndex = 1;
       this.tabPage2.Text = "tabPage2";
       this.tabPage2.UseVisualStyleBackColor = true;
@@ -494,9 +495,10 @@
       this.Controls.Add(this.tabControlMain);
       this.Controls.Add(this.menuStripMain);
       this.MainMenuStrip = this.menuStripMain;
-      this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.Margin = new System.Windows.Forms.Padding(2);
       this.Name = "FormMain";
       this.Text = "A.I. Training";
+      this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
       this.Load += new System.EventHandler(this.FormMain_Load);
       this.menuStripMain.ResumeLayout(false);
       this.menuStripMain.PerformLayout();

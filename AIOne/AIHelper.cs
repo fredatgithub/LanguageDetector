@@ -258,7 +258,7 @@ namespace AIOne
 
       if (referenceLanguageWords.Count != 0 && numberOfWordsFound != 0)
       {
-        result = numberOfWordsFound / referenceLanguageWords.Count;
+        result = (double)numberOfWordsFound / (double)referenceLanguageWords.Count;
       }
       
       return result;

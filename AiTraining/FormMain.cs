@@ -303,14 +303,15 @@ namespace AiTraining
         languageDetectedTmp[pair.Key] = AIHelper.CountFoundWords(GetLanguageWords(pair.Key), listOfWords);
       }
 
-      double closestBestLanguage = languageDetected.OrderByDescending(k => k.Value).Max(k=>k.Value);
+      //double maxValue = languageDetected.OrderByDescending(k => k.Value).Max(v => v.Value);
+      double maxValue = languageDetectedTmp.Max(v => v.Value);
       string languageDetectedGuess = "unknown";
-      if (languageDetected.OrderByDescending(k => k.Value).Max(k => k.Value) != 0.0)
+      if (maxValue != 0.0)
       {
         //languageDetectedGuess = languageDetected(languageDetected.OrderByDescending(k => k.Value).Max(k => k.Value).ToString();
         //var myKey = types.FirstOrDefault(x => x.Value == "one").Key;
-        languageDetectedGuess = languageDetected
-          .FirstOrDefault(x => x.Value == languageDetected.OrderByDescending(k => k.Value).Max(k => k.Value)).Key;
+        languageDetectedGuess = languageDetectedTmp
+          .FirstOrDefault(x => x.Value == maxValue).Key;
       }
       var debug = "test";
       labelLanguageDetected.Text = $"Language detected is : {languageDetectedGuess}";
@@ -337,7 +338,17 @@ namespace AiTraining
       if (textBoxSource.Text.Trim() == string.Empty)
       {
         labelLanguageDetected.Text = "Language detected is : unknown";
+        buttonDetect.Enabled = false;
       }
+      else
+      {
+        buttonDetect.Enabled = true;
+      }
+    }
+
+    private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+    {
+      QuitterToolStripMenuItem_Click(sender, e);
     }
   }
 }
