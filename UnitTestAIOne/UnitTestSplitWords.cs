@@ -9,7 +9,7 @@ namespace UnitTestAIOne
   public class UnitTestSplitWords
   {
     [TestMethod]
-    public void TestMethod_CreateDictionary_one_word_once()
+    public void TestMethod_SplitWords_one_word_once()
     {
       const string source = "a";
       Dictionary<string, int> expected = new Dictionary<string, int> { { "a", 1 } };
@@ -20,7 +20,7 @@ namespace UnitTestAIOne
     }
 
     [TestMethod]
-    public void TestMethod_CreateDictionary_two_words_once()
+    public void TestMethod_SplitWords_two_words_once()
     {
       const string source = "a long";
       var expected = new Dictionary<string, int> { { "a", 1 }, { "long", 1 }, };
@@ -30,7 +30,7 @@ namespace UnitTestAIOne
     }
 
     [TestMethod]
-    public void TestMethod_CreateDictionary_long_sentence_many_words_several_times()
+    public void TestMethod_SplitWords_long_sentence_many_words_several_times()
     {
       const string source = "a long long time ago in a galaxy far far away";
       var expected = new Dictionary<string, int>
@@ -57,6 +57,16 @@ namespace UnitTestAIOne
       }
 
       return result;
+    }
+
+    [TestMethod]
+    public void TestMethod_SplitWords_only_numbers()
+    {
+      const string source = "123456789";
+      var expected = new Dictionary<string, int>();
+      Dictionary<string, int> result = AIHelper.SplitWords(source);
+      Assert.AreEqual(result.Count, expected.Count);
+      Assert.IsTrue(DictionariesAreEqualed(result, expected));
     }
   }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace AIOne
 {
@@ -64,6 +65,13 @@ namespace AIOne
 
         // no word length equal to 1
         if (cleanedWord.Length == 1)
+        {
+          continue;
+        }
+
+        // if word contains only numbers then continue
+        Regex pattern  = new Regex(@"^\d$");
+        if (cleanedWord.All(char.IsDigit))
         {
           continue;
         }
@@ -148,7 +156,7 @@ namespace AIOne
 
     public static string GetBasicWords(string language)
     {
-      string result = String.Empty;
+      string result = string.Empty;
       //string language = fileName.Substring(0, fileName.Length - 4).ToLower();
       switch (language)
       {

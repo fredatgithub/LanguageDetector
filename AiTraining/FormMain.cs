@@ -303,24 +303,21 @@ namespace AiTraining
         languageDetectedTmp[pair.Key] = AIHelper.CountFoundWords(GetLanguageWords(pair.Key), listOfWords);
       }
 
-      //double maxValue = languageDetected.OrderByDescending(k => k.Value).Max(v => v.Value);
       double maxValue = languageDetectedTmp.Max(v => v.Value);
       string languageDetectedGuess = "unknown";
       if (maxValue != 0.0)
       {
-        //languageDetectedGuess = languageDetected(languageDetected.OrderByDescending(k => k.Value).Max(k => k.Value).ToString();
-        //var myKey = types.FirstOrDefault(x => x.Value == "one").Key;
         languageDetectedGuess = languageDetectedTmp
           .FirstOrDefault(x => x.Value == maxValue).Key;
       }
-      var debug = "test";
+
       labelLanguageDetected.Text = $"Language detected is : {languageDetectedGuess}";
     }
 
     private static List<string> GetLanguageWords(string language)
     {
       List<string> result = new List<string>();
-      switch (language.ToLower())
+      switch (language.Trim().ToLower())
       {
         case "french":
           result = Settings.Default.FrenchWords.Split(',').ToList();
