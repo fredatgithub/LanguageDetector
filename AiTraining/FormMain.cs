@@ -3,6 +3,7 @@ using AiTraining.Properties;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -275,6 +276,17 @@ namespace AiTraining
       return container.FirstOrDefault(control => control.Focused);
     }
 
+    private static string PeekFile(bool shortName = true)
+    {
+      string result = string.Empty;
+      OpenFileDialog fd = new OpenFileDialog();
+      if (fd.ShowDialog() == DialogResult.OK)
+      {
+        result = shortName ? fd.SafeFileName: fd.FileName;
+      }
+
+      return result;
+    }
     private static string PeekDirectory()
     {
       string result = string.Empty;
@@ -310,7 +322,13 @@ namespace AiTraining
           .FirstOrDefault(x => x.Value == maxValue).Key;
       }
 
-      labelLanguageDetected.Text = $"Language detected is : {languageDetectedGuess}";
+      labelLanguageDetected.Text = $"Language detected is : {languageDetectedGuess.ToUpper()}";
+      labelLanguageDetected.ForeColor = GetColor(languageDetectedGuess);
+    }
+
+    private static Color GetColor(string languageDetected)
+    {
+      return languageDetected.ToLower() == "unknown" ? Color.Red : Color.Green;
     }
 
     private static List<string> GetLanguageWords(string language)
@@ -334,6 +352,7 @@ namespace AiTraining
       if (textBoxSource.Text.Trim() == string.Empty)
       {
         labelLanguageDetected.Text = "Language detected is : unknown";
+        labelLanguageDetected.ForeColor = GetColor("unknown");
         buttonDetect.Enabled = false;
       }
       else
@@ -345,6 +364,27 @@ namespace AiTraining
     private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
     {
       QuitterToolStripMenuItem_Click(sender, e);
+    }
+
+    private void buttonPeekFile_Click(object sender, EventArgs e)
+    {
+      textBoxSource.Text = string.Empty;
+      var fileName = PeekFile(false);
+      // read file and put it in textbox
+      try
+      {
+        using (StreamReader sr = new StreamReader(fileName))
+        {
+          while (!sr.EndOfStream)
+          {
+            textBoxSource.Text += sr.ReadLine(); // TODO to be debug
+          }
+        }
+      }
+      catch (Exception)
+      {
+        // ignored
+      }
     }
   }
 }

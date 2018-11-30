@@ -73,7 +73,7 @@
       this.textBoxSource = new System.Windows.Forms.TextBox();
       this.buttonPeekFile = new System.Windows.Forms.Button();
       this.labelPasteOrPeekFile = new System.Windows.Forms.Label();
-      this.tabPage2 = new System.Windows.Forms.TabPage();
+      this.tabPageAddNewLanguage = new System.Windows.Forms.TabPage();
       this.menuStripMain.SuspendLayout();
       this.tabControlMain.SuspendLayout();
       this.tabPageAITraining.SuspendLayout();
@@ -117,7 +117,7 @@
       this.nouveauToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
       this.nouveauToolStripMenuItem.Name = "nouveauToolStripMenuItem";
       this.nouveauToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-      this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(213, 30);
+      this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
       this.nouveauToolStripMenuItem.Text = "&Nouveau";
       // 
       // ouvrirToolStripMenuItem
@@ -325,7 +325,7 @@
       // tabControlMain
       // 
       this.tabControlMain.Controls.Add(this.tabPageAITraining);
-      this.tabControlMain.Controls.Add(this.tabPage2);
+      this.tabControlMain.Controls.Add(this.tabPageAddNewLanguage);
       this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
       this.tabControlMain.Location = new System.Drawing.Point(0, 24);
       this.tabControlMain.Name = "tabControlMain";
@@ -466,6 +466,7 @@
       this.buttonPeekFile.TabIndex = 11;
       this.buttonPeekFile.Text = "Peek File";
       this.buttonPeekFile.UseVisualStyleBackColor = true;
+      this.buttonPeekFile.Click += new System.EventHandler(this.buttonPeekFile_Click);
       // 
       // labelPasteOrPeekFile
       // 
@@ -477,15 +478,15 @@
       this.labelPasteOrPeekFile.TabIndex = 10;
       this.labelPasteOrPeekFile.Text = "Paste text below or peek a file";
       // 
-      // tabPage2
+      // tabPageAddNewLanguage
       // 
-      this.tabPage2.Location = new System.Drawing.Point(4, 22);
-      this.tabPage2.Name = "tabPage2";
-      this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-      this.tabPage2.Size = new System.Drawing.Size(999, 625);
-      this.tabPage2.TabIndex = 1;
-      this.tabPage2.Text = "tabPage2";
-      this.tabPage2.UseVisualStyleBackColor = true;
+      this.tabPageAddNewLanguage.Location = new System.Drawing.Point(4, 22);
+      this.tabPageAddNewLanguage.Name = "tabPageAddNewLanguage";
+      this.tabPageAddNewLanguage.Padding = new System.Windows.Forms.Padding(3);
+      this.tabPageAddNewLanguage.Size = new System.Drawing.Size(999, 625);
+      this.tabPageAddNewLanguage.TabIndex = 1;
+      this.tabPageAddNewLanguage.Text = "Add new language";
+      this.tabPageAddNewLanguage.UseVisualStyleBackColor = true;
       // 
       // FormMain
       // 
@@ -544,7 +545,7 @@
     private System.Windows.Forms.ToolStripMenuItem àproposdeToolStripMenuItem;
     private System.Windows.Forms.TabControl tabControlMain;
     private System.Windows.Forms.TabPage tabPageAITraining;
-    private System.Windows.Forms.TabPage tabPage2;
+    private System.Windows.Forms.TabPage tabPageAddNewLanguage;
     private System.Windows.Forms.ListBox listBoxTopWords;
     private System.Windows.Forms.ComboBox comboBoxLanguages;
     private System.Windows.Forms.Button buttonTraining;
