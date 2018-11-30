@@ -10,7 +10,7 @@ namespace UnitTestAIOne
     public void TestMethod_RemovePunctuation_period()
     {
       const string source = "galaxy.";
-      const string expected = "galaxy";
+      const string expected = "galaxy ";
       string result = AIHelper.RemovePunctuation(source);
       Assert.AreEqual(result, expected);
     }
@@ -19,7 +19,7 @@ namespace UnitTestAIOne
     public void TestMethod_RemovePunctuation_semi_colon()
     {
       const string source = "galaxy;";
-      const string expected = "galaxy";
+      const string expected = "galaxy ";
       string result = AIHelper.RemovePunctuation(source);
       Assert.AreEqual(result, expected);
     }
@@ -28,7 +28,7 @@ namespace UnitTestAIOne
     public void TestMethod_RemovePunctuation_comma()
     {
       const string source = "galaxy,";
-      const string expected = "galaxy";
+      const string expected = "galaxy ";
       string result = AIHelper.RemovePunctuation(source);
       Assert.AreEqual(result, expected);
     }
@@ -37,7 +37,7 @@ namespace UnitTestAIOne
     public void TestMethod_RemovePunctuation_colon()
     {
       const string source = "galaxy:";
-      const string expected = "galaxy";
+      const string expected = "galaxy ";
       string result = AIHelper.RemovePunctuation(source);
       Assert.AreEqual(result, expected);
     }

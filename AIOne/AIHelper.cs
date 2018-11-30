@@ -107,7 +107,7 @@ namespace AIOne
       return result;
     }
 
-    public static string  nbRemovePunctuation(string phrase)
+    public static string  RemovePunctuation(string phrase)
     {
       return phrase.Replace(",", " ").Replace(".", " ").Replace(";", " ").Replace(":", " ").Replace("?", " ");
     }
