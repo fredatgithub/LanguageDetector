@@ -11,19 +11,19 @@ namespace UnitTestAIOne
     [TestMethod]
     public void TestMethod_SplitWords_one_word_once()
     {
-      const string source = "a";
-      Dictionary<string, int> expected = new Dictionary<string, int> { { "a", 1 } };
+      const string source = "very";
+      Dictionary<string, int> expected = new Dictionary<string, int> { { "very", 1 } };
       Dictionary<string, int> result = AIHelper.SplitWords(source);
       Assert.AreEqual(result.Count, expected.Count);
-      Assert.AreEqual(result["a"], expected["a"]);
+      Assert.AreEqual(result["very"], expected["very"]);
       Assert.IsTrue(DictionariesAreEqualed(result, expected));
     }
 
     [TestMethod]
     public void TestMethod_SplitWords_two_words_once()
     {
-      const string source = "a long";
-      var expected = new Dictionary<string, int> { { "a", 1 }, { "long", 1 }, };
+      const string source = "very long";
+      var expected = new Dictionary<string, int> { { "very", 1 }, { "long", 1 }, };
       Dictionary<string, int> result = AIHelper.SplitWords(source);
       Assert.AreEqual(result.Count, expected.Count);
       Assert.IsTrue(DictionariesAreEqualed(result, expected));
@@ -35,7 +35,7 @@ namespace UnitTestAIOne
       const string source = "a long long time ago in a galaxy far far away";
       var expected = new Dictionary<string, int>
       {
-        { "a", 2 }, { "long", 2 }, { "time", 1 }, { "ago", 1 }, { "in", 1 }, { "galaxy", 1 },
+        { "long", 2 }, { "time", 1 }, { "ago", 1 }, { "in", 1 }, { "galaxy", 1 },
         { "far", 2 }, { "away", 1 }
       };
       Dictionary<string, int> result = AIHelper.SplitWords(source);
@@ -64,6 +64,26 @@ namespace UnitTestAIOne
     {
       const string source = "123456789";
       var expected = new Dictionary<string, int>();
+      Dictionary<string, int> result = AIHelper.SplitWords(source);
+      Assert.AreEqual(result.Count, expected.Count);
+      Assert.IsTrue(DictionariesAreEqualed(result, expected));
+    }
+
+    [TestMethod]
+    public void TestMethod_SplitWords_two_numbers()
+    {
+      const string source = "123456789 galaxy";
+      var expected = new Dictionary<string, int>{{"galaxy", 1}};
+      Dictionary<string, int> result = AIHelper.SplitWords(source);
+      Assert.AreEqual(result.Count, expected.Count);
+      Assert.IsTrue(DictionariesAreEqualed(result, expected));
+    }
+
+    [TestMethod]
+    public void TestMethod_SplitWords_one_number_plus_numbers()
+    {
+      const string source = "123456789 galaxy51";
+      var expected = new Dictionary<string, int> { { "galaxy", 1 } };
       Dictionary<string, int> result = AIHelper.SplitWords(source);
       Assert.AreEqual(result.Count, expected.Count);
       Assert.IsTrue(DictionariesAreEqualed(result, expected));

@@ -76,8 +76,7 @@ namespace AIOne
         }
 
         // remove numbers in any word
-        // TODO 
-        Regex pattern = new Regex(@"^\d$");
+        cleanedWord = Regex.Replace(cleanedWord, @"\d", "");
 
         if (dico.ContainsKey(cleanedWord))
         {
@@ -108,7 +107,7 @@ namespace AIOne
       return result;
     }
 
-    public static string RemovePunctuation(string phrase)
+    public static string  nbRemovePunctuation(string phrase)
     {
       return phrase.Replace(",", " ").Replace(".", " ").Replace(";", " ").Replace(":", " ").Replace("?", " ");
     }
@@ -273,6 +272,11 @@ namespace AIOne
       }
       
       return result;
+    }
+
+    public static string RemoveDigits(string theString)
+    {
+      return Regex.Replace(theString, @"\d", "");
     }
   }
 }

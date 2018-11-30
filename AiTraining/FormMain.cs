@@ -290,7 +290,6 @@ namespace AiTraining
     private void ButtonDetect_Click(object sender, EventArgs e)
     {
       var languageDetected = new Dictionary<string, double>();
-      //var languageFrequencyFound = Properties.Settings.Default.ListOfLanguages.Split(',').ToDictionary(language => language, language => 0.0);
       foreach (string language in Settings.Default.ListOfLanguages.Split(','))
       {
         languageDetected.Add(language, 0.0);
