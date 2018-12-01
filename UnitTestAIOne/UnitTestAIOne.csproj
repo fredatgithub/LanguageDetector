@@ -58,8 +58,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AIOneStandard\AIOne.csproj">
-      <Project>{515dba58-8b66-45bd-9611-a61a632b44fe}</Project>
+    <ProjectReference Include="..\AIOne\AIOne.csproj">
+      <Project>{a1154b35-4b0d-4ce3-b698-0f06a09d7301}</Project>
       <Name>AIOne</Name>
     </ProjectReference>
   </ItemGroup>

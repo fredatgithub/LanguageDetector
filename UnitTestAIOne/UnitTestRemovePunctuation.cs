@@ -1,4 +1,5 @@
-﻿using AIOneStandard;
+﻿using AIOne;
+using AIOneStandard;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestAIOne

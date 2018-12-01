@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AIOneStandard.Properties {
+namespace AIOne.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -44,7 +44,7 @@ namespace AIOneStandard.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("you, he, she, it, we, they")]
+        [global::System.Configuration.DefaultSettingValueAttribute("I, you, he, she, it, we, they")]
         public string EnglishWords {
             get {
                 return ((string)(this["EnglishWords"]));

@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AIOneStandard.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AIOne.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="FrenchWiki" Type="(Web Service URL)" Scope="Application">
@@ -9,7 +9,7 @@
       <Value Profile="(Default)">je, tu, il, nous, vous, ils</Value>
     </Setting>
     <Setting Name="EnglishWords" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">you, he, she, it, we, they</Value>
+      <Value Profile="(Default)">I, you, he, she, it, we, they</Value>
     </Setting>
     <Setting Name="EnglishWiki" Type="System.String" Scope="Application">
       <Value Profile="(Default)">https://en.wikipedia.org/wiki/Punctuation</Value>
