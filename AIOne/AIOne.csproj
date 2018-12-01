@@ -9,7 +9,7 @@
     <TargetFramework>net472</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <!--<Authors>Freddy Juhel</Authors>-->
-      <Description>AIOne is the first step of an Artificial Intelligence which is to detect language</Description>
+    <Description>AIOne is the first step of an Artificial Intelligence which is to detect language</Description>
     <Copyright>(c) Freddy Juhel MIT 2018</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageTags>AI, artificial, intelligence, language, machine, learning</PackageTags>
@@ -29,11 +29,19 @@
     <Reference Include="mscorlib" />
   </ItemGroup>
 
-  <!--<ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>-->
+  </ItemGroup>
 
 </Project>

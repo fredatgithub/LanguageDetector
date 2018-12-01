@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AIOneStandard.Properties {
+namespace AIOne.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
