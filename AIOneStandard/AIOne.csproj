@@ -19,7 +19,7 @@
     <PackageReleaseNotes>AIOne is the first step of an Artificial Intelligence which is to detect language</PackageReleaseNotes>
     <PackageId>AIOne</PackageId>
     <Product>AIOne</Product>
-    <AssemblyName>AIOneStandard</AssemblyName>
+    <AssemblyName>AIOne</AssemblyName>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
