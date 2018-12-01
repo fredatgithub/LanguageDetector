@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestLanguageDetector", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountLanguageWords", "CountLanguageWords\CountLanguageWords.csproj", "{A101410B-7AF5-4AB0-8BC0-603832D5BC60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIOne.old", "AIOne\AIOne.old.csproj", "{CA761E5A-7D53-4A7C-B47C-188547B29FF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIOne-old", "AIOne\AIOne-old.csproj", "{CA761E5A-7D53-4A7C-B47C-188547B29FF2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestAIOne", "UnitTestAIOne\UnitTestAIOne.csproj", "{7CAA624C-3930-4280-A335-E65D5953C0BE}"
 EndProject
