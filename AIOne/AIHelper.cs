@@ -13,6 +13,11 @@ namespace AIOne
   /// </summary>
   public static class AIHelper
   {
+    /// <summary>
+    /// Sort a dictionary by value.
+    /// </summary>
+    /// <param name="sampleDico"></param>
+    /// <returns>A dictionary sorted by value.</returns>
     public static IEnumerable<KeyValuePair<string, int>> SortDicoByValue(Dictionary<string, int> sampleDico)
     {
       return sampleDico.OrderByDescending(sortingBy => sortingBy.Value);
