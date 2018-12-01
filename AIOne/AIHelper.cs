@@ -8,6 +8,9 @@ using System.Text.RegularExpressions;
 namespace AIOne
 {
   // ReSharper disable once InconsistentNaming
+  /// <summary>
+  /// Class for AI helper methods
+  /// </summary>
   public static class AIHelper
   {
     public static IEnumerable<KeyValuePair<string, int>> SortDicoByValue(Dictionary<string, int> sampleDico)
