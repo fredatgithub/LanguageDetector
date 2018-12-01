@@ -1,10 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <!--<TargetFramework>netstandard1.0</TargetFramework>-->
+    <TargetFramework>netstandard1.3</TargetFramework>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <!--<TargetFramework>net40</TargetFramework>-->
+    <!--<TargetFramework>net45</TargetFramework>-->
     <TargetFramework>net472</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Freddy Juhel</Authors>
+    <Owner>Freddy</Owner>
     <Description>AIOne is the first step of an Artificial Intelligence which is to detect language</Description>
     <Copyright>(c) Freddy Juhel MIT 2018</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
