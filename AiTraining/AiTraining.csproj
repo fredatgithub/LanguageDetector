@@ -83,8 +83,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AIOne\AIOne.csproj">
-      <Project>{ca761e5a-7d53-4a7c-b47c-188547b29ff2}</Project>
+    <ProjectReference Include="..\AIOneStandard\AIOne.csproj">
+      <Project>{515dba58-8b66-45bd-9611-a61a632b44fe}</Project>
       <Name>AIOne</Name>
     </ProjectReference>
   </ItemGroup>

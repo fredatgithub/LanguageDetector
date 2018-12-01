@@ -4,6 +4,11 @@
         <name>AIOneStandard</name>
     </assembly>
     <members>
+        <member name="T:AIOneStandard.AIHelper">
+            <summary>
+            AI helper class
+            </summary>
+        </member>
         <member name="M:AIOneStandard.AIHelper.SortDicoByValue(System.Collections.Generic.Dictionary{System.String,System.Int32})">
             <summary>
             Sort a dictionary by value.
