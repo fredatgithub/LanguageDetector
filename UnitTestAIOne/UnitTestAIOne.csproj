@@ -58,9 +58,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AIOne\AIOne.old.csproj">
-      <Project>{ca761e5a-7d53-4a7c-b47c-188547b29ff2}</Project>
-      <Name>AIOne.old</Name>
+    <ProjectReference Include="..\AIOneStandard\AIOne.csproj">
+      <Project>{515dba58-8b66-45bd-9611-a61a632b44fe}</Project>
+      <Name>AIOne</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
