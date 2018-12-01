@@ -22,7 +22,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>C:\Users\fjuhel\Source\Repos\LanguageDetector\AIOneStandard\AIOneStandard.xml</DocumentationFile>
+    <DocumentationFile>C:\Users\fjuhel\Source\Repos\LanguageDetector\AIOne\AIOne.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
