@@ -1,17 +1,26 @@
 <?xml version="1.0"?>
-<package >
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
+  <!-- The identifier that must be unique within the hosting gallery -->
     <id>AIOne</id>
-    <version>$version$</version>
+	<!-- The package version number that is used when resolving dependencies -->
+	<!-- <version>$version$</version> -->
+    <version>1.0.0</version>
     <title>AIOne</title>
     <authors>Freddy Juhel</authors>
-    <owners>Freddy Juhel</owners>
+	<!-- 
+            Owners are typically nuget.org identities that allow gallery
+            users to easily find other packages by the same owners.  
+        -->
+    <owners>Freddy</owners>
     <licenseUrl>https://github.com/fredatgithub/LanguageDetector/blob/master/LICENSE</licenseUrl>
-    <projectUrl>http://none.sample.net/</projectUrl>
+    <projectUrl>https://github.com/fredatgithub/LanguageDetector</projectUrl>
+	<!-- The icon is used in Visual Studio's package manager UI -->
     <iconUrl>https://avatars3.githubusercontent.com/u/7890777?s=140</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>AIOne is the first step of an Artificial Intelligence which is to detect language.</description>
-    <releaseNotes></releaseNotes>
+	<!-- Any details about this particular release -->
+    <releaseNotes>First version</releaseNotes>
     <copyright>Copyright &#x00A9; Freddy Juhel MIT license.  All rights reserved.</copyright>
     <tags>AI artificial intelligence language machine learning</tags>
   </metadata>
