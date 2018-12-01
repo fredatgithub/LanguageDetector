@@ -12,7 +12,6 @@
             Owners are typically nuget.org identities that allow gallery
             users to easily find other packages by the same owners.  
         -->
-    <owners>Freddy</owners>
     <licenseUrl>https://github.com/fredatgithub/LanguageDetector/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/fredatgithub/LanguageDetector</projectUrl>
 	<!-- The icon is used in Visual Studio's package manager UI -->
