@@ -7,6 +7,9 @@ using AIOneStandard.Properties;
 
 namespace AIOneStandard
 {
+  /// <summary>
+  /// AI helper class
+  /// </summary>
   // ReSharper disable once InconsistentNaming
   public static class AIHelper
   {
