@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Freddy Juhel</Authors>
+    <Description>AIOne is the first step of an Artificial Intelligence which is to detect language</Description>
+    <Copyright>(c) Freddy Juhel MIT 2018</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageTags>AI, artificial, intelligence, language, machine, learning</PackageTags>
+    <PackageProjectUrl>https://github.com/fredatgithub/LanguageDetector</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/fredatgithub/LanguageDetector/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageReleaseNotes>AIOne is the first step of an Artificial Intelligence which is to detect language</PackageReleaseNotes>
+    <PackageId>AIOne</PackageId>
+    <Product>AIOne</Product>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Users\fjuhel\Source\Repos\LanguageDetector\AIOneStandard\AIOneStandard.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>
