@@ -31,6 +31,7 @@ namespace AiTraining
       Settings.Default.WindowLeft = Left;
       Settings.Default.WindowTop = Top;
       Settings.Default.comboBoxLanguagesAvailableIndex = comboBoxLanguagesAvailable.SelectedIndex;
+      Settings.Default.tabControlMainIndexSelected = tabControlMain.SelectedIndex;
       Settings.Default.Save();
     }
 
@@ -156,6 +157,7 @@ namespace AiTraining
       Top = Settings.Default.WindowTop < 0 ? 0 : Settings.Default.WindowTop;
       Left = Settings.Default.WindowLeft < 0 ? 0 : Settings.Default.WindowLeft;
       comboBoxLanguagesAvailable.SelectedIndex = Settings.Default.comboBoxLanguagesAvailableIndex;
+      tabControlMain.SelectedIndex = Settings.Default.tabControlMainIndexSelected;
     }
 
     private void DisplayTitle()
@@ -333,7 +335,7 @@ namespace AiTraining
 
     private static List<string> GetLanguageWords(string language)
     {
-      List<string> result = new List<string>();
+      var result = new List<string>();
       switch (language.Trim().ToLower())
       {
         case "french":
@@ -342,12 +344,15 @@ namespace AiTraining
         case "english":
           result = Settings.Default.EnglishWords.Split(',').ToList();
           break;
+        default:
+          result = new List<string>();
+          break;
       }
 
       return result;
     }
 
-    private void textBoxSource_TextChanged(object sender, EventArgs e)
+    private void TextBoxSource_TextChanged(object sender, EventArgs e)
     {
       if (textBoxSource.Text.Trim() == string.Empty)
       {
@@ -366,7 +371,7 @@ namespace AiTraining
       QuitterToolStripMenuItem_Click(sender, e);
     }
 
-    private void buttonPeekFile_Click(object sender, EventArgs e)
+    private void ButtonPeekFile_Click(object sender, EventArgs e)
     {
       textBoxSource.Text = string.Empty;
       var fileName = PeekFile(false);

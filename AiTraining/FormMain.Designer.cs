@@ -384,7 +384,7 @@
       this.textBoxSource.Size = new System.Drawing.Size(1397, 602);
       this.textBoxSource.TabIndex = 12;
       this.textBoxSource.Text = resources.GetString("textBoxSource.Text");
-      this.textBoxSource.TextChanged += new System.EventHandler(this.textBoxSource_TextChanged);
+      this.textBoxSource.TextChanged += new System.EventHandler(this.TextBoxSource_TextChanged);
       // 
       // buttonPeekFile
       // 
@@ -396,7 +396,7 @@
       this.buttonPeekFile.TabIndex = 11;
       this.buttonPeekFile.Text = "Peek File";
       this.buttonPeekFile.UseVisualStyleBackColor = true;
-      this.buttonPeekFile.Click += new System.EventHandler(this.buttonPeekFile_Click);
+      this.buttonPeekFile.Click += new System.EventHandler(this.ButtonPeekFile_Click);
       // 
       // labelPasteOrPeekFile
       // 
