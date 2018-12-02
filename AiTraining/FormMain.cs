@@ -8,7 +8,6 @@ using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 using AIOne;
-using AIOneStandard;
 
 namespace AiTraining
 {
