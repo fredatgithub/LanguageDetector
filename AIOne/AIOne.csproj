@@ -3,7 +3,7 @@
   <PropertyGroup>
     <!--<TargetFramework>netstandard1.0</TargetFramework>-->
     <!--<TargetFramework>netstandard1.3</TargetFramework>-->
-    <!--<TargetFramework>netstandard2.0</TargetFramework>-->
+    <TargetFramework>netstandard2.0</TargetFramework>
     <!--<TargetFramework>net40</TargetFramework>-->
     <!--<TargetFramework>net45</TargetFramework>-->
     <TargetFramework>net472</TargetFramework>
