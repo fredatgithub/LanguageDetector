@@ -373,8 +373,13 @@ namespace AiTraining
 
     private void ButtonPeekFile_Click(object sender, EventArgs e)
     {
-      textBoxSource.Text = string.Empty;
-      var fileName = PeekFile(false);
+      ReadFile(textBoxSource, PeekFile(false));
+    }
+
+    private void ReadFile(TextBox textBox, string fileName)
+    {
+      textBox.Text = string.Empty;
+      fileName = PeekFile(false);
       // read file and put it in textbox
       try
       {
@@ -390,6 +395,11 @@ namespace AiTraining
       {
         // ignored
       }
+    }
+
+    private void ButtonAddLanguagePeekFile_Click(object sender, EventArgs e)
+    {
+      ReadFile(textBoxAddNewSource, PeekFile(false));
     }
   }
 }
