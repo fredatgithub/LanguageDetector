@@ -67,6 +67,9 @@
       this.buttonPeekFile = new System.Windows.Forms.Button();
       this.labelPasteOrPeekFile = new System.Windows.Forms.Label();
       this.tabPageAddNewLanguage = new System.Windows.Forms.TabPage();
+      this.textBoxAddNewSource = new System.Windows.Forms.TextBox();
+      this.buttonAddLanguagePeekFile = new System.Windows.Forms.Button();
+      this.labelAddNewPasteText = new System.Windows.Forms.Label();
       this.comboBoxLanguagesAvailable = new System.Windows.Forms.ComboBox();
       this.comboBoxLanguages = new System.Windows.Forms.ComboBox();
       this.buttonTraining = new System.Windows.Forms.Button();
@@ -74,9 +77,6 @@
       this.labelWordsFromTextBox = new System.Windows.Forms.Label();
       this.listBoxWordsFromFile = new System.Windows.Forms.ListBox();
       this.listBoxTopWords = new System.Windows.Forms.ListBox();
-      this.textBoxAddNewSource = new System.Windows.Forms.TextBox();
-      this.buttonAddLanguagePeekFile = new System.Windows.Forms.Button();
-      this.labelAddNewPasteText = new System.Windows.Forms.Label();
       this.menuStripMain.SuspendLayout();
       this.tabControlMain.SuspendLayout();
       this.tabPageAITraining.SuspendLayout();
@@ -433,6 +433,41 @@
       this.tabPageAddNewLanguage.Text = "Add new language";
       this.tabPageAddNewLanguage.UseVisualStyleBackColor = true;
       // 
+      // textBoxAddNewSource
+      // 
+      this.textBoxAddNewSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.textBoxAddNewSource.Location = new System.Drawing.Point(55, 151);
+      this.textBoxAddNewSource.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+      this.textBoxAddNewSource.Multiline = true;
+      this.textBoxAddNewSource.Name = "textBoxAddNewSource";
+      this.textBoxAddNewSource.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+      this.textBoxAddNewSource.Size = new System.Drawing.Size(905, 300);
+      this.textBoxAddNewSource.TabIndex = 31;
+      this.textBoxAddNewSource.Text = resources.GetString("textBoxAddNewSource.Text");
+      // 
+      // buttonAddLanguagePeekFile
+      // 
+      this.buttonAddLanguagePeekFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.buttonAddLanguagePeekFile.Location = new System.Drawing.Point(812, 95);
+      this.buttonAddLanguagePeekFile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+      this.buttonAddLanguagePeekFile.Name = "buttonAddLanguagePeekFile";
+      this.buttonAddLanguagePeekFile.Size = new System.Drawing.Size(148, 45);
+      this.buttonAddLanguagePeekFile.TabIndex = 30;
+      this.buttonAddLanguagePeekFile.Text = "Peek File";
+      this.buttonAddLanguagePeekFile.UseVisualStyleBackColor = true;
+      this.buttonAddLanguagePeekFile.Click += new System.EventHandler(this.ButtonAddLanguagePeekFile_Click);
+      // 
+      // labelAddNewPasteText
+      // 
+      this.labelAddNewPasteText.AutoSize = true;
+      this.labelAddNewPasteText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.labelAddNewPasteText.Location = new System.Drawing.Point(51, 103);
+      this.labelAddNewPasteText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+      this.labelAddNewPasteText.Name = "labelAddNewPasteText";
+      this.labelAddNewPasteText.Size = new System.Drawing.Size(365, 29);
+      this.labelAddNewPasteText.TabIndex = 29;
+      this.labelAddNewPasteText.Text = "Paste text below or peek a file";
+      // 
       // comboBoxLanguagesAvailable
       // 
       this.comboBoxLanguagesAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -494,7 +529,7 @@
       this.listBoxWordsFromFile.Location = new System.Drawing.Point(1243, 80);
       this.listBoxWordsFromFile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
       this.listBoxWordsFromFile.Name = "listBoxWordsFromFile";
-      this.listBoxWordsFromFile.Size = new System.Drawing.Size(234, 676);
+      this.listBoxWordsFromFile.Size = new System.Drawing.Size(234, 356);
       this.listBoxWordsFromFile.TabIndex = 23;
       // 
       // listBoxTopWords
@@ -505,43 +540,8 @@
       this.listBoxTopWords.Location = new System.Drawing.Point(978, 80);
       this.listBoxTopWords.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
       this.listBoxTopWords.Name = "listBoxTopWords";
-      this.listBoxTopWords.Size = new System.Drawing.Size(234, 676);
+      this.listBoxTopWords.Size = new System.Drawing.Size(234, 356);
       this.listBoxTopWords.TabIndex = 22;
-      // 
-      // textBoxAddNewSource
-      // 
-      this.textBoxAddNewSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.textBoxAddNewSource.Location = new System.Drawing.Point(55, 151);
-      this.textBoxAddNewSource.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-      this.textBoxAddNewSource.Multiline = true;
-      this.textBoxAddNewSource.Name = "textBoxAddNewSource";
-      this.textBoxAddNewSource.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-      this.textBoxAddNewSource.Size = new System.Drawing.Size(905, 300);
-      this.textBoxAddNewSource.TabIndex = 31;
-      this.textBoxAddNewSource.Text = resources.GetString("textBoxAddNewSource.Text");
-      // 
-      // buttonAddLanguagePeekFile
-      // 
-      this.buttonAddLanguagePeekFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.buttonAddLanguagePeekFile.Location = new System.Drawing.Point(812, 95);
-      this.buttonAddLanguagePeekFile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-      this.buttonAddLanguagePeekFile.Name = "buttonAddLanguagePeekFile";
-      this.buttonAddLanguagePeekFile.Size = new System.Drawing.Size(148, 45);
-      this.buttonAddLanguagePeekFile.TabIndex = 30;
-      this.buttonAddLanguagePeekFile.Text = "Peek File";
-      this.buttonAddLanguagePeekFile.UseVisualStyleBackColor = true;
-      this.buttonAddLanguagePeekFile.Click += new System.EventHandler(this.ButtonAddLanguagePeekFile_Click);
-      // 
-      // labelAddNewPasteText
-      // 
-      this.labelAddNewPasteText.AutoSize = true;
-      this.labelAddNewPasteText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.labelAddNewPasteText.Location = new System.Drawing.Point(51, 103);
-      this.labelAddNewPasteText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-      this.labelAddNewPasteText.Name = "labelAddNewPasteText";
-      this.labelAddNewPasteText.Size = new System.Drawing.Size(365, 29);
-      this.labelAddNewPasteText.TabIndex = 29;
-      this.labelAddNewPasteText.Text = "Paste text below or peek a file";
       // 
       // FormMain
       // 
