@@ -1,9 +1,9 @@
-﻿using System;
+﻿using AIOne.Properties;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using AIOne.Properties;
 
 namespace AIOne
 {
@@ -124,14 +124,14 @@ namespace AIOne
     {
       foreach (string language in Settings.Default.ListOfLanguages.Split(','))
       {
-        switch (language.ToLower())
+        switch (language.ToLower().trim())
         {
           case "french":
             if (!File.Exists(Settings.Default.FrenchFileName))
             {
               // create french basic file if not exist
-              CreateFile(Settings.Default.FrenchFileName);
-              AddWordsToFile(Settings.Default.FrenchFileName, GetBasicWords(Settings.Default.FrenchFileName));
+              CreateFile(Settings.Default.FrenchFileName, "french");
+              //AddWordsToFile(Settings.Default.FrenchFileName, GetBasicWords(Settings.Default.FrenchFileName));
             }
             break;
 
@@ -139,8 +139,8 @@ namespace AIOne
             if (!File.Exists(Settings.Default.EnglishFileName))
             {
               // create English basic file if not exist
-              CreateFile(Settings.Default.EnglishFileName);
-              AddWordsToFile(Settings.Default.EnglishFileName, GetBasicWords(Settings.Default.EnglishFileName));
+              CreateFile(Settings.Default.EnglishFileName, "english");
+              //AddWordsToFile(Settings.Default.EnglishFileName, GetBasicWords(Settings.Default.EnglishFileName));
             }
             break;
           default:
@@ -149,13 +149,17 @@ namespace AIOne
       }
     }
 
-    public static void CreateFile(string fileName)
+    public static void CreateFile(string fileName, string language)
     {
       try
       {
+        var words = GetBasicWords(language).Split(',');
         using (StreamWriter sw = new StreamWriter(fileName))
         {
-
+          foreach(string word in words)
+          {
+            sw.WriteLine(word.trim());
+          }
         }
       }
       catch (Exception)
@@ -167,7 +171,6 @@ namespace AIOne
     public static string GetBasicWords(string language)
     {
       string result = string.Empty;
-      //string language = fileName.Substring(0, fileName.Length - 4).ToLower();
       switch (language)
       {
         case "french":
@@ -190,7 +193,7 @@ namespace AIOne
       {
         using (StreamWriter sw = new StreamWriter(fileName))
         {
-          foreach (string word in words.Split(','))
+          foreach (string word in words.Split(',').trim())
           {
             sw.WriteLine(word);
           }
@@ -232,7 +235,7 @@ namespace AIOne
         string fileName = $"{language}.txt";
         if (!File.Exists(fileName))
         {
-          AddWordsToFile(fileName, GetBasicWords(fileName));
+          InitStartFiles();
         }
       }
 
