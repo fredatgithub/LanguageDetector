@@ -30,9 +30,7 @@ namespace AIOne
 
     public static int CountWords(string phrase)
     {
-      var dico = new Dictionary<string, int>();
-      dico = SplitWords(phrase);
-      return dico.Count;
+      return SplitWords(phrase).Count;
     }
 
     public static int CountWordsFromDictionary(Dictionary<string, int> dico)
@@ -124,7 +122,7 @@ namespace AIOne
     {
       foreach (string language in Settings.Default.ListOfLanguages.Split(','))
       {
-        switch (language.ToLower().trim())
+        switch (language.ToLower().Trim())
         {
           case "french":
             if (!File.Exists(Settings.Default.FrenchFileName))
@@ -158,7 +156,7 @@ namespace AIOne
         {
           foreach(string word in words)
           {
-            sw.WriteLine(word.trim());
+            sw.WriteLine(word.Trim());
           }
         }
       }
@@ -193,9 +191,9 @@ namespace AIOne
       {
         using (StreamWriter sw = new StreamWriter(fileName))
         {
-          foreach (string word in words.Split(',').trim())
+          foreach (string word in words.Split(','))
           {
-            sw.WriteLine(word);
+            sw.WriteLine(word.Trim());
           }
         }
       }
