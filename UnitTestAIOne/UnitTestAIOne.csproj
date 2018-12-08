@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UnitTestRemoveDigits.cs" />
     <Compile Include="UnitTestRemovePunctuation.cs" />
     <Compile Include="UnitTestCountWordsFromDictionary.cs" />
     <Compile Include="UnitTestSplitWords.cs" />

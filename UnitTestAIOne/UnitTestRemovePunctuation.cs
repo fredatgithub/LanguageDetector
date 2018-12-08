@@ -7,57 +7,57 @@ namespace UnitTestAIOne
   public class UnitTestHelper
   {
     [TestMethod]
-    public void TestMethod_RemovePunctuation_period()
+    public void TestMethodRemovePunctuationPeriod()
     {
-      const string source = "galaxy.";
-      const string expected = "galaxy ";
-      string result = AIHelper.RemovePunctuation(source);
-      Assert.AreEqual(result, expected);
+      const string Source = "galaxy.";
+      const string Expected = "galaxy ";
+      string result = AIHelper.RemovePunctuation(Source);
+      Assert.AreEqual(result, Expected);
     }
 
     [TestMethod]
-    public void TestMethod_RemovePunctuation_semi_colon()
+    public void TestMethodRemovePunctuationSemiColon()
     {
-      const string source = "galaxy;";
-      const string expected = "galaxy ";
-      string result = AIHelper.RemovePunctuation(source);
-      Assert.AreEqual(result, expected);
+      const string Source = "galaxy;";
+      const string Expected = "galaxy ";
+      string result = AIHelper.RemovePunctuation(Source);
+      Assert.AreEqual(result, Expected);
     }
 
     [TestMethod]
-    public void TestMethod_RemovePunctuation_comma()
+    public void TestMethodRemovePunctuationComma()
     {
-      const string source = "galaxy,";
-      const string expected = "galaxy ";
-      string result = AIHelper.RemovePunctuation(source);
-      Assert.AreEqual(result, expected);
+      const string Source = "galaxy,";
+      const string Expected = "galaxy ";
+      string result = AIHelper.RemovePunctuation(Source);
+      Assert.AreEqual(result, Expected);
     }
 
     [TestMethod]
-    public void TestMethod_RemovePunctuation_colon()
+    public void TestMethodRemovePunctuationColon()
     {
-      const string source = "galaxy:";
-      const string expected = "galaxy ";
-      string result = AIHelper.RemovePunctuation(source);
-      Assert.AreEqual(result, expected);
+      const string Source = "galaxy:";
+      const string Expected = "galaxy ";
+      string result = AIHelper.RemovePunctuation(Source);
+      Assert.AreEqual(result, Expected);
     }
 
     [TestMethod]
-    public void TestMethod_RemovePunctuation_no_punctuation_sign()
+    public void TestMethodRemovePunctuationNoPunctuationSign()
     {
-      const string source = "galaxy";
-      const string expected = "galaxy";
-      string result = AIHelper.RemovePunctuation(source);
-      Assert.AreEqual(result, expected);
+      const string Source = "galaxy";
+      const string Expected = "galaxy";
+      string result = AIHelper.RemovePunctuation(Source);
+      Assert.AreEqual(result, Expected);
     }
 
     [TestMethod]
-    public void TestMethod_RemovePunctuation_string_empty()
+    public void TestMethodRemovePunctuationStringEmpty()
     {
-      const string source = "";
-      const string expected = "";
-      string result = AIHelper.RemovePunctuation(source);
-      Assert.AreEqual(result, expected);
+      const string Source = "";
+      const string Expected = "";
+      string result = AIHelper.RemovePunctuation(Source);
+      Assert.AreEqual(result, Expected);
     }
   }
 }

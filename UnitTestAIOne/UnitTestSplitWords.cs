@@ -8,12 +8,28 @@ namespace UnitTestAIOne
   [TestClass]
   public class UnitTestSplitWords
   {
+    public static bool DictionariesAreEqualed(Dictionary<string, int> source, Dictionary<string, int> target)
+    {
+      bool result = true;
+      if (source.Count != target.Count)
+      {
+        return false;
+      }
+
+      if (source.Except(target).Any())
+      {
+        return false;
+      }
+
+      return result;
+    }
+
     [TestMethod]
     public void TestMethod_SplitWords_one_word_once()
     {
-      const string source = "very";
+      const string Source = "very";
       Dictionary<string, int> expected = new Dictionary<string, int> { { "very", 1 } };
-      Dictionary<string, int> result = AIHelper.SplitWords(source);
+      Dictionary<string, int> result = AIHelper.SplitWords(Source);
       Assert.AreEqual(result.Count, expected.Count);
       Assert.AreEqual(result["very"], expected["very"]);
       Assert.IsTrue(DictionariesAreEqualed(result, expected));
@@ -43,21 +59,7 @@ namespace UnitTestAIOne
       Assert.IsTrue(DictionariesAreEqualed(result, expected));
     }
 
-    public static bool DictionariesAreEqualed(Dictionary<string, int> source, Dictionary<string, int> target)
-    {
-      bool result = true;
-      if (source.Count != target.Count)
-      {
-        return false;
-      }
-
-      if (source.Except(target).Any())
-      {
-        return false;
-      }
-
-      return result;
-    }
+    
 
     [TestMethod]
     public void TestMethod_SplitWords_only_numbers()

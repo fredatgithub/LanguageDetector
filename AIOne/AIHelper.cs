@@ -82,7 +82,7 @@ namespace AIOne
         }
 
         // remove numbers in any word
-        cleanedWord = Regex.Replace(cleanedWord, @"\d", "");
+        cleanedWord = Regex.Replace(cleanedWord, @"\d", string.Empty);
 
         if (dico.ContainsKey(cleanedWord))
         {
@@ -285,7 +285,7 @@ namespace AIOne
 
     public static string RemoveDigits(string theString)
     {
-      return Regex.Replace(theString, @"\d", "");
+      return Regex.Replace(theString, @"\d", string.Empty);
     }
   }
 }
