@@ -309,11 +309,11 @@ namespace AiTraining
         languageDetected.Add(language, 0.0);
       }
 
-      var listOfWords = AIHelper.SplitWords(AIHelper.RemovePunctuation(textBoxSource.Text));
+      var listOfWords = AIHelper.SplitWords(AIHelper.RemovePunctuation(this.textBoxSource.Text));
       var languageDetectedTmp = new Dictionary<string, double>();
       foreach (KeyValuePair<string, double> pair in languageDetected)
       {
-        languageDetectedTmp[pair.Key] = AIHelper.CountFoundWords(GetLanguageWords(pair.Key), listOfWords);
+        languageDetectedTmp[pair.Key] = AIHelper.CountFoundWords(GetLanguageWords(pair.Key), listOfWords.Keys.ToList());
       }
 
       double maxValue = languageDetectedTmp.Max(v => v.Value);

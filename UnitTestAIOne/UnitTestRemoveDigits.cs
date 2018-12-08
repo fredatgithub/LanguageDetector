@@ -96,7 +96,5 @@
       string result = AIHelper.RemoveDigits(Source);
       Assert.AreEqual(result, Expected);
     }
-
-
   }
 }

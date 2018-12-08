@@ -263,7 +263,27 @@ namespace AIOne
 
     }
 
-    public static double CountFoundWords(List<string> referenceLanguageWords, Dictionary<string, int> listOfWordsToBeDetected)
+    public static double CountFoundWords(List<string> referenceLanguageWords, List<string> listOfWordsToBeDetected)
+    {
+      double result = 0.0;
+      int numberOfWordsFound = 0;
+      foreach (var wordKeyPair in listOfWordsToBeDetected)
+      {
+        if (referenceLanguageWords.Contains(wordKeyPair.ToLower()))
+        {
+          numberOfWordsFound++;
+        }
+      }
+
+      if (referenceLanguageWords.Count != 0 && numberOfWordsFound != 0)
+      {
+        result = numberOfWordsFound / (double)referenceLanguageWords.Count;
+      }
+
+      return result;
+    }
+
+    public static double CountFoundWords2(List<string> referenceLanguageWords, Dictionary<string, int> listOfWordsToBeDetected)
     {
       double result = 0.0;
       int numberOfWordsFound = 0;
@@ -277,7 +297,7 @@ namespace AIOne
 
       if (referenceLanguageWords.Count != 0 && numberOfWordsFound != 0)
       {
-        result = (double)numberOfWordsFound / (double)referenceLanguageWords.Count;
+        result = numberOfWordsFound / (double)referenceLanguageWords.Count;
       }
 
       return result;
