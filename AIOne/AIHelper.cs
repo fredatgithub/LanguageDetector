@@ -154,7 +154,7 @@ namespace AIOne
         var words = GetBasicWords(language).Split(',');
         using (StreamWriter sw = new StreamWriter(fileName))
         {
-          foreach(string word in words)
+          foreach (string word in words)
           {
             sw.WriteLine(word.Trim());
           }
@@ -224,13 +224,14 @@ namespace AIOne
     {
       string[] result = { "not found", "unknown" };
       var languageWordsFound = new Dictionary<string, int>();
+
       // get a list of languages in xml files
       var listOfLanguagesAvailable = Settings.Default.ListOfLanguages.Split(',').ToList();
 
       // for each language calculate the number of words found
       foreach (string language in listOfLanguagesAvailable)
       {
-        string fileName = $"{language}.txt";
+        string fileName = $"{language.Trim()}.txt";
         if (!File.Exists(fileName))
         {
           InitStartFiles();
@@ -247,20 +248,19 @@ namespace AIOne
     {
       // number of words found divided by total number of words equals percentage of words found
       double result = 0.00;
-      Dictionary<string, double> wordsFound = new Dictionary<string, double>();
 
       // init dictionaries
       var listOfLanguagesAvailable = Settings.Default.ListOfLanguages.Split(',').ToList();
+
       // for each language calculate the number of words found
+      Dictionary<string, double> wordsFound = listOfLanguagesAvailable.ToDictionary(language => language, language => 0.0);
+
       foreach (string language in listOfLanguagesAvailable)
       {
-        wordsFound.Add(language, 0.0);
+        //
       }
 
-
-
       return result;
-
     }
 
     public static double CountFoundWords(List<string> referenceLanguageWords, List<string> listOfWordsToBeDetected)
@@ -283,7 +283,7 @@ namespace AIOne
       return result;
     }
 
-    public static double CountFoundWords2(List<string> referenceLanguageWords, Dictionary<string, int> listOfWordsToBeDetected)
+    public static double CountFoundWordsWithDictionary(List<string> referenceLanguageWords, Dictionary<string, int> listOfWordsToBeDetected)
     {
       double result = 0.0;
       int numberOfWordsFound = 0;
