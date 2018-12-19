@@ -310,5 +310,17 @@ namespace AIOne
     {
       return Regex.Replace(theString, @"\d", string.Empty);
     }
+    
+    public Enum Intent
+    {
+      Unknown = 0,
+      Question,
+      Affirmative
+    }
+    
+    public static Intent IntentOfSentence(string sentence)
+    {
+      return sentence.EndsWith('?') ? Intent.Question : Affirmative;
+    }
   }
 }
