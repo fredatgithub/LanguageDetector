@@ -311,16 +311,16 @@ namespace AIOne
       return Regex.Replace(theString, @"\d", string.Empty);
     }
     
-    public Enum Intent
+    public Enum Intention
     {
       Unknown = 0,
       Question,
       Affirmative
     }
     
-    public static Intent IntentOfSentence(string sentence)
+    public static Intention IntentOfSentence(string sentence)
     {
-      return sentence.EndsWith('?') ? Intent.Question : Affirmative;
+      return sentence.TrimRight().EndsWith('?') ? Intention.Question : Affirmative;
     }
   }
 }
