@@ -117,6 +117,11 @@ namespace AIOne
     {
       return phrase.Replace(",", " ").Replace(".", " ").Replace(";", " ").Replace(":", " ").Replace("?", " ");
     }
+    
+    public static string RemoveRightEndPunctuation(string phrase)
+    {
+      return phrase.TrimRight(',').TrimRight('.').TrimRight(';').TrimRight(':');
+    }
 
     public static void InitStartFiles()
     {
