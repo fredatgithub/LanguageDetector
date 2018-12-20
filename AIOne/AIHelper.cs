@@ -118,9 +118,9 @@ namespace AIOne
       return phrase.Replace(",", " ").Replace(".", " ").Replace(";", " ").Replace(":", " ").Replace("?", " ");
     }
     
-    public static string RemoveRightEndPunctuation(string phrase)
+    public static string RemoveEndPunctuation(string phrase)
     {
-      return phrase.TrimRight(',').TrimRight('.').TrimRight(';').TrimRight(':');
+      return phrase.TrimEnd(',').TrimEnd('.').TrimEnd(';').TrimEnd(':');
     }
 
     public static void InitStartFiles()
@@ -316,16 +316,20 @@ namespace AIOne
       return Regex.Replace(theString, @"\d", string.Empty);
     }
     
-    public Enum Intention
-    {
-      Unknown = 0,
-      Question,
-      Affirmative
-    }
-    
     public static Intention IntentOfSentence(string sentence)
     {
-      return sentence.TrimRight().EndsWith('?') ? Intention.Question : Affirmative;
+      var listOfQuestionStartWords = new List<string> { "what", "how", "why", "who" };
+      if (listOfQuestionStartWords.Any(word => sentence.ToLower().StartsWith(word)))
+      {
+        return Intention.Question;
+      }
+
+      if (sentence.TrimEnd().EndsWith("?"))
+      {
+        return Intention.Question;
+      }
+
+      return Intention.Affirmative;
     }
   }
 }
