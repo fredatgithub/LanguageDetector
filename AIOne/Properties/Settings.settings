@@ -24,7 +24,7 @@
       <Value Profile="(Default)">french, english, latin</Value>
     </Setting>
     <Setting Name="EnglishQuestionStartingWords" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">what,how,why,who,when,where,do, does, have, has,is,whose,which,were</Value>
+      <Value Profile="(Default)">what,how,why,who,when,where,do, does, have, has,is,whose,which,were,isn't</Value>
     </Setting>
   </Settings>
 </SettingsFile>
