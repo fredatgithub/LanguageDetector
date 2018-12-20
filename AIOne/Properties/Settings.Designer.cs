@@ -89,7 +89,7 @@ namespace AIOne.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("what,how,why,who,when,where,do, does, have, has,is,whose,which")]
+        [global::System.Configuration.DefaultSettingValueAttribute("what,how,why,who,when,where,do, does, have, has,is,whose,which,were")]
         public string EnglishQuestionStartingWords {
             get {
                 return ((string)(this["EnglishQuestionStartingWords"]));

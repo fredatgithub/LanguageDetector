@@ -318,8 +318,14 @@ namespace AIOne
     
     public static Intention IntentOfSentence(string sentence)
     {
-      var listOfQuestionStartWords = new List<string> { "what", "how", "why", "who", "when", "where" };
-      if (listOfQuestionStartWords.Any(word => sentence.ToLower().StartsWith(word)))
+      var listOfQuestionStartWords = new List<string>();
+      listOfQuestionStartWords.AddRange(Settings.Default.EnglishQuestionStartingWords.Split(','));
+      if (listOfQuestionStartWords.Count == 0)
+      {
+        return Intention.Affirmative;
+      }
+
+      if (listOfQuestionStartWords.Any(word => sentence.ToLower().StartsWith(word.ToLower())))
       {
         return Intention.Question;
       }

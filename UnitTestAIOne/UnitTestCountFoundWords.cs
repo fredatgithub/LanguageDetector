@@ -26,7 +26,8 @@
       var source2 = new List<string> { "you", "are", "he", "is" };
       const double Expected = 1.0;
       var result = AIHelper.CountFoundWords(source1, source2);
-      //Assert.AreEqual(result, Expected);
+
+      // Assert.AreEqual(result, Expected);
       Assert.IsFalse(false); // assuming all reference words are in lower case.
     }
 

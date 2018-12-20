@@ -53,6 +53,7 @@
     <Compile Include="UnitTestRemoveDigits.cs" />
     <Compile Include="UnitTestRemovePunctuation.cs" />
     <Compile Include="UnitTestCountWordsFromDictionary.cs" />
+    <Compile Include="UnitTestIntentOfSentence.cs" />
     <Compile Include="UnitTestSplitWords.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
