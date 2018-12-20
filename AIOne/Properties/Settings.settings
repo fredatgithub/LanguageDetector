@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AIOneStandard.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AIOne.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="FrenchWiki" Type="(Web Service URL)" Scope="Application">
@@ -22,6 +22,9 @@
     </Setting>
     <Setting Name="ListOfLanguages" Type="System.String" Scope="Application">
       <Value Profile="(Default)">french, english, latin</Value>
+    </Setting>
+    <Setting Name="EnglishQuestionStartingWords" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">what,how,why,who,when,where,do, does, have, has,is,whose,which</Value>
     </Setting>
   </Settings>
 </SettingsFile>

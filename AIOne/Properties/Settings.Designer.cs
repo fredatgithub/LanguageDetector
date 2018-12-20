@@ -80,10 +80,19 @@ namespace AIOne.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("french, english, spanish, italian, german")]
+        [global::System.Configuration.DefaultSettingValueAttribute("french, english, latin")]
         public string ListOfLanguages {
             get {
                 return ((string)(this["ListOfLanguages"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("what,how,why,who,when,where,do, does, have, has,is,whose,which")]
+        public string EnglishQuestionStartingWords {
+            get {
+                return ((string)(this["EnglishQuestionStartingWords"]));
             }
         }
     }
