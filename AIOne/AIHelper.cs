@@ -325,7 +325,7 @@ namespace AIOne
         return Intention.Affirmative;
       }
 
-      if (listOfQuestionStartWords.Any(word => sentence.ToLower().StartsWith(word.ToLower())))
+      if (listOfQuestionStartWords.Any(word => sentence.ToLower().StartsWith(word.ToLower().Trim())))
       {
         return Intention.Question;
       }
