@@ -38,7 +38,7 @@ namespace AIOne
       return dico.Sum(word => word.Value);
     }
 
-    public static string[] SplitWordsUsingRegex(string sentene)
+    public static string[] SplitWordsUsingRegex(string sentence)
     {
       return Regex.Split(sentence, @"\W+"); 
     }
