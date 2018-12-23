@@ -38,6 +38,11 @@ namespace AIOne
       return dico.Sum(word => word.Value);
     }
 
+    public static string[] SplitWordsUsingRegex(string sentene)
+    {
+      return Regex.Split(sentence, @"\W+"); 
+    }
+
     public static Dictionary<string, int> SplitLetters(string phrase) // why this method name?
     {
       var dico = new Dictionary<string, int>();
