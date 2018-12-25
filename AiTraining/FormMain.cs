@@ -258,9 +258,20 @@ namespace AiTraining
 
     private void SelectAllToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource });
-      TextBox control = focusedControl as TextBox;
-      control?.SelectAll();
+      if (tabControlMain.SelectedIndex == 0)
+      {
+        Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource });
+        TextBox control = focusedControl as TextBox;
+        control?.SelectAll();
+      }
+
+      if (tabControlMain.SelectedIndex == 1)
+      {
+        Control focusedControl = FindFocusedControl(new List<Control> { textBoxAddNewSource });
+        TextBox control = focusedControl as TextBox;
+        control?.SelectAll();
+      }
+      
     }
 
     private static Control FindFocusedControl(List<Control> container)
