@@ -206,20 +206,20 @@
       // 
       this.annulerToolStripMenuItem.Name = "annulerToolStripMenuItem";
       this.annulerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-      this.annulerToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+      this.annulerToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
       this.annulerToolStripMenuItem.Text = "&Annuler";
       // 
       // rétablirToolStripMenuItem
       // 
       this.rétablirToolStripMenuItem.Name = "rétablirToolStripMenuItem";
       this.rétablirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-      this.rétablirToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+      this.rétablirToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
       this.rétablirToolStripMenuItem.Text = "&Rétablir";
       // 
       // toolStripSeparator3
       // 
       this.toolStripSeparator3.Name = "toolStripSeparator3";
-      this.toolStripSeparator3.Size = new System.Drawing.Size(203, 6);
+      this.toolStripSeparator3.Size = new System.Drawing.Size(211, 6);
       // 
       // couperToolStripMenuItem
       // 
@@ -227,7 +227,7 @@
       this.couperToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
       this.couperToolStripMenuItem.Name = "couperToolStripMenuItem";
       this.couperToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-      this.couperToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+      this.couperToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
       this.couperToolStripMenuItem.Text = "&Couper";
       this.couperToolStripMenuItem.Click += new System.EventHandler(this.CutToolStripMenuItem_Click);
       // 
@@ -237,7 +237,7 @@
       this.copierToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
       this.copierToolStripMenuItem.Name = "copierToolStripMenuItem";
       this.copierToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-      this.copierToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+      this.copierToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
       this.copierToolStripMenuItem.Text = "Co&pier";
       this.copierToolStripMenuItem.Click += new System.EventHandler(this.CopyToolStripMenuItem_Click);
       // 
@@ -247,20 +247,20 @@
       this.collerToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
       this.collerToolStripMenuItem.Name = "collerToolStripMenuItem";
       this.collerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-      this.collerToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+      this.collerToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
       this.collerToolStripMenuItem.Text = "Co&ller";
       this.collerToolStripMenuItem.Click += new System.EventHandler(this.PasteToolStripMenuItem_Click);
       // 
       // toolStripSeparator4
       // 
       this.toolStripSeparator4.Name = "toolStripSeparator4";
-      this.toolStripSeparator4.Size = new System.Drawing.Size(203, 6);
+      this.toolStripSeparator4.Size = new System.Drawing.Size(211, 6);
       // 
       // sélectionnertoutToolStripMenuItem
       // 
       this.sélectionnertoutToolStripMenuItem.Name = "sélectionnertoutToolStripMenuItem";
       this.sélectionnertoutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-      this.sélectionnertoutToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+      this.sélectionnertoutToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
       this.sélectionnertoutToolStripMenuItem.Text = "Sélectio&nner tout";
       this.sélectionnertoutToolStripMenuItem.Click += new System.EventHandler(this.SelectAllToolStripMenuItem_Click);
       // 
@@ -334,7 +334,7 @@
       this.tabControlMain.Location = new System.Drawing.Point(0, 24);
       this.tabControlMain.Name = "tabControlMain";
       this.tabControlMain.SelectedIndex = 0;
-      this.tabControlMain.Size = new System.Drawing.Size(1049, 459);
+      this.tabControlMain.Size = new System.Drawing.Size(1049, 591);
       this.tabControlMain.TabIndex = 1;
       // 
       // tabPageAITraining
@@ -346,8 +346,8 @@
       this.tabPageAITraining.Controls.Add(this.labelPasteOrPeekFile);
       this.tabPageAITraining.Location = new System.Drawing.Point(4, 22);
       this.tabPageAITraining.Name = "tabPageAITraining";
-      this.tabPageAITraining.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-      this.tabPageAITraining.Size = new System.Drawing.Size(895, 344);
+      this.tabPageAITraining.Padding = new System.Windows.Forms.Padding(3);
+      this.tabPageAITraining.Size = new System.Drawing.Size(1041, 433);
       this.tabPageAITraining.TabIndex = 0;
       this.tabPageAITraining.Text = "Training";
       this.tabPageAITraining.UseVisualStyleBackColor = true;
@@ -420,8 +420,8 @@
       this.tabPageAddNewLanguage.Controls.Add(this.listBoxTopWords);
       this.tabPageAddNewLanguage.Location = new System.Drawing.Point(4, 22);
       this.tabPageAddNewLanguage.Name = "tabPageAddNewLanguage";
-      this.tabPageAddNewLanguage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-      this.tabPageAddNewLanguage.Size = new System.Drawing.Size(1041, 433);
+      this.tabPageAddNewLanguage.Padding = new System.Windows.Forms.Padding(3);
+      this.tabPageAddNewLanguage.Size = new System.Drawing.Size(1041, 565);
       this.tabPageAddNewLanguage.TabIndex = 1;
       this.tabPageAddNewLanguage.Text = "Add new language";
       this.tabPageAddNewLanguage.UseVisualStyleBackColor = true;
@@ -485,6 +485,7 @@
       this.buttonTraining.TabIndex = 26;
       this.buttonTraining.Text = "Training";
       this.buttonTraining.UseVisualStyleBackColor = true;
+      this.buttonTraining.Click += new System.EventHandler(this.ButtonTraining_Click);
       // 
       // labelWordsFromFile
       // 
@@ -530,11 +531,11 @@
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(1049, 483);
+      this.ClientSize = new System.Drawing.Size(1049, 615);
       this.Controls.Add(this.tabControlMain);
       this.Controls.Add(this.menuStripMain);
       this.MainMenuStrip = this.menuStripMain;
-      this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+      this.Margin = new System.Windows.Forms.Padding(2);
       this.Name = "FormMain";
       this.Text = "A.I. Training";
       this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);

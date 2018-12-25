@@ -461,5 +461,32 @@ namespace AiTraining
     {
       ReadFile(textBoxAddNewSource, PeekFile(false));
     }
+
+    private void ButtonTrainingClick(object sender, EventArgs e)
+    {
+      var languageDetected = new Dictionary<string, double>();
+      foreach (string language in Settings.Default.ListOfLanguages.Split(','))
+      {
+        languageDetected.Add(language, 0.0);
+      }
+
+      var listOfWords = AIHelper.SplitWords(AIHelper.RemovePunctuation(textBoxSource.Text));
+      var languageDetectedTmp = new Dictionary<string, double>();
+      foreach (KeyValuePair<string, double> pair in languageDetected)
+      {
+        languageDetectedTmp[pair.Key] = AIHelper.CountFoundWords(GetLanguageWords(pair.Key), listOfWords.Keys.ToList());
+      }
+
+      double maxValue = languageDetectedTmp.Max(v => v.Value);
+      string languageDetectedGuess = "unknown";
+      if (maxValue != 0.0)
+      {
+        languageDetectedGuess = languageDetectedTmp
+          .FirstOrDefault(x => x.Value == maxValue).Key;
+      }
+
+      //labelLanguageDetected.Text = $"Language detected is : {languageDetectedGuess.ToUpper()}";
+      //labelLanguageDetected.ForeColor = GetColor(languageDetectedGuess);
+    }
   }
 }
