@@ -80,7 +80,7 @@ namespace AIOne.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("french, english, latin,spanish, german")]
+        [global::System.Configuration.DefaultSettingValueAttribute("french,english,latin,spanish")]
         public string ListOfLanguages {
             get {
                 return ((string)(this["ListOfLanguages"]));

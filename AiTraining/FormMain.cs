@@ -38,7 +38,7 @@ namespace AiTraining
     private void ButtonTraining_Click(object sender, EventArgs e)
     {
       // getting words from text to study
-      var listOfWords = AIHelper.SplitWords(AIHelper.RemovePunctuation(textBoxSource.Text));
+      var listOfWords = AIHelper.SplitWords(AIHelper.RemovePunctuation(textBoxAddNewSource.Text));
       listBoxTopWords.Items.Clear();
       // displaying number of words found
       foreach (KeyValuePair<string, int> item in listOfWords.OrderByDescending(k => k.Value))
@@ -156,7 +156,15 @@ namespace AiTraining
       Height = Settings.Default.WindowHeight;
       Top = Settings.Default.WindowTop < 0 ? 0 : Settings.Default.WindowTop;
       Left = Settings.Default.WindowLeft < 0 ? 0 : Settings.Default.WindowLeft;
-      comboBoxLanguagesAvailable.SelectedIndex = Settings.Default.comboBoxLanguagesAvailableIndex;
+      try
+      {
+        comboBoxLanguagesAvailable.SelectedIndex = Settings.Default.comboBoxLanguagesAvailableIndex;
+      }
+      catch (Exception)
+      {
+        comboBoxLanguagesAvailable.SelectedIndex = 0;
+      }
+      
       tabControlMain.SelectedIndex = Settings.Default.tabControlMainIndexSelected;
     }
 
@@ -170,7 +178,7 @@ namespace AiTraining
     private void LoadLanguages()
     {
       comboBoxLanguagesAvailable.Items.Clear();
-      object[] listOfLanguages = { "french", "english", "spanish", "italian" };
+      object[] listOfLanguages = AIHelper.GetListOfLanguages();
       comboBoxLanguagesAvailable.Items.AddRange(listOfLanguages);
       comboBoxLanguagesAvailable.SelectedIndex = 0;
     }
