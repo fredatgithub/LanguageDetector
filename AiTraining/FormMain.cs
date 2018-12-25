@@ -48,75 +48,75 @@ namespace AiTraining
 
       // is the text written in French
       // for each language file available, check if language does match
-      string languageSelectedFileName = $"{comboBoxLanguagesAvailable.SelectedItem}-words.txt";
-      if (!File.Exists(languageSelectedFileName))
-      {
-        try
-        {
-          using (StreamWriter sw = new StreamWriter(languageSelectedFileName))
-          {
-            foreach (KeyValuePair<string, int> item in listOfWords.OrderByDescending(k => k.Value))
-            {
-              sw.WriteLine($"{item.Key},{item.Value}");
-              //sw.WriteLine($"{item.Key}"); //use to create list of most used words
-            }
-          }
-        }
-        catch (Exception exception)
-        {
-          MessageBox.Show($"exception while writing the dictionary: {exception.Message}");
-        }
+      //string languageSelectedFileName = $"{comboBoxLanguagesAvailable.SelectedItem}-words.txt";
+      //if (!File.Exists(languageSelectedFileName))
+      //{
+      //  try
+      //  {
+      //    using (StreamWriter sw = new StreamWriter(languageSelectedFileName))
+      //    {
+      //      foreach (KeyValuePair<string, int> item in listOfWords.OrderByDescending(k => k.Value))
+      //      {
+      //        sw.WriteLine($"{item.Key},{item.Value}");
+      //        //sw.WriteLine($"{item.Key}"); //use to create list of most used words
+      //      }
+      //    }
+      //  }
+      //  catch (Exception exception)
+      //  {
+      //    MessageBox.Show($"exception while writing the dictionary: {exception.Message}");
+      //  }
 
-        // display listbox from file
-        LoadlistBox(listBoxWordsFromFile, listOfWords);
-        return; // end
-      }
+      //  // display listbox from file
+      //  LoadlistBox(listBoxWordsFromFile, listOfWords);
+      //  return; // end
+      //}
 
 
       // the file exists so we add new result to it.
       //read file first
-      Dictionary<string, int> dicofile = new Dictionary<string, int>();
-      try
-      {
-        using (StreamReader sw = new StreamReader(languageSelectedFileName))
-        {
-          while (!sw.EndOfStream)
-          {
-            string line = sw.ReadLine();
-            if (line != null)
-            {
-              var lineSplitted = line.Split(',');
-              int wordOccurence = int.Parse(lineSplitted[1]);
-              dicofile.Add(lineSplitted[0].ToLower(), wordOccurence);
-            }
-          }
-        }
-      }
-      catch (Exception exception)
-      {
-        MessageBox.Show($"exception while reading the word stats dictionary: {exception.Message}");
-      }
+      //Dictionary<string, int> dicofile = new Dictionary<string, int>();
+      //try
+      //{
+      //  using (StreamReader sw = new StreamReader(languageSelectedFileName))
+      //  {
+      //    while (!sw.EndOfStream)
+      //    {
+      //      string line = sw.ReadLine();
+      //      if (line != null)
+      //      {
+      //        var lineSplitted = line.Split(',');
+      //        int wordOccurence = int.Parse(lineSplitted[1]);
+      //        dicofile.Add(lineSplitted[0].ToLower(), wordOccurence);
+      //      }
+      //    }
+      //  }
+      //}
+      //catch (Exception exception)
+      //{
+      //  MessageBox.Show($"exception while reading the word stats dictionary: {exception.Message}");
+      //}
 
       // add results to existing file
-      Dictionary<string, int> newDico = AIHelper.AddTwoDictionaries(dicofile, listOfWords);
-      File.Delete(languageSelectedFileName);
-      try
-      {
-        using (StreamWriter sw = new StreamWriter(languageSelectedFileName))
-        {
-          foreach (KeyValuePair<string, int> item in newDico.OrderByDescending(k => k.Value))
-          {
-            sw.WriteLine($"{item.Key},{item.Value}");
-          }
-        }
-      }
-      catch (Exception exception)
-      {
-        MessageBox.Show($"exception while writing the dictionary: {exception.Message}");
-      }
+      //Dictionary<string, int> newDico = AIHelper.AddTwoDictionaries(dicofile, listOfWords);
+      //File.Delete(languageSelectedFileName);
+      //try
+      //{
+      //  using (StreamWriter sw = new StreamWriter(languageSelectedFileName))
+      //  {
+      //    foreach (KeyValuePair<string, int> item in newDico.OrderByDescending(k => k.Value))
+      //    {
+      //      sw.WriteLine($"{item.Key},{item.Value}");
+      //    }
+      //  }
+      //}
+      //catch (Exception exception)
+      //{
+      //  MessageBox.Show($"exception while writing the dictionary: {exception.Message}");
+      //}
 
       //update listbox from file
-      LoadlistBox(listBoxWordsFromFile, newDico);
+      //LoadlistBox(listBoxWordsFromFile, newDico);
     }
 
     private static void LoadlistBox(ListBox listBox, Dictionary<string, int> dico)
@@ -164,7 +164,7 @@ namespace AiTraining
       {
         comboBoxLanguagesAvailable.SelectedIndex = 0;
       }
-      
+
       tabControlMain.SelectedIndex = Settings.Default.tabControlMainIndexSelected;
     }
 
@@ -495,6 +495,45 @@ namespace AiTraining
 
       //labelLanguageDetected.Text = $"Language detected is : {languageDetectedGuess.ToUpper()}";
       //labelLanguageDetected.ForeColor = GetColor(languageDetectedGuess);
+    }
+
+    private void ButtonSaveResult_Click(object sender, EventArgs e)
+    {
+      // save the result
+      if (listBoxTopWords.Items.Count == 0)
+      {
+        return;
+      }
+
+      string languageSelectedFileName = $"{comboBoxLanguagesAvailable.SelectedItem}-words.txt";
+      try
+      {
+        using (StreamWriter sw = new StreamWriter(languageSelectedFileName))
+        {
+          foreach (string item in listBoxTopWords.Items)
+          {
+            string word = item.Split('-')[0];
+            if (word.StartsWith("¿"))
+            {
+              word = word.Substring(1);
+            }
+
+            if (word.StartsWith("_"))
+            {
+              word = word.Substring(1);
+            }
+
+            if (word.Length > 1)
+            {
+              sw.Write($"{word},");
+            }
+          }
+        }
+      }
+      catch (Exception exception)
+      {
+        MessageBox.Show(exception.Message);
+      }
     }
   }
 }
