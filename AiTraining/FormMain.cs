@@ -165,7 +165,6 @@ namespace AiTraining
       Assembly assembly = Assembly.GetExecutingAssembly();
       FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
       Text += $@" V{fvi.FileMajorPart}.{fvi.FileMinorPart}.{fvi.FileBuildPart}.{fvi.FilePrivatePart}";
-
     }
 
     private void LoadLanguages()
@@ -178,21 +177,55 @@ namespace AiTraining
 
     private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource });
-      var tb = focusedControl as TextBox;
-      if (tb != null)
+      if (tabControlMain.SelectedIndex == 0)
       {
-        CopyToClipboard(tb);
+        Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource });
+        var tb = focusedControl as TextBox;
+        if (tb != null)
+        {
+          CopyToClipboard(tb);
+        }
+
+        return;
+      }
+
+      if (tabControlMain.SelectedIndex == 1)
+      {
+        Control focusedControl = FindFocusedControl(new List<Control> { textBoxAddNewSource });
+        var tb = focusedControl as TextBox;
+        if (tb != null)
+        {
+          CopyToClipboard(tb);
+        }
+
+        return;
       }
     }
 
     private void CutToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource });
-      var tb = focusedControl as TextBox;
-      if (tb != null)
+      if (tabControlMain.SelectedIndex == 0)
       {
-        CutToClipboard(tb);
+        Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource });
+        var tb = focusedControl as TextBox;
+        if (tb != null)
+        {
+          CutToClipboard(tb);
+        }
+
+        return;
+      }
+
+      if (tabControlMain.SelectedIndex == 1)
+      {
+        Control focusedControl = FindFocusedControl(new List<Control> { textBoxAddNewSource });
+        var tb = focusedControl as TextBox;
+        if (tb != null)
+        {
+          CutToClipboard(tb);
+        }
+
+        return;
       }
     }
 
@@ -222,11 +255,28 @@ namespace AiTraining
 
     private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource });
-      var tb = focusedControl as TextBox;
-      if (tb != null)
+      if (tabControlMain.SelectedIndex == 0)
       {
-        PasteFromClipboard(tb);
+        Control focusedControl = FindFocusedControl(new List<Control> { textBoxSource });
+        var tb = focusedControl as TextBox;
+        if (tb != null)
+        {
+          PasteFromClipboard(tb);
+        }
+
+        return;
+      }
+
+      if (tabControlMain.SelectedIndex == 1)
+      {
+        Control focusedControl = FindFocusedControl(new List<Control> { textBoxAddNewSource });
+        var tb = focusedControl as TextBox;
+        if (tb != null)
+        {
+          PasteFromClipboard(tb);
+        }
+
+        return;
       }
     }
 
@@ -271,7 +321,6 @@ namespace AiTraining
         TextBox control = focusedControl as TextBox;
         control?.SelectAll();
       }
-      
     }
 
     private static Control FindFocusedControl(List<Control> container)
@@ -295,7 +344,7 @@ namespace AiTraining
       OpenFileDialog fd = new OpenFileDialog();
       if (fd.ShowDialog() == DialogResult.OK)
       {
-        result = shortName ? fd.SafeFileName: fd.FileName;
+        result = shortName ? fd.SafeFileName : fd.FileName;
       }
 
       return result;
