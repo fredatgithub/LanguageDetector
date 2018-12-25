@@ -40,7 +40,7 @@ namespace AIOne
 
     public static string[] SplitWordsUsingRegex(string sentence)
     {
-      return Regex.Split(sentence, @"\W+"); 
+      return Regex.Split(sentence, @"\W+");
     }
 
     public static Dictionary<string, int> SplitLetters(string phrase) // why this method name?
@@ -122,7 +122,7 @@ namespace AIOne
     {
       return phrase.Replace(",", " ").Replace(".", " ").Replace(";", " ").Replace(":", " ").Replace("?", " ");
     }
-    
+
     public static string RemoveEndPunctuation(string phrase)
     {
       return phrase.TrimEnd(',').TrimEnd('.').TrimEnd(';').TrimEnd(':');
@@ -188,7 +188,13 @@ namespace AIOne
         case "english":
           result = "the,and,of,to,in,it,his,you,was,he,that,is,my,with,as,at,have,be,which,not,had,for,she,but,me,from,there,said,this,your,up,then,on,do,who,are,will,one,by,what,her,all,into,an,were,has,or,man,so,if,down,upon,been,when,very,could,we,out,am,may,him,own,would,some,must,how,street,see,know,before,should,most,little,now,just,no,house,minutes,other,eyes,our,indeed,two,matter,they,such,more,yet,door,looked,good,quite,majesty,three,case,think,half,only,face,nothing,once,five,found,lodge,front,heard,under,mind,seen,might,than,while,every,still,time,their,part,fire,over,remarked,too,where,gentleman,myself,well,note,without,paper,window,come,understand,about,them,shall,church,name,himself,doubt,us,soul,however,knew,friend,again,twice,room,work,seven,tell,much,came,long,left,right,address,o'clock,visitor,mask,small,make,asked,rather,its,made,hand,whom,back,none,say,person,king,men,take,throw,nature,baker,those,these,returned,dark,armchair,answered,six,side,give,clear,times,interested,enough,open,importance";
           break;
-          case "latin": // just for the fun of it :O)
+        case "spanish":
+          result = "no,puedo,ir,la,playa,Señora,Presidenta,si,comprendo,bien,nuestra,colega,la,afirma,ella,que,este,tan,largo,texto,ha,sido,presentado,como,una,enmienda,oral";
+          break;
+        case "german":
+          result = "ich";
+          break;
+        case "latin": // just for the fun of it :O)
           result = "errare,humanum,est,perseverare,diabolicum,ac,accumsan,ad,adipiscing,aenean,aliquam,aliquet,amet,ante,aptent,arcu,at,auctor,augue,bibendum,blandit,commodo,condimentum,congue,consectetur,consequat,conubia,convallis,cras,cubilia,curabitur,curae,cursus,dapibus,diam,dictum,dictumst,dignissim,dis,dolor,donec,dui,duis,efficitur,egestas,eget,eleifend,elementum,elit,enim,erat,eros,est,et,etiam,eu,euismod,ex,facilisi,facilisis,fames,faucibus,felis,fermentum,feugiat,finibus,fringilla,fusce,gravida,habitant,habitasse,hac,hendrerit,himenaeos,iaculis,id,imperdiet,in,inceptos,interdum,justo,lacinia,lacus,laoreet,lectus,leo,libero,ligula,litora,lobortis,luctus,maecenas,magna,magnis,malesuada,massa,mattis,mauris,maximus,metus,mi,molestie,mollis,montes,morbi,mus,nam,nascetur,natoque,nec,neque,netus,nibh,nisi,nisl,non,nostra,nulla,nullam,nunc,odio,orci,ornare,parturient,pellentesque,penatibus,per,pharetra,phasellus,placerat,platea,porta,porttitor,posuere,potenti,praesent,pretium,primis,proin,pulvinar,purus,quam,quis,quisque,rhoncus,ridiculus,risus,rutrum,sagittis,sapien,scelerisque,sed,sem,semper,senectus,sit,sociosqu,sodales,sollicitudin,suscipit,suspendisse,taciti,tellus,tempor,tempus,tincidunt,torquent,tortor,tristique,turpis,ullamcorper,ultrices,ultricies,urna,us,ut,vari,varius,vehicula,vel,velit,venenatis,estibulum,vitae,vivamus,viverra,volutpat,vulputate";
           break;
         default:
@@ -320,7 +326,7 @@ namespace AIOne
     {
       return Regex.Replace(theString, @"\d", string.Empty);
     }
-    
+
     public static Intention IntentOfSentence(string sentence)
     {
       var listOfQuestionStartWords = new List<string>();

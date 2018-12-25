@@ -21,10 +21,13 @@
       <Value Profile="(Default)">english.txt</Value>
     </Setting>
     <Setting Name="ListOfLanguages" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">french, english, latin</Value>
+      <Value Profile="(Default)">french, english, latin,spanish, german</Value>
     </Setting>
     <Setting Name="EnglishQuestionStartingWords" Type="System.String" Scope="Application">
       <Value Profile="(Default)">what,how,why,who,when,where,do, does,have,has,is,whose,which,were,isn't</Value>
+    </Setting>
+    <Setting Name="SpanishWiki" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.gutenberg.org/cache/epub/15353/pg15353.txt</Value>
     </Setting>
   </Settings>
 </SettingsFile>

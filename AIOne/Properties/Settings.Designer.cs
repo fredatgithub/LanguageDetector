@@ -80,7 +80,7 @@ namespace AIOne.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("french, english, latin")]
+        [global::System.Configuration.DefaultSettingValueAttribute("french, english, latin,spanish, german")]
         public string ListOfLanguages {
             get {
                 return ((string)(this["ListOfLanguages"]));
@@ -93,6 +93,16 @@ namespace AIOne.Properties {
         public string EnglishQuestionStartingWords {
             get {
                 return ((string)(this["EnglishQuestionStartingWords"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://www.gutenberg.org/cache/epub/15353/pg15353.txt")]
+        public string SpanishWiki {
+            get {
+                return ((string)(this["SpanishWiki"]));
             }
         }
     }
