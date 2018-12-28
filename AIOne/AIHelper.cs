@@ -354,9 +354,10 @@ namespace AIOne
       return Intention.Affirmative;
     }
 
-    public static List<string, double> GetLanguagePercentage(string sentences)
+    public static List<string, double> GetLanguageDetectionPercentage(string sentences)
     {
       List<string, double> result = new List<string, double>();
+      var listOfLanguagesAvailable = "";
 
       return result;
     }
