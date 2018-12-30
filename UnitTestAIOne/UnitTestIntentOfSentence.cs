@@ -16,7 +16,7 @@ namespace UnitTestAIOne
     }
 
     [TestMethod]
-    public void TestMethod_IntentOfSentence_affirmatio2()
+    public void TestMethod_IntentOfSentence_affirmation2()
     {
       const string Source = "A long long time ago in a galaxy far far away.";
       const Intention expected = Intention.Affirmative;
