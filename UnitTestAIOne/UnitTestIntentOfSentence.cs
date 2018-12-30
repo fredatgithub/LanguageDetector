@@ -16,6 +16,15 @@ namespace UnitTestAIOne
     }
 
     [TestMethod]
+    public void TestMethod_IntentOfSentence_affirmatio2()
+    {
+      const string Source = "A long long time ago in a galaxy far far away.";
+      const Intention expected = Intention.Affirmative;
+      Intention result = AIHelper.IntentOfSentence(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
     public void TestMethod_IntentOfSentence_question_do()
     {
       const string Source = "Do you have twenty dollars";
