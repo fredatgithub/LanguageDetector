@@ -59,8 +59,6 @@ namespace UnitTestAIOne
       Assert.IsTrue(DictionariesAreEqualed(result, expected));
     }
 
-    
-
     [TestMethod]
     public void TestMethod_SplitWords_only_numbers()
     {

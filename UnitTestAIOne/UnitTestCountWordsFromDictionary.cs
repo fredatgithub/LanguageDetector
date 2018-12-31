@@ -8,6 +8,15 @@ namespace UnitTestAIOne
   public class UnitTestCountWordsFromDictionary
   {
     [TestMethod]
+    public void TestMethod_CountWordsFromDictionary_no_word()
+    {
+      Dictionary<string, int> source = new Dictionary<string, int> { };
+      const int expected = 0;
+      int result = AIHelper.CountWordsFromDictionary(source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
     public void TestMethod_CountWordsFromDictionary_one_word_one()
     {
       Dictionary<string, int> source = new Dictionary<string, int> { { "a", 1 } };
