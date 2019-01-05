@@ -1,4 +1,5 @@
-﻿using AiTraining.Properties;
+﻿using AIOne;
+using AiTraining.Properties;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,7 +8,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
-using AIOne;
 
 namespace AiTraining
 {

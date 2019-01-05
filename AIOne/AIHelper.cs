@@ -357,7 +357,12 @@ namespace AIOne
     public static Dictionary<string, double> GetLanguageDetectionPercentage(string sentences)
     {
       Dictionary<string, double> result = new Dictionary<string, double>();
-      var listOfLanguagesAvailable = "";
+      foreach (string language in Settings.Default.ListOfLanguages.Split(','))
+      {
+        result.Add(language, 0.0);
+      }
+
+      
 
       return result;
     }
