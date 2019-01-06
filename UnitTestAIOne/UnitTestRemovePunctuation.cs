@@ -68,5 +68,14 @@ namespace UnitTestAIOne
       string result = AIHelper.RemovePunctuation(Source);
       Assert.AreEqual(result, Expected);
     }
+
+    [TestMethod]
+    public void TestMethodRemovePunctuation_apres()
+    {
+      const string Source = "après";
+      const string Expected = "apres";
+      string result = AIHelper.RemovePunctuation(Source);
+      Assert.AreEqual(result, Expected);
+    }
   }
 }
