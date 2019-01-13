@@ -366,5 +366,34 @@ namespace AIOne
 
       return result;
     }
+
+    public static Dictionary<double, string> GetFrToneScaleByValue()
+    {
+      Dictionary<double, string> result = new Dictionary<double, string>();
+      // TODO add code
+
+      return result;
+    }
+
+    public static Dictionary<string, double> GetFrToneScaleByName()
+    {
+      Dictionary<string, double> result = new Dictionary<string, double>();
+        // TODO add code
+      return result;
+    }
+
+    public static Dictionary<double, string> GetEnToneScaleByValue()
+    {
+      Dictionary<double, string> result = new Dictionary<double, string>();
+        // TODO add code
+      return result;
+    }
+
+    public static Dictionary<string, double> GetEnToneScaleByName()
+    {
+      Dictionary<string, double> result = new Dictionary<string, double>();
+        // TODO add code
+      return result;
+    }
   }
 }
