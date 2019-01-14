@@ -15,22 +15,49 @@
 
   public enum ToneLevelUS
   {
-    Fear = 1,
-    Antagonism = 2,
-    Conservatism = 3,
+    //from 4.0 to 0.0
     Enthusiam = 4,
+    Conservatism = 3,
+    Antagonism = 2,
+    Fear = 1,
     Boredom
   }
 
   public enum ToneLevelFr
   {
-    SereniteDeLEtre,
-    Postulats,
-    Jeux,
-    Action,
-    Exultation,
-    Esthetique,
+    //from 0 to 4.0
+    Enthousiasme,
+    Gaiete,
+    VifInteret,
+    Conservatisme,
+    InteretModere,
+    Satisfait,
+    Desinteret,
+    Ennui,
+    Monotonie,
     Antagonisme,
-    Peur
+    Hostilite,
+    Douleur,
+    Haine,
+    Ressentiment,
+    PasDeCompassion,
+    RessentimentInexprime,
+    HostiliteCachee,
+    Anxiete,
+    Peur,
+    Desespoir,
+    Terreur,
+    Compassion,
+    Propiation,
+    Chagrin,
+    SeRacheter,
+    Indigne,
+    AvilissementDeSoi,
+    Victime,
+    SansExpoir,
+    Apathie,
+    Inutile,
+    Mourant,
+    MortDuCorps
   }
 }

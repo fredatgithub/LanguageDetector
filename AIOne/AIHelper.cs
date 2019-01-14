@@ -367,18 +367,21 @@ namespace AIOne
       return result;
     }
 
-    public static Dictionary<double, string> GetFrToneScaleByValue()
+    public static Dictionary<double, string> GetFrToneLevelByValue()
     {
       return new Dictionary<double, string>
                {
-                 { 1.0, ToneLevelFr.Peur.ToString().ToLower() },
-                 { 2.0, ToneLevelFr.Antagonisme.ToString().ToLower() }
+                 { 4.0, ToneLevelFr.Enthousiasme.ToString().ToLower() },
+                 { 3.5, ToneLevelFr.Gaiete.ToString().ToLower() },
+                 { 3.3, ToneLevelFr.VifInteret.ToString().ToLower() },
+                 { 2.0, ToneLevelFr.Antagonisme.ToString().ToLower() },
+                 { 1.0, ToneLevelFr.Peur.ToString().ToLower() }
                };
 
       // TODO add code     
     }
 
-    public static Dictionary<string, double> GetFrToneScaleByName()
+    public static Dictionary<string, double> GetFrToneLevelByName()
     {
       return new Dictionary<string, double>
       {
@@ -388,7 +391,7 @@ namespace AIOne
       // TODO add code 
     }
 
-    public static Dictionary<double, string> GetEnToneScaleByValue()
+    public static Dictionary<double, string> GetEnToneLevelByValue()
     {
       Dictionary<double, string> result = new Dictionary<double, string>();
 
@@ -396,7 +399,7 @@ namespace AIOne
       return result;
     }
 
-    public static Dictionary<string, double> GetEnToneScaleByName()
+    public static Dictionary<string, double> GetEnToneLevelByName()
     {
       Dictionary<string, double> result = new Dictionary<string, double>();
 
