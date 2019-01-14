@@ -13,21 +13,24 @@
     TonePositive = 2,
   }
 
-  public enum ToneScaleUS
+  public enum ToneLevelUS
   {
     Fear = 1,
+    Antagonism = 2,
+    Conservatism = 3,
+    Enthusiam = 4,
     Boredom
-
   }
 
-  public enum ToneScaleFr
+  public enum ToneLevelFr
   {
     SereniteDeLEtre,
     Postulats,
     Jeux,
     Action,
     Exultation,
-    Esthetique
-    
+    Esthetique,
+    Antagonisme,
+    Peur
   }
 }

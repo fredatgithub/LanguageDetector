@@ -369,22 +369,29 @@ namespace AIOne
 
     public static Dictionary<double, string> GetFrToneScaleByValue()
     {
-      Dictionary<double, string> result = new Dictionary<double, string>();
-      // TODO add code
+      return new Dictionary<double, string>
+               {
+                 { 1.0, ToneLevelFr.Peur.ToString().ToLower() },
+                 { 2.0, ToneLevelFr.Antagonisme.ToString().ToLower() }
+               };
 
-      return result;
+      // TODO add code     
     }
 
     public static Dictionary<string, double> GetFrToneScaleByName()
     {
-      Dictionary<string, double> result = new Dictionary<string, double>();
-        // TODO add code
-      return result;
+      return new Dictionary<string, double>
+      {
+        { "peur", 1.0 }
+      };
+
+      // TODO add code 
     }
 
     public static Dictionary<double, string> GetEnToneScaleByValue()
     {
       Dictionary<double, string> result = new Dictionary<double, string>();
+
         // TODO add code
       return result;
     }
@@ -392,6 +399,7 @@ namespace AIOne
     public static Dictionary<string, double> GetEnToneScaleByName()
     {
       Dictionary<string, double> result = new Dictionary<string, double>();
+
         // TODO add code
       return result;
     }
