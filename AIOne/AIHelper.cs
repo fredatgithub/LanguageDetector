@@ -139,7 +139,8 @@ namespace AIOne
             {
               // create french basic file if not exist
               CreateFile(Settings.Default.FrenchFileName, "french");
-              //AddWordsToFile(Settings.Default.FrenchFileName, GetBasicWords(Settings.Default.FrenchFileName));
+
+              // AddWordsToFile(Settings.Default.FrenchFileName, GetBasicWords(Settings.Default.FrenchFileName));
             }
             break;
 
@@ -148,7 +149,8 @@ namespace AIOne
             {
               // create English basic file if not exist
               CreateFile(Settings.Default.EnglishFileName, "english");
-              //AddWordsToFile(Settings.Default.EnglishFileName, GetBasicWords(Settings.Default.EnglishFileName));
+
+              // AddWordsToFile(Settings.Default.EnglishFileName, GetBasicWords(Settings.Default.EnglishFileName));
             }
             break;
           default:
