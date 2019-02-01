@@ -327,11 +327,17 @@ namespace AIOne
       return result;
     }
 
+    /// <summary>Remove the digits from a string.</summary>
+    /// <param name="theString">The string to be analyzed.</param>
+    /// <returns>The string sent without any digit.</returns>
     public static string RemoveDigits(string theString)
     {
       return Regex.Replace(theString, @"\d", string.Empty);
     }
 
+    /// <summary>Intention of a sentence.</summary>
+    /// <param name="sentence">The sentence to be analyzed.</param>
+    /// <returns>An AiEnumerations intention.</returns>
     public static AiEnumerations.Intention IntentOfSentence(string sentence)
     {
       var listOfQuestionStartWords = new List<string>();
@@ -354,6 +360,9 @@ namespace AIOne
       return AiEnumerations.Intention.Affirmative;
     }
 
+    /// <summary>Computes a percentage of language detection.</summary>
+    /// <param name="sentences">One or many sentences to be language detected.</param>
+    /// <returns>A dictionary of language and their accuracy as a double.</returns>
     public static Dictionary<string, double> GetLanguageDetectionPercentage(string sentences)
     {
       Dictionary<string, double> result = new Dictionary<string, double>();
@@ -362,11 +371,13 @@ namespace AIOne
         result.Add(language, 0.0);
       }
 
-
+      // TODO add code
 
       return result;
     }
 
+    /// <summary>The French tone levels by value</summary>
+    /// <returns>A dictionary of French tone levels by value</returns>
     public static Dictionary<double, string> GetFrToneLevelByValue()
     {
       return new Dictionary<double, string>
@@ -415,6 +426,8 @@ namespace AIOne
                };
     }
 
+    /// <summary>The French tone levels by name</summary>
+    /// <returns>A dictionary of French tone levels by name</returns>
     public static Dictionary<string, double> GetFrToneLevelByName()
     {
       return new Dictionary<string, double>
@@ -463,6 +476,8 @@ namespace AIOne
       };
     }
 
+    /// <summary>The English tone levels by value</summary>
+    /// <returns>A dictionary of English tone levels by value</returns>
     public static Dictionary<double, string> GetEnToneLevelByValue()
     {
       return new Dictionary<double, string>
@@ -511,6 +526,8 @@ namespace AIOne
       };
     }
 
+    /// <summary>The English tone levels by name</summary>
+    /// <returns>A dictionary of English tone levels by name</returns>
     public static Dictionary<string, double> GetEnToneLevelByName()
     {
       return new Dictionary<string, double>
