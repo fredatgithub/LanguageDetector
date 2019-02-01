@@ -40,7 +40,7 @@
     , Conservatisme
     , InteretModere
     , Satisfait
-    , Désintérêt
+    , Desinteret
     , Ennui
     , Monotonie
     , Antagonisme
