@@ -153,8 +153,6 @@ namespace AIOne
               // AddWordsToFile(Settings.Default.EnglishFileName, GetBasicWords(Settings.Default.EnglishFileName));
             }
             break;
-          default:
-            break;
         }
       }
     }
@@ -206,7 +204,7 @@ namespace AIOne
       return result;
     }
 
-    public static object[] GetListOfLanguages()
+    public static string[] GetListOfLanguages()
     {
       return Settings.Default.ListOfLanguages.ToLower().Split(',');
     }
