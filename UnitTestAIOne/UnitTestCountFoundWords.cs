@@ -24,11 +24,10 @@
     {
       var source1 = new List<string> { "YOU", "ARE", "HE", "IS" };
       var source2 = new List<string> { "you", "are", "he", "is" };
-      const double Expected = 1.0;
-      var result = AIHelper.CountFoundWords(source1, source2);
-
-      // Assert.AreEqual(result, Expected);
-      Assert.IsFalse(false); // assuming all reference words are in lower case.
+      const double Expected = 0.0;
+      double result = AIHelper.CountFoundWords(source1, source2);
+      Assert.AreEqual(result, Expected);
+      // assuming all reference words are in lower case.
     }
 
     [TestMethod]

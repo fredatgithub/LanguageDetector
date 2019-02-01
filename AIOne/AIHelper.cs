@@ -332,26 +332,26 @@ namespace AIOne
       return Regex.Replace(theString, @"\d", string.Empty);
     }
 
-    public static Intention IntentOfSentence(string sentence)
+    public static AiEnumerations.Intention IntentOfSentence(string sentence)
     {
       var listOfQuestionStartWords = new List<string>();
       listOfQuestionStartWords.AddRange(Settings.Default.EnglishQuestionStartingWords.Split(','));
       if (listOfQuestionStartWords.Count == 0)
       {
-        return Intention.Affirmative;
+        return AiEnumerations.Intention.Affirmative;
       }
 
       if (listOfQuestionStartWords.Any(word => sentence.ToLower().StartsWith(word.ToLower().Trim())))
       {
-        return Intention.Question;
+        return AiEnumerations.Intention.Question;
       }
 
       if (sentence.TrimEnd().EndsWith("?"))
       {
-        return Intention.Question;
+        return AiEnumerations.Intention.Question;
       }
 
-      return Intention.Affirmative;
+      return AiEnumerations.Intention.Affirmative;
     }
 
     public static Dictionary<string, double> GetLanguageDetectionPercentage(string sentences)
@@ -371,11 +371,11 @@ namespace AIOne
     {
       return new Dictionary<double, string>
                {
-                 { 4.0, ToneLevelFr.Enthousiasme.ToString().ToLower() },
-                 { 3.5, ToneLevelFr.Gaiete.ToString().ToLower() },
-                 { 3.3, ToneLevelFr.VifInteret.ToString().ToLower() },
-                 { 2.0, ToneLevelFr.Antagonisme.ToString().ToLower() },
-                 { 1.0, ToneLevelFr.Peur.ToString().ToLower() }
+                 { 4.0, AiEnumerations.ToneLevelFr.Enthousiasme.ToString().ToLower() },
+                 { 3.5, AiEnumerations.ToneLevelFr.Gaiete.ToString().ToLower() },
+                 { 3.3, AiEnumerations.ToneLevelFr.VifInteret.ToString().ToLower() },
+                 { 2.0, AiEnumerations.ToneLevelFr.Antagonisme.ToString().ToLower() },
+                 { 1.0, AiEnumerations.ToneLevelFr.Peur.ToString().ToLower() }
                };
 
       // TODO add code     
