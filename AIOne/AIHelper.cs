@@ -465,18 +465,98 @@ namespace AIOne
 
     public static Dictionary<double, string> GetEnToneLevelByValue()
     {
-      Dictionary<double, string> result = new Dictionary<double, string>();
-
-      // TODO add code
-      return result;
+      return new Dictionary<double, string>
+      {
+        {40.0, AiEnumerations.ToneLevelEn.SerenityOfBeingness.ToString().ToLower() },
+        {30.0, AiEnumerations.ToneLevelEn.Postulates.ToString().ToLower() },
+        {22.0, AiEnumerations.ToneLevelEn.Games.ToString().ToLower() },
+        {20.0, AiEnumerations.ToneLevelEn.Action.ToString().ToLower() },
+        {8.0, AiEnumerations.ToneLevelEn.Exhilaration.ToString().ToLower() },
+        {6.0, AiEnumerations.ToneLevelEn.Aesthetic.ToString().ToLower() },
+        {4.0, AiEnumerations.ToneLevelEn.Enthusiasm.ToString().ToLower() },
+        {3.5, AiEnumerations.ToneLevelEn.Cheerfulness.ToString().ToLower() },
+        {3.3, AiEnumerations.ToneLevelEn.StrongInterest.ToString().ToLower() },
+        {3.0, AiEnumerations.ToneLevelEn.Conservatism.ToString().ToLower() },
+        {2.9, AiEnumerations.ToneLevelEn.MildInterest.ToString().ToLower() },
+        {2.8, AiEnumerations.ToneLevelEn.Contented.ToString().ToLower() },
+        {2.6, AiEnumerations.ToneLevelEn.Disinterested.ToString().ToLower() },
+        {2.5, AiEnumerations.ToneLevelEn.Boredom.ToString().ToLower() },
+        {2.4, AiEnumerations.ToneLevelEn.Monotony.ToString().ToLower() },
+        {2.0, AiEnumerations.ToneLevelEn.Antagonism.ToString().ToLower() },
+        {1.9, AiEnumerations.ToneLevelEn.Hostility.ToString().ToLower() },
+        {1.8, AiEnumerations.ToneLevelEn.Pain.ToString().ToLower() },
+        {1.5, AiEnumerations.ToneLevelEn.Anger.ToString().ToLower() },
+        {1.4, AiEnumerations.ToneLevelEn.Hate.ToString().ToLower() },
+        {1.3, AiEnumerations.ToneLevelEn.Resentment.ToString().ToLower() },
+        {1.2, AiEnumerations.ToneLevelEn.NoSympathy.ToString().ToLower() },
+        {1.15, AiEnumerations.ToneLevelEn.UnexpressedResentment.ToString().ToLower() },
+        {1.1, AiEnumerations.ToneLevelEn.CovertHostility.ToString().ToLower() },
+        {1.02, AiEnumerations.ToneLevelEn.Anxiety.ToString().ToLower() },
+        {1.0, AiEnumerations.ToneLevelEn.Fear.ToString().ToLower() },
+        {0.98, AiEnumerations.ToneLevelEn.Despair.ToString().ToLower() },
+        {0.96, AiEnumerations.ToneLevelEn.Terror.ToString().ToLower() },
+        {0.94, AiEnumerations.ToneLevelEn.Numb.ToString().ToLower() },
+        {0.9, AiEnumerations.ToneLevelEn.Sympathy.ToString().ToLower() },
+        {0.8, AiEnumerations.ToneLevelEn.Propitiation.ToString().ToLower() },
+        {0.5, AiEnumerations.ToneLevelEn.Grief.ToString().ToLower() },
+        {0.375, AiEnumerations.ToneLevelEn.MakingAmends.ToString().ToLower() },
+        {0.3, AiEnumerations.ToneLevelEn.Undeserving.ToString().ToLower() },
+        {0.2, AiEnumerations.ToneLevelEn.SelfAbasement.ToString().ToLower() },
+        {0.1, AiEnumerations.ToneLevelEn.Victim.ToString().ToLower() },
+        {0.07, AiEnumerations.ToneLevelEn.Hopeless.ToString().ToLower() },
+        {0.05, AiEnumerations.ToneLevelEn.Apathy.ToString().ToLower() },
+        {0.03, AiEnumerations.ToneLevelEn.Useless.ToString().ToLower() },
+        {0.01, AiEnumerations.ToneLevelEn.Dying.ToString().ToLower() },
+        {0.0, AiEnumerations.ToneLevelEn.BodyDeath.ToString().ToLower() }
+      };
     }
 
     public static Dictionary<string, double> GetEnToneLevelByName()
     {
-      Dictionary<string, double> result = new Dictionary<string, double>();
-
-      // TODO add code
-      return result;
+      return new Dictionary<string, double>
+      {
+        {AiEnumerations.ToneLevelFr.SereniteDeLEtre.ToString().ToLower(),40.0},
+        {AiEnumerations.ToneLevelFr.Postulats.ToString().ToLower(),30.0},
+        {AiEnumerations.ToneLevelFr.Jeux.ToString().ToLower(),22.0},
+        {AiEnumerations.ToneLevelFr.Action.ToString().ToLower(),20.0},
+        {AiEnumerations.ToneLevelFr.Exultation.ToString().ToLower(),8.0},
+        {AiEnumerations.ToneLevelFr.Esthetique.ToString().ToLower(),6.0},
+        {AiEnumerations.ToneLevelFr.Enthousiasme.ToString().ToLower(),4.0},
+        {AiEnumerations.ToneLevelFr.Gaiete.ToString().ToLower(),3.5},
+        {AiEnumerations.ToneLevelFr.VifInteret.ToString().ToLower(),3.3},
+        {AiEnumerations.ToneLevelFr.Conservatisme.ToString().ToLower(),3.0},
+        {AiEnumerations.ToneLevelFr.InteretModere.ToString().ToLower(),2.9},
+        {AiEnumerations.ToneLevelFr.Satisfait.ToString().ToLower(),2.8},
+        {AiEnumerations.ToneLevelFr.Desinteret.ToString().ToLower(),2.6},
+        {AiEnumerations.ToneLevelFr.Ennui.ToString().ToLower(),2.5},
+        {AiEnumerations.ToneLevelFr.Monotonie.ToString().ToLower(),2.4},
+        {AiEnumerations.ToneLevelFr.Antagonisme.ToString().ToLower(),2.0},
+        {AiEnumerations.ToneLevelFr.Hostilite.ToString().ToLower(),1.9},
+        {AiEnumerations.ToneLevelFr.Douleur.ToString().ToLower(),1.8},
+        {AiEnumerations.ToneLevelFr.Colere.ToString().ToLower(),1.5},
+        {AiEnumerations.ToneLevelFr.Haine.ToString().ToLower(),1.4},
+        {AiEnumerations.ToneLevelFr.Ressentiment.ToString().ToLower(),1.3},
+        {AiEnumerations.ToneLevelFr.PasDeCompassion.ToString().ToLower(),1.2},
+        {AiEnumerations.ToneLevelFr.RessentimentInexprime.ToString().ToLower(),1.15},
+        {AiEnumerations.ToneLevelFr.HostiliteCachee.ToString().ToLower(),1.1},
+        {AiEnumerations.ToneLevelFr.Anxiete.ToString().ToLower(),1.02},
+        {AiEnumerations.ToneLevelFr.Peur.ToString().ToLower(),1.0},
+        {AiEnumerations.ToneLevelFr.Desespoir.ToString().ToLower(),0.98},
+        {AiEnumerations.ToneLevelFr.Terreur.ToString().ToLower(),0.96},
+        {AiEnumerations.ToneLevelFr.Torpeur.ToString().ToLower(),0.94},
+        {AiEnumerations.ToneLevelFr.Compassion.ToString().ToLower(),0.9},
+        {AiEnumerations.ToneLevelFr.Propitiation.ToString().ToLower(),0.8},
+        {AiEnumerations.ToneLevelFr.Chagrin.ToString().ToLower(),0.5},
+        {AiEnumerations.ToneLevelFr.SeRacheter.ToString().ToLower(),0.375},
+        {AiEnumerations.ToneLevelFr.Indigne.ToString().ToLower(),0.3},
+        {AiEnumerations.ToneLevelFr.AvilissementDeSoi.ToString().ToLower(),0.2},
+        {AiEnumerations.ToneLevelFr.Victime.ToString().ToLower(),0.1},
+        {AiEnumerations.ToneLevelFr.SansEspoir.ToString().ToLower(),0.07},
+        {AiEnumerations.ToneLevelFr.Apathie.ToString().ToLower(),0.05},
+        {AiEnumerations.ToneLevelFr.Inutile.ToString().ToLower(),0.03},
+        {AiEnumerations.ToneLevelFr.Mourant.ToString().ToLower(),0.01},
+        {AiEnumerations.ToneLevelFr.MortDuCorps.ToString().ToLower(),0.0}
+      };
     }
   }
 }
