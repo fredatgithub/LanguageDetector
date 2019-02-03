@@ -575,5 +575,29 @@ namespace AIOne
         {AiEnumerations.ToneLevelFr.MortDuCorps.ToString().ToLower(),0.0}
       };
     }
+
+    public static bool IsUpTone(AiEnumerations.ToneLevelEn toneLevel)
+    {
+      bool result = false;
+      var toneLevels = GetEnToneLevelByName();
+      //if (toneLevels.Where(a => a.Key = toneLevel))
+      //{
+
+      //}
+
+      return result;
+    }
+
+    public static bool IsUpTone(AiEnumerations.ToneLevelFr toneLevel)
+    {
+      // TODO ADD CODE
+      return true;
+    }
+
+    public static bool IsUpTone(double toneLevel)
+    {
+      // TODO ADD CODE
+      return true;
+    }
   }
 }
