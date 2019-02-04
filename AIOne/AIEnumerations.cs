@@ -17,6 +17,7 @@
       TonePositive = 2,
     }
 
+    [Flags]
     public enum ToneLevelEn
     {
       // From 0.0 to 40.0 not in order
