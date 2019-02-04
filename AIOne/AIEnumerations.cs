@@ -17,7 +17,7 @@
 
     public enum ToneLevelEn
     {
-      //from 4.0 to 0.0
+      // From 4.0 to 0.0
       SerenityOfBeingness = 40,
       Postulates = 30,
       Games = 22,
@@ -63,7 +63,7 @@
 
     public enum ToneLevelFr
     {
-      //from 4.0 to 0.0
+      // From 4.0 to 0.0
       SereniteDeLEtre = 40,
       Postulats = 30,
       Jeux = 22,

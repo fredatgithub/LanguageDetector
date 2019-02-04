@@ -8,7 +8,7 @@ namespace UnitTestAIOne
   [TestClass]
   public class UnitTestToneLevels
   {
-    //TODO write them all in English, then french then as a integer
+    // TODO write them all in English, then french then as a integer
     [TestMethod]
     public void TestMethod_ToneLevels_Serenity_of_beingness()
     {
@@ -31,6 +31,15 @@ namespace UnitTestAIOne
     public void TestMethod_ToneLevels_Games()
     {
       const AiEnumerations.ToneLevelEn Source = AiEnumerations.ToneLevelEn.Games;
+      const bool expected = true;
+      bool result = AIHelper.IsUpTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_ToneLevels_Action()
+    {
+      const AiEnumerations.ToneLevelEn Source = AiEnumerations.ToneLevelEn.Action;
       const bool expected = true;
       bool result = AIHelper.IsUpTone(Source);
       Assert.AreEqual(result, expected);
