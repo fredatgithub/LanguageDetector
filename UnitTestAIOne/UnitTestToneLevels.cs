@@ -1126,9 +1126,12 @@ namespace UnitTestAIOne
 
     #endregion
 
+    #region Number of French tone levels
+    
     [TestMethod]
     public void TestMethod_ToneLevels_English_41_of_them()
     {
+      // if there are not 41 levels then alter-is
       var source = AIHelper.GetEnToneLevelByName();
       const int expected = 41;
       int result = source.Count;
@@ -1138,13 +1141,15 @@ namespace UnitTestAIOne
     [TestMethod]
     public void TestMethod_ToneLevels_French_41_of_them()
     {
+      // if there are not 41 levels then alter-is
       var source = AIHelper.GetFrToneLevelByName();
       const int expected = 41;
       int result = source.Count;
       Assert.AreEqual(result, expected);
     }
 
-    // public static bool IsUpTone(AiEnumerations.ToneLevelFr toneLevel)
-    // french tests
+    #endregion
+
+    // TODO add English tests
   }
 }
