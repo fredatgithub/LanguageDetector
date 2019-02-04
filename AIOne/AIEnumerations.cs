@@ -1,5 +1,7 @@
 ﻿namespace AIOne
 {
+  using System;
+
   public class AiEnumerations
   {
     public enum Intention
@@ -17,38 +19,38 @@
 
     public enum ToneLevelEn
     {
-      // From 4.0 to 0.0
-      SerenityOfBeingness = 40,
-      Postulates = 30,
-      Games = 22,
-      Action = 20,
-      Exhilaration = 8,
-      Aesthetic = 6,
+      // From 0.0 to 40.0 not in order
+      BodyDeath = 0,
+      Fear = 1,
+      Antagonism = 2,
+      Conservatism = 3,
       Enthusiasm = 4,
       Cheerfulness,
+      Aesthetic = 6,
       StrongInterest,
-      Conservatism = 3,
+      Exhilaration = 8,
       MildInterest,
       Contented,
       Disinterested,
       Boredom,
       Monotony,
-      Antagonism = 2,
       Hostility,
       Pain,
       Anger,
       Hate,
       Resentment,
       NoSympathy,
+      Action = 20,
       UnexpressedResentment,
+      Games = 22,
       CovertHostility,
       Anxiety,
-      Fear = 1,
       Despair,
       Terror,
       Numb,
       Sympathy,
       Propitiation,
+      Postulates = 30,
       Grief,
       MakingAmends,
       Undeserving,
@@ -58,43 +60,44 @@
       Apathy,
       Useless,
       Dying,
-      BodyDeath = 0
+      SerenityOfBeingness = 40,
     }
 
+    [Flags]
     public enum ToneLevelFr
     {
-      // From 4.0 to 0.0
-      SereniteDeLEtre = 40,
-      Postulats = 30,
-      Jeux = 22,
-      Action = 20,
-      Exultation = 8,
-      Esthetique = 6,
+      // From 0.0 to 40.0 not in order
+      MortDuCorps = 0,
+      Peur = 1,
+      Antagonisme = 2,
+      Conservatisme = 3,
       Enthousiasme = 4,
       Gaiete,
+      Esthetique = 6,
       VifInteret,
-      Conservatisme = 3,
+      Exultation = 8,
       InteretModere,
       Satisfait,
       Desinteret,
       Ennui,
       Monotonie,
-      Antagonisme = 2,
       Hostilite,
       Douleur,
       Colere,
       Haine,
       Ressentiment,
       PasDeCompassion,
+      Action = 20,
       RessentimentInexprime,
+      Jeux = 22,
       HostiliteCachee,
       Anxiete,
-      Peur = 1,
       Desespoir,
       Terreur,
       Torpeur,
       Compassion,
       Propitiation,
+      Postulats = 30,
       Chagrin,
       SeRacheter,
       Indigne,
@@ -104,7 +107,7 @@
       Apathie,
       Inutile,
       Mourant,
-      MortDuCorps = 0
+      SereniteDeLEtre = 40,
     }
   }
 }

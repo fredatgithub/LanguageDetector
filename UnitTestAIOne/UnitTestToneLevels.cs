@@ -7,8 +7,7 @@ namespace UnitTestAIOne
   public class UnitTestToneLevels
   {
     // TODO write them all in English, then french then as a integer
-
-    #region EnglishTests
+    #region English Tests
 
     [TestMethod]
     public void TestMethod_ToneLevels_Serenity_of_beingness()
@@ -1126,5 +1125,26 @@ namespace UnitTestAIOne
     }
 
     #endregion
+
+    [TestMethod]
+    public void TestMethod_ToneLevels_English_41_of_them()
+    {
+      var source = AIHelper.GetEnToneLevelByName();
+      const int expected = 41;
+      int result = source.Count;
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_ToneLevels_French_41_of_them()
+    {
+      var source = AIHelper.GetFrToneLevelByName();
+      const int expected = 41;
+      int result = source.Count;
+      Assert.AreEqual(result, expected);
+    }
+
+    // public static bool IsUpTone(AiEnumerations.ToneLevelFr toneLevel)
+    // french tests
   }
 }
