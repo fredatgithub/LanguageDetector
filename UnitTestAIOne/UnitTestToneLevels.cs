@@ -381,7 +381,7 @@ namespace UnitTestAIOne
 
     #endregion
 
-    #region Tone level by number
+    #region Tone level up by number
 
     [TestMethod]
     public void TestMethod_ToneLevels_by_number_SerenityOfBeingness_40()
@@ -749,6 +749,379 @@ namespace UnitTestAIOne
       const double Source = 0;
       const bool expected = false;
       bool result = AIHelper.IsUpTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    #endregion
+
+    #region Tone level down by number
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_by_number_SerenityOfBeingness_40()
+    {
+      const double Source = 40.0;
+      const bool expected = false;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_by_number_Postulates_30()
+    {
+      const double Source = 30.0;
+      const bool expected = false;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Games_22()
+    {
+      const double Source = 22.0;
+      const bool expected = false;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Action_20()
+    {
+      const double Source = 20.0;
+      const bool expected = false;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Exhilaration_8()
+    {
+      const double Source = 8.0;
+      const bool expected = false;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Aesthetic_6()
+    {
+      const double Source = 6.0;
+      const bool expected = false;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Enthusiasm_4()
+    {
+      const double Source = 4.0;
+      const bool expected = false;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Cheerfulness_3_5()
+    {
+      const double Source = 3.5;
+      const bool expected = false;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_StrongInterest_3_3()
+    {
+      const double Source = 3.3;
+      const bool expected = false;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Conservatism_3()
+    {
+      const double Source = 3.5;
+      const bool expected = false;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_MildInterest_2_9()
+    {
+      const double Source = 2.9;
+      const bool expected = false;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Contented_2_8()
+    {
+      const double Source = 2.8;
+      const bool expected = false;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Disinterested_2_6()
+    {
+      const double Source = 2.6;
+      const bool expected = false;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Boredom_2_5()
+    {
+      const double Source = 2.5;
+      const bool expected = false;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Monotony_2_4()
+    {
+      const double Source = 2.4;
+      const bool expected = false;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Antagonism_2()
+    {
+      const double Source = 2.0;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Hostility_1_9()
+    {
+      const double Source = 1.9;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Pain_1_8()
+    {
+      const double Source = 1.8;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Anger_1_5()
+    {
+      const double Source = 1.5;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Hate_1_4()
+    {
+      const double Source = 1.4;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Resentment_1_3()
+    {
+      const double Source = 1.3;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_NoSympathy_1_2()
+    {
+      const double Source = 1.2;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_UnexpressedResentment_1_15()
+    {
+      const double Source = 1.15;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_CovertHostility_1_1()
+    {
+      const double Source = 1.1;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Anxiety_1_02()
+    {
+      const double Source = 1.02;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Fear_1()
+    {
+      const double Source = 1.0;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Despair_0_98()
+    {
+      const double Source = 0.98;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Terror_0_96()
+    {
+      const double Source = 0.96;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Numb_0_94()
+    {
+      const double Source = 0.94;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Sympathy_0_9()
+    {
+      const double Source = 0.9;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Propitiation_0_8()
+    {
+      const double Source = 0.8;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Grief_0_5()
+    {
+      const double Source = 0.5;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_MakingAmends_0_375()
+    {
+      const double Source = 0.375;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Undeserving_0_3()
+    {
+      const double Source = 0.3;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_SelfAbasement_0_2()
+    {
+      const double Source = 0.2;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Victim_0_1()
+    {
+      const double Source = 0.1;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Hopeless_0_07()
+    {
+      const double Source = 0.07;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Apathy_0_05()
+    {
+      const double Source = 0.05;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Useless_0_03()
+    {
+      const double Source = 0.03;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_Dying_0_01()
+    {
+      const double Source = 0.01;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
+      Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    public void TestMethod_DownTone_ToneLevels_BodyDeath_0()
+    {
+      const double Source = 0;
+      const bool expected = true;
+      bool result = AIHelper.IsDownTone(Source);
       Assert.AreEqual(result, expected);
     }
 

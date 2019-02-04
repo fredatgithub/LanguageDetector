@@ -596,8 +596,7 @@ namespace AIOne
 
     public static bool IsUpTone(double toneLevel)
     {
-      // TODO ADD CODE
-      return true;
+      return toneLevel > 2.0;
     }
 
     public static bool IsDownTone(AiEnumerations.ToneLevelEn toneLevel)
@@ -620,8 +619,7 @@ namespace AIOne
 
     public static bool IsDownTone(double toneLevel)
     {
-      // TODO ADD CODE
-      return true;
+      return toneLevel < 2.4;
     }
   }
 }
