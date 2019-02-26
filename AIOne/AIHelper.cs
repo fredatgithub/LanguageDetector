@@ -7,15 +7,11 @@ using System.Text.RegularExpressions;
 
 namespace AIOne
 {
-  /// <summary>
-  /// AI helper class
-  /// </summary>
+  /// <summary>AI helper class</summary>
   // ReSharper disable once InconsistentNaming
   public static class AIHelper
   {
-    /// <summary>
-    /// Sort a dictionary by value.
-    /// </summary>
+    /// <summary>Sort a dictionary by value.</summary>
     /// <param name="sampleDico"></param>
     /// <returns>A dictionary sorted by value.</returns>
     public static IEnumerable<KeyValuePair<string, int>> SortDicoByValue(Dictionary<string, int> sampleDico)
@@ -23,11 +19,17 @@ namespace AIOne
       return sampleDico.OrderByDescending(sortingBy => sortingBy.Value);
     }
 
+    /// <summary>Sort a dictionary by key.</summary>
+    /// <param name="sampleDico"></param>
+    /// <returns>A dictionary sorted by key.</returns>
     public static IEnumerable<KeyValuePair<string, int>> SortDicoByKey(Dictionary<string, int> sampleDico)
     {
       return sampleDico.OrderByDescending(sortingBy => sortingBy.Key);
     }
 
+    /// <summary>Count the number of words from a phrase.</summary>
+    /// <param name="phrase">The phrase to count words.</param>
+    /// <returns>The numner of words.</returns>
     public static int CountWords(string phrase)
     {
       return SplitWords(phrase).Count;
@@ -198,7 +200,7 @@ namespace AIOne
           result = "errare,humanum,est,perseverare,diabolicum,ac,accumsan,ad,adipiscing,aenean,aliquam,aliquet,amet,ante,aptent,arcu,at,auctor,augue,bibendum,blandit,commodo,condimentum,congue,consectetur,consequat,conubia,convallis,cras,cubilia,curabitur,curae,cursus,dapibus,diam,dictum,dictumst,dignissim,dis,dolor,donec,dui,duis,efficitur,egestas,eget,eleifend,elementum,elit,enim,erat,eros,est,et,etiam,eu,euismod,ex,facilisi,facilisis,fames,faucibus,felis,fermentum,feugiat,finibus,fringilla,fusce,gravida,habitant,habitasse,hac,hendrerit,himenaeos,iaculis,id,imperdiet,in,inceptos,interdum,justo,lacinia,lacus,laoreet,lectus,leo,libero,ligula,litora,lobortis,luctus,maecenas,magna,magnis,malesuada,massa,mattis,mauris,maximus,metus,mi,molestie,mollis,montes,morbi,mus,nam,nascetur,natoque,nec,neque,netus,nibh,nisi,nisl,non,nostra,nulla,nullam,nunc,odio,orci,ornare,parturient,pellentesque,penatibus,per,pharetra,phasellus,placerat,platea,porta,porttitor,posuere,potenti,praesent,pretium,primis,proin,pulvinar,purus,quam,quis,quisque,rhoncus,ridiculus,risus,rutrum,sagittis,sapien,scelerisque,sed,sem,semper,senectus,sit,sociosqu,sodales,sollicitudin,suscipit,suspendisse,taciti,tellus,tempor,tempus,tincidunt,torquent,tortor,tristique,turpis,ullamcorper,ultrices,ultricies,urna,us,ut,vari,varius,vehicula,vel,velit,venenatis,estibulum,vitae,vivamus,viverra,volutpat,vulputate";
           break;
         default:
-          result = "the,of,and,to,a,in,for,is,on,that,by,this,with,i,you,it,not,or,be,are,from,at,as,your,all,have,new,more,an,was,we,will,home,can,us,about,if,page,my,has,search,free,but,our,one,other,do,no,information,time,they,site,he,up,may,what,which,their,news,out,use,any,there,see,only,so,his,when,contact,here,business,who,web,also,now,help,get,pm,view,first,am,been,would,how,were,me,services,some,these,its,like,service,than,find";
+          result = "the,of,and,to,in,for,is,on,that,by,this,with,you,it,not,or,be,are,from,at,as,your,all,have,new,more,an,was,we,will,home,can,us,about,if,page,my,has,search,free,but,our,one,other,do,no,information,time,they,site,he,up,may,what,which,their,news,out,use,any,there,see,only,so,his,when,contact,here,business,who,web,also,now,help,get,pm,view,first,am,been,would,how,were,me,services,some,these,its,like,service,than,find";
           break;
       }
       return result;
@@ -261,10 +263,7 @@ namespace AIOne
           InitStartFiles();
         }
       }
-
-
-
-
+      
       return result;
     }
 
