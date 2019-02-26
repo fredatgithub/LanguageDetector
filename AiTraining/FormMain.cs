@@ -205,8 +205,6 @@ namespace AiTraining
         {
           CopyToClipboard(tb);
         }
-
-        return;
       }
     }
 
@@ -232,8 +230,6 @@ namespace AiTraining
         {
           CutToClipboard(tb);
         }
-
-        return;
       }
     }
 
@@ -283,8 +279,6 @@ namespace AiTraining
         {
           PasteFromClipboard(tb);
         }
-
-        return;
       }
     }
 

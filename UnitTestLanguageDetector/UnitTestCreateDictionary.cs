@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using LanguageDetector;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using LanguageDetector;
+using System.Collections.Generic;
 
 namespace UnitTestLanguageDetector
 {
@@ -11,7 +11,7 @@ namespace UnitTestLanguageDetector
     public void TestMethod_CreateDictionary_one_word_once()
     {
       const string source = "a";
-      Dictionary<string, int> expected = new Dictionary<string, int> {{"a", 1}};
+      Dictionary<string, int> expected = new Dictionary<string, int> { { "a", 1 } };
       Dictionary<string, int> result = FormMain.CreateDictionary(source);
       Assert.AreEqual(result.Count, expected.Count);
       //Assert.AreEqual(result.Keys, expected.Keys);

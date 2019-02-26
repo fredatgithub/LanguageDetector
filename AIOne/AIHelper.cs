@@ -263,7 +263,7 @@ namespace AIOne
           InitStartFiles();
         }
       }
-      
+
       return result;
     }
 
@@ -580,15 +580,15 @@ namespace AIOne
       return toneLevel == AiEnumerations.ToneLevelEn.Action ||
              toneLevel == AiEnumerations.ToneLevelEn.SerenityOfBeingness ||
              toneLevel == AiEnumerations.ToneLevelEn.Postulates ||
-             toneLevel == AiEnumerations.ToneLevelEn.Games || 
-             toneLevel == AiEnumerations.ToneLevelEn.Exhilaration || 
-             toneLevel == AiEnumerations.ToneLevelEn.Cheerfulness || 
-             toneLevel == AiEnumerations.ToneLevelEn.Aesthetic || 
-             toneLevel == AiEnumerations.ToneLevelEn.Enthusiasm || 
-             toneLevel == AiEnumerations.ToneLevelEn.StrongInterest || 
-             toneLevel == AiEnumerations.ToneLevelEn.Conservatism || 
-             toneLevel == AiEnumerations.ToneLevelEn.MildInterest || 
-             toneLevel == AiEnumerations.ToneLevelEn.Contented || 
+             toneLevel == AiEnumerations.ToneLevelEn.Games ||
+             toneLevel == AiEnumerations.ToneLevelEn.Exhilaration ||
+             toneLevel == AiEnumerations.ToneLevelEn.Cheerfulness ||
+             toneLevel == AiEnumerations.ToneLevelEn.Aesthetic ||
+             toneLevel == AiEnumerations.ToneLevelEn.Enthusiasm ||
+             toneLevel == AiEnumerations.ToneLevelEn.StrongInterest ||
+             toneLevel == AiEnumerations.ToneLevelEn.Conservatism ||
+             toneLevel == AiEnumerations.ToneLevelEn.MildInterest ||
+             toneLevel == AiEnumerations.ToneLevelEn.Contented ||
              toneLevel == AiEnumerations.ToneLevelEn.Monotony ||
              toneLevel == AiEnumerations.ToneLevelEn.Disinterested ||
              toneLevel == AiEnumerations.ToneLevelEn.Boredom;
