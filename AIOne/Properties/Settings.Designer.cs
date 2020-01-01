@@ -12,7 +12,7 @@ namespace AIOne.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -39,15 +39,6 @@ namespace AIOne.Properties {
         public string FrenchWords {
             get {
                 return ((string)(this["FrenchWords"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("you, he, she, it, we, they")]
-        public string EnglishWords {
-            get {
-                return ((string)(this["EnglishWords"]));
             }
         }
         
@@ -80,15 +71,6 @@ namespace AIOne.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("french,english,latin,spanish")]
-        public string ListOfLanguages {
-            get {
-                return ((string)(this["ListOfLanguages"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("what,how,why,who,when,where,do, does,have,has,is,whose,which,were,isn\'t")]
         public string EnglishQuestionStartingWords {
             get {
@@ -103,6 +85,24 @@ namespace AIOne.Properties {
         public string SpanishWiki {
             get {
                 return ((string)(this["SpanishWiki"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("I, you, he, she, it, we, they")]
+        public string EnglishWords {
+            get {
+                return ((string)(this["EnglishWords"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("french, english, spanish, italian, german")]
+        public string ListOfLanguages {
+            get {
+                return ((string)(this["ListOfLanguages"]));
             }
         }
     }
