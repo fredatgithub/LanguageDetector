@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2050
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageDetector", "LanguageDetector\LanguageDetector.csproj", "{62E2BA13-4F26-4C29-9403-FDF150FB08F0}"
 EndProject
@@ -14,8 +14,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiTraining", "AiTraining\AiTraining.csproj", "{6FEB9AE2-B205-4FAA-A098-E14019A47B4E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AIOne", "AIOne\AIOne.csproj", "{A1154B35-4B0D-4CE3-B698-0F06A09D7301}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AITwo", "AITwo\AITwo.csproj", "{CBFEDBD4-92B7-4F49-82B9-3BD4BEDDDC02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +45,6 @@ Global
 		{A1154B35-4B0D-4CE3-B698-0F06A09D7301}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1154B35-4B0D-4CE3-B698-0F06A09D7301}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1154B35-4B0D-4CE3-B698-0F06A09D7301}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CBFEDBD4-92B7-4F49-82B9-3BD4BEDDDC02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CBFEDBD4-92B7-4F49-82B9-3BD4BEDDDC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBFEDBD4-92B7-4F49-82B9-3BD4BEDDDC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CBFEDBD4-92B7-4F49-82B9-3BD4BEDDDC02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
