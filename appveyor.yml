@@ -37,7 +37,7 @@ build:
   # MSBuild verbosity level
   #verbosity: quiet|minimal|normal|detailed
   verbosity: minimal
-  BUILD_PLATFORM: "VS2017"
+  #BUILD_PLATFORM: "VS2017"
   parallel: true  
   project: LanguageDetector.sln
 
