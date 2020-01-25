@@ -181,7 +181,7 @@ namespace AIOne
     public static string GetBasicWords(string language)
     {
       string result = string.Empty;
-      switch (language)
+      switch (language.ToLower())
       {
         case "french":
           result = "je,tu,il,elle,nous,vous,ils,elles,le,la,là,de,et,dans,est,pour,sur,ce,depuis,avoir,être,nouveau,plus,un,une,sera,maison,peut,si,page,mon,man,chercher,avait,libre,mais,ou,où,donc,or,ni,car,autre,autres,non,information,informations,temps,site,haut,que,quoi,quel,quels,quelle,quelles,leur,nouvelles,voir,seulement,quand,contact,ici,web,aussi,maintenant,aider,obtenir,été,comment,serait,service,services,des,sa,son,ses,trouver";
@@ -203,6 +203,7 @@ namespace AIOne
           result = "the,of,and,to,in,for,is,on,that,by,this,with,you,it,not,or,be,are,from,at,as,your,all,have,new,more,an,was,we,will,home,can,us,about,if,page,my,has,search,free,but,our,one,other,do,no,information,time,they,site,he,up,may,what,which,their,news,out,use,any,there,see,only,so,his,when,contact,here,business,who,web,also,now,help,get,pm,view,first,am,been,would,how,were,me,services,some,these,its,like,service,than,find";
           break;
       }
+
       return result;
     }
 
