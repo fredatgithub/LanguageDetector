@@ -1,4 +1,6 @@
-﻿namespace AIOne
+﻿using System;
+
+namespace AIOne
 {
   public enum Intention
   {
@@ -13,6 +15,7 @@
     TonePositive = 2,
   }
 
+  [Flags]
   public enum ToneLevelUS
   {
     //from 4.0 to 0.0

@@ -76,7 +76,7 @@ namespace AIOne
           continue;
         }
 
-        // no word length equal to 1
+        // exclude word with length equals to 1
         if (cleanedWord.Length == 1)
         {
           continue;

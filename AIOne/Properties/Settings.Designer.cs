@@ -71,7 +71,8 @@ namespace AIOne.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("what,how,why,who,when,where,do, does,have,has,is,whose,which,were,isn\'t")]
+        [global::System.Configuration.DefaultSettingValueAttribute("what,how,why,who,when,where,do, does,have,has,is,whose,which,were,isn\'t,will,won\'" +
+            "t,weren\'t")]
         public string EnglishQuestionStartingWords {
             get {
                 return ((string)(this["EnglishQuestionStartingWords"]));
@@ -103,6 +104,15 @@ namespace AIOne.Properties {
         public string ListOfLanguages {
             get {
                 return ((string)(this["ListOfLanguages"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("est-ce,quand,où,que,qu\'est-ce,pourquoi,pour")]
+        public string FrenchQuestionStartingWords {
+            get {
+                return ((string)(this["FrenchQuestionStartingWords"]));
             }
         }
     }
