@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using AIOne;
 
 namespace FormatNewLanguageText
 {
@@ -22,39 +23,15 @@ namespace FormatNewLanguageText
 
       textBoxFormatted.Text = string.Empty;
       string result = textBoxSource.Text;
-      result = Regex.Replace(result, @"[\d-]", string.Empty);
-      result = result.Replace(".", "");
-      result = result.Replace(";", "");
-      result = result.Replace("!", "");
-      result = result.Replace(" ", ",");
-      result = result.Replace(",,", ",");
-      result = result.Replace(",,", ",");
-      result = result.Replace("/", "");
-
-      textBoxFormatted.Text = result;
-
+      textBoxFormatted.Text = AIHelper.RemoveWrongCharacters(result);
       listBoxWords.Items.Clear();
       string[] words = textBoxFormatted.Text.Split(',');
-      foreach (string word in GetWordsDistinct(words))
+      foreach (string word in AIHelper.GetWordsDistinct(words))
       {
         listBoxWords.Items.Add(word);
       }
     }
-
-    public static IEnumerable<string> GetWordsDistinct(string[] words)
-    {
-      List<string> result = new List<string>();
-      for (int i = 0; i < words.Length; i++)
-      {
-        if (!result.Contains(words[i].ToLower()))
-        {
-          result.Add(words[i].ToLower());
-        }
-      }
-
-      return result;
-    }
-
+        
     public static string RemoveSpecialCharacters(string sentence, char[] specialCharacters)
     {
       return new string(sentence.Except(specialCharacters).ToArray());

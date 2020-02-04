@@ -83,7 +83,7 @@
       this.textBoxFormatted.Location = new System.Drawing.Point(12, 336);
       this.textBoxFormatted.Multiline = true;
       this.textBoxFormatted.Name = "textBoxFormatted";
-      this.textBoxFormatted.Size = new System.Drawing.Size(764, 388);
+      this.textBoxFormatted.Size = new System.Drawing.Size(764, 400);
       this.textBoxFormatted.TabIndex = 1;
       // 
       // buttonFormatText

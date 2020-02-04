@@ -159,6 +159,37 @@ namespace AIOne
       }
     }
 
+    public static IEnumerable<string> GetWordsDistinct(string[] words)
+    {
+      List<string> result = new List<string>();
+      for (int i = 0; i < words.Length; i++)
+      {
+        if (!result.Contains(words[i].ToLower()))
+        {
+          result.Add(words[i].ToLower());
+        }
+      }
+
+      return result;
+    }
+
+    public static string RemoveWrongCharacters(string sentence)
+    {
+      sentence = Regex.Replace(sentence, @"[\d-]", string.Empty); // remove numbers
+      sentence = sentence.Replace(".", "");
+      sentence = sentence.Replace(";", "");
+      sentence = sentence.Replace("!", "");
+      sentence = sentence.Replace("-", ",");
+      sentence = sentence.Replace(" ", ",");
+      sentence = sentence.Replace(",,", ",");
+      sentence = sentence.Replace(",,", ",");
+      sentence = sentence.Replace("/", "");
+      sentence = sentence.Replace("\"", "");
+      sentence = sentence.Replace("?", "");
+
+      return sentence;
+    }
+
     public static void CreateFile(string fileName, string language)
     {
       try
