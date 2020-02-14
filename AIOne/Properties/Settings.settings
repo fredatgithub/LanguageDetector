@@ -24,7 +24,7 @@
       <Value Profile="(Default)">http://www.gutenberg.org/cache/epub/15353/pg15353.txt</Value>
     </Setting>
     <Setting Name="EnglishWords" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">I, you, he, she, it, we, they</Value>
+      <Value Profile="(Default)">I,you,he,she,it,we,they</Value>
     </Setting>
     <Setting Name="ListOfLanguages" Type="System.String" Scope="Application">
       <Value Profile="(Default)">french, english, spanish, italian, german</Value>

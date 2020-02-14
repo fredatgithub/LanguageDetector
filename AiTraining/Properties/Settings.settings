@@ -18,7 +18,7 @@
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="ListOfLanguages" Type="System.String" Scope="User">
-      <Value Profile="(Default)">french,english</Value>
+      <Value Profile="(Default)">french,english,latin,german,spanish</Value>
     </Setting>
     <Setting Name="FrenchWords" Type="System.String" Scope="User">
       <Value Profile="(Default)">je,tu,il,elle,nous,vous,ils,elles,le,la,là,de,et,dans,est,pour,sur,ce,depuis,avoir,être,nouveau,plus,un,une,sera,maison,peut,si,page,mon,man,chercher,avait,libre,mais,ou,où,donc,or,ni,car,autre,autres,non,information,informations,temps,site,haut,que,quoi,quel,quels,quelle,quelles,leur,nouvelles,voir,seulement,quand,contact,ici,web,aussi,maintenant,aider,obtenir,été,comment,serait,service,services,des,sa,son,ses,trouver</Value>
@@ -28,6 +28,15 @@
     </Setting>
     <Setting Name="tabControlMainIndexSelected" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="GermanWords" Type="System.String" Scope="User">
+      <Value Profile="(Default)">eins,zwei,drei,vier,die,anderen,kinder</Value>
+    </Setting>
+    <Setting Name="LatinWords" Type="System.String" Scope="User">
+      <Value Profile="(Default)">errare,humanum,est</Value>
+    </Setting>
+    <Setting Name="SpanishWords" Type="System.String" Scope="User">
+      <Value Profile="(Default)">uno,dos, tres</Value>
     </Setting>
   </Settings>
 </SettingsFile>

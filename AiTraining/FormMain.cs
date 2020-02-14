@@ -406,6 +406,15 @@ namespace AiTraining
         case "english":
           result = Settings.Default.EnglishWords.Split(',').ToList();
           break;
+        case "latin":
+          result = Settings.Default.LatinWords.Split(',').ToList();
+          break;
+        case "spanish":
+          result = Settings.Default.SpanishWords.Split(',').ToList();
+          break;
+        case "german":
+          result = Settings.Default.GermanWords.Split(',').ToList();
+          break;
         default:
           result = new List<string>();
           break;
