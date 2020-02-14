@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using AIOne;
 
@@ -47,6 +46,25 @@ namespace FormatNewLanguageText
 
       result = result.TrimEnd(',');
       Clipboard.SetText(result);
+    }
+
+    private void ButtonRemoveDuplicate_Click(object sender, EventArgs e)
+    {
+      textBoxFormatted.Text = string.Empty;
+      var tableau = textBoxSource.Text.Split(',');
+      var dico = new List<string>();
+      for (int i = 0; i < tableau.Length; i++)
+      {
+        if (!dico.Contains(tableau[i]))
+        {
+          dico.Add(tableau[i]);
+        }
+      }
+
+      foreach (string item in dico)
+      {
+        textBoxFormatted.Text += $"{item},";
+      }
     }
   }
 }

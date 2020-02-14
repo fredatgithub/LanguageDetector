@@ -64,6 +64,7 @@
       this.àproposdeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.listBoxWords = new System.Windows.Forms.ListBox();
       this.buttonCopy = new System.Windows.Forms.Button();
+      this.buttonRemoveDuplicate = new System.Windows.Forms.Button();
       this.menuStrip1.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -352,11 +353,23 @@
       this.buttonCopy.UseVisualStyleBackColor = true;
       this.buttonCopy.Click += new System.EventHandler(this.ButtonCopy_Click);
       // 
+      // buttonRemoveDuplicate
+      // 
+      this.buttonRemoveDuplicate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.buttonRemoveDuplicate.Location = new System.Drawing.Point(110, 307);
+      this.buttonRemoveDuplicate.Name = "buttonRemoveDuplicate";
+      this.buttonRemoveDuplicate.Size = new System.Drawing.Size(128, 23);
+      this.buttonRemoveDuplicate.TabIndex = 6;
+      this.buttonRemoveDuplicate.Text = "Remove Duplicate";
+      this.buttonRemoveDuplicate.UseVisualStyleBackColor = true;
+      this.buttonRemoveDuplicate.Click += new System.EventHandler(this.ButtonRemoveDuplicate_Click);
+      // 
       // FormMain
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(1055, 736);
+      this.Controls.Add(this.buttonRemoveDuplicate);
       this.Controls.Add(this.buttonCopy);
       this.Controls.Add(this.listBoxWords);
       this.Controls.Add(this.buttonFormatText);
@@ -410,6 +423,7 @@
         private System.Windows.Forms.ToolStripMenuItem àproposdeToolStripMenuItem;
         private System.Windows.Forms.ListBox listBoxWords;
         private System.Windows.Forms.Button buttonCopy;
+        private System.Windows.Forms.Button buttonRemoveDuplicate;
     }
 }
 
