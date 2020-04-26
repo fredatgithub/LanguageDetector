@@ -667,6 +667,11 @@ namespace AIOne
       return toneLevel != DownToneLevelEn;
     }
 
+    /// <summary>
+    /// Method to state if a tone level is down or not.
+    /// </summary>
+    /// <param name="toneLevel">The tone level to guess.</param>
+    /// <returns>True if the tone level is below 2.4, false otherwise.</returns>
     public static bool IsDownTone(double toneLevel)
     {
       return toneLevel < 2.4;

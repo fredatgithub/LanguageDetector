@@ -2,7 +2,7 @@
 {
   using System;
 
-  public class AiEnumerations
+  public static class AiEnumerations
   {
     public enum Intention
     {
