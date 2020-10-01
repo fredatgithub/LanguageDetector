@@ -77,7 +77,7 @@
             // 
             this.textBoxSource.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBoxSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSource.Location = new System.Drawing.Point(0, 28);
+            this.textBoxSource.Location = new System.Drawing.Point(0, 48);
             this.textBoxSource.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSource.Multiline = true;
             this.textBoxSource.Name = "textBoxSource";
@@ -118,7 +118,7 @@
             this.aideToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1728, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(2160, 38);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -136,7 +136,7 @@
             this.toolStripSeparator2,
             this.quitterToolStripMenuItem});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(66, 34);
             this.fichierToolStripMenuItem.Text = "&Fichier";
             // 
             // nouveauToolStripMenuItem
@@ -222,7 +222,7 @@
             this.toolStripSeparator4,
             this.sélectionnertoutToolStripMenuItem});
             this.editionToolStripMenuItem.Name = "editionToolStripMenuItem";
-            this.editionToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.editionToolStripMenuItem.Size = new System.Drawing.Size(70, 34);
             this.editionToolStripMenuItem.Text = "&Edition";
             // 
             // annulerToolStripMenuItem
@@ -288,7 +288,7 @@
             this.personnaliserToolStripMenuItem,
             this.optionsToolStripMenuItem});
             this.outilsToolStripMenuItem.Name = "outilsToolStripMenuItem";
-            this.outilsToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.outilsToolStripMenuItem.Size = new System.Drawing.Size(61, 34);
             this.outilsToolStripMenuItem.Text = "&Outils";
             // 
             // personnaliserToolStripMenuItem
@@ -312,7 +312,7 @@
             this.toolStripSeparator5,
             this.àproposdeToolStripMenuItem});
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
-            this.aideToolStripMenuItem.Size = new System.Drawing.Size(54, 24);
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(54, 34);
             this.aideToolStripMenuItem.Text = "&Aide";
             // 
             // sommaireToolStripMenuItem
@@ -347,12 +347,13 @@
             // listBoxWords
             // 
             this.listBoxWords.Dock = System.Windows.Forms.DockStyle.Right;
+            this.listBoxWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxWords.FormattingEnabled = true;
-            this.listBoxWords.ItemHeight = 16;
-            this.listBoxWords.Location = new System.Drawing.Point(1440, 343);
+            this.listBoxWords.ItemHeight = 20;
+            this.listBoxWords.Location = new System.Drawing.Point(1800, 441);
             this.listBoxWords.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxWords.Name = "listBoxWords";
-            this.listBoxWords.Size = new System.Drawing.Size(288, 118);
+            this.listBoxWords.Size = new System.Drawing.Size(360, 135);
             this.listBoxWords.Sorted = true;
             this.listBoxWords.TabIndex = 4;
             // 
