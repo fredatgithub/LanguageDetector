@@ -55,6 +55,7 @@ namespace FormatNewLanguageText
             using (FormPleaseWait waitingForm = new FormPleaseWait())
             {
                 waitingForm.Show();
+                Application.DoEvents();
                 var tableau = textBoxFormatted.Text.Split(',');
                 var dico = new List<string>();
                 for (int i = 0; i < tableau.Length; i++)
