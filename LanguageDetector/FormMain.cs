@@ -762,7 +762,6 @@ namespace LanguageDetector
     private void ButtonDetect_Click(object sender, EventArgs e)
     {
             MessageBox.Show("no implementation yet");
-
     }
 
     private void ButtonTraining_Click(object sender, EventArgs e)

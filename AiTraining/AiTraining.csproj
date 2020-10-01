@@ -88,5 +88,12 @@
       <Name>AIOne</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="LanguageSamples\English.txt" />
+    <Content Include="LanguageSamples\French.txt" />
+    <Content Include="LanguageSamples\German.txt" />
+    <Content Include="LanguageSamples\Latin.txt" />
+    <Content Include="LanguageSamples\spanish.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
