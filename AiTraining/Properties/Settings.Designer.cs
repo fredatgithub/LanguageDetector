@@ -12,7 +12,7 @@ namespace AiTraining.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -145,7 +145,7 @@ namespace AiTraining.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("errare,humanum,est")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"errare,humanum,est,pedonem,albinovanum,narrantem,audivimus,habitasse,se,supra,domum,papinii,is,erat,ex,turba,lucifugarum,inquit,circa,horam,tertiam,noctis,flagellorum,sonos,quaero,quid,faciat,dicitur,rationes,accipere,circa,horam,sextam,noctis,clamorem,concitatum,quaero,quid,sit,dicitur,vocem,exercere,quaero,circa,horam,octavam,noctis,quid,sibi,ille,sonus,rotarum,velit,gestari,dicitur,circa,lucem,discurritur,pueri,vocantur,cellari,coqui,tumultuantur,quaero,quid,sit,dicitur,mulsum,et,alicam,poposcisse,balneo,exisse,excedebat,inquis,ejus,cena,diem,minime,valde,enim,frugaliter,vivebat,nihil,consumebat,nisi,noctem")]
         public string LatinWords {
             get {
                 return ((string)(this["LatinWords"]));
@@ -157,7 +157,7 @@ namespace AiTraining.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("uno,dos, tres")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"uno,dos, tres,acción,acciones,accionistas,actitud,además,administración,adquirir,al,alentada,alternativa,antes,antimonopolio,anunció,apoyo,asegurar,así,beneficiar,capital,carta,clientes,colegas,como,competencia,compromiso,comunicado,con,conjunto,consejo,consideramos,contar,de,del,después,determinación,duplicación,economía,el,empleados,en,equipos,espíritu,esta,estimados,favorablemente,finanzas,fondo,formalización,francés,francia,fue,fuente,futuro,ganador,ha,haber,han,hasta,hostil,igual,impulsados,incertidumbre,incondicional,independencia,inmediatamente,intención,intenciones,interesadas,la,lanzar,las,lo,marcha,más,mesa,meses,mi,ministro,mismo,momento,ni,no,nuestro,nuestros,numerosas,nunca,obligaciones,ocasiones,octubre,oferta,operativa,para,partes,participación,pasado,plazo,pleno,podéis,podrá,podría,poner,ponerse,por,posee,posible,positiva,presenta,primer,proponer,prórroga,protege,proyecto,pública,puedo,que,reactivación,recalcado,recibió,respetamos,riesgos,sé,septiembre,siendo,sigue,sobre,solicitado,solución,solucionado,su,sus,tenemos,tiempo,todas,total,trabajadores,un,una,valores,verdadera,vez,vuestro")]
         public string SpanishWords {
             get {
                 return ((string)(this["SpanishWords"]));

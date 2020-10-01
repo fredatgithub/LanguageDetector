@@ -759,12 +759,13 @@ namespace LanguageDetector
       return result;
     }
 
-    private void buttonDetect_Click(object sender, EventArgs e)
+    private void ButtonDetect_Click(object sender, EventArgs e)
     {
+            MessageBox.Show("no implementation yet");
 
     }
 
-    private void buttonTraining_Click(object sender, EventArgs e)
+    private void ButtonTraining_Click(object sender, EventArgs e)
     {
       Dictionary<string, int> sampleDico = new Dictionary<string, int>();
       sampleDico = CreateDictionary(textBoxSource.Text);

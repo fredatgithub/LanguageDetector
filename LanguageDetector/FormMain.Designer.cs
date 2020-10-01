@@ -413,7 +413,7 @@
       this.buttonDetect.TabIndex = 5;
       this.buttonDetect.Text = "Detect Language";
       this.buttonDetect.UseVisualStyleBackColor = true;
-      this.buttonDetect.Click += new System.EventHandler(this.buttonDetect_Click);
+      this.buttonDetect.Click += new System.EventHandler(this.ButtonDetect_Click);
       // 
       // labelLanguageDetected
       // 
@@ -434,7 +434,7 @@
       this.buttonTraining.TabIndex = 7;
       this.buttonTraining.Text = "Training";
       this.buttonTraining.UseVisualStyleBackColor = true;
-      this.buttonTraining.Click += new System.EventHandler(this.buttonTraining_Click);
+      this.buttonTraining.Click += new System.EventHandler(this.ButtonTraining_Click);
       // 
       // comboBoxLanguages
       // 
