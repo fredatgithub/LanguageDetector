@@ -50,21 +50,30 @@ namespace FormatNewLanguageText
 
         private void ButtonRemoveDuplicate_Click(object sender, EventArgs e)
         {
-            textBoxFormatted.Text = string.Empty;
-            var tableau = textBoxSource.Text.Split(',');
-            var dico = new List<string>();
-            for (int i = 0; i < tableau.Length; i++)
+            buttonRemoveDuplicate.Enabled = false;
+            Application.DoEvents();
+            using (FormPleaseWait waitingForm = new FormPleaseWait())
             {
-                if (!dico.Contains(tableau[i]))
+                waitingForm.Show();
+                var tableau = textBoxFormatted.Text.Split(',');
+                var dico = new List<string>();
+                for (int i = 0; i < tableau.Length; i++)
                 {
-                    dico.Add(tableau[i]);
+                    if (!dico.Contains(tableau[i]))
+                    {
+                        dico.Add(tableau[i]);
+                    }
+                }
+
+                textBoxFormatted.Text = string.Empty;
+                foreach (string item in dico)
+                {
+                    textBoxFormatted.Text += $"{item},";
                 }
             }
 
-            foreach (string item in dico)
-            {
-                textBoxFormatted.Text += $"{item},";
-            }
+            buttonRemoveDuplicate.Enabled = true;
+            Application.DoEvents();
         }
 
         private void ButtonToLowercase_Click(object sender, EventArgs e)
@@ -104,8 +113,26 @@ namespace FormatNewLanguageText
             listBoxWords.Items.Clear();
             foreach (string word in AIHelper.GetWordsDistinct(words))
             {
-                listBoxWords.Items.Add(word.Trim());
+                if (word.Trim() != string.Empty)
+                {
+                    listBoxWords.Items.Add(word.Trim());
+                }
             }
+        }
+
+        private void ButtonRemoveOneCharacter_Click(object sender, EventArgs e)
+        {
+            var allWords = textBoxFormatted.Text.Split(',');
+            string result = string.Empty;
+            foreach (string word in allWords)
+            {
+                if (word.Length > 1)
+                {
+                    result += $"{word},";
+                }
+            }
+
+            textBoxFormatted.Text = result;
         }
     }
 }

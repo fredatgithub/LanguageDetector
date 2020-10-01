@@ -69,6 +69,7 @@
             this.buttonRemovecharacter = new System.Windows.Forms.Button();
             this.comboBoxRemoveCharacter = new System.Windows.Forms.ComboBox();
             this.buttonReloadWords = new System.Windows.Forms.Button();
+            this.buttonRemoveOneCharacter = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -425,11 +426,24 @@
             this.buttonReloadWords.UseVisualStyleBackColor = true;
             this.buttonReloadWords.Click += new System.EventHandler(this.ButtonReloadWords_Click);
             // 
+            // buttonRemoveOneCharacter
+            // 
+            this.buttonRemoveOneCharacter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRemoveOneCharacter.Location = new System.Drawing.Point(821, 380);
+            this.buttonRemoveOneCharacter.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRemoveOneCharacter.Name = "buttonRemoveOneCharacter";
+            this.buttonRemoveOneCharacter.Size = new System.Drawing.Size(223, 27);
+            this.buttonRemoveOneCharacter.TabIndex = 11;
+            this.buttonRemoveOneCharacter.Text = "Remove one character";
+            this.buttonRemoveOneCharacter.UseVisualStyleBackColor = true;
+            this.buttonRemoveOneCharacter.Click += new System.EventHandler(this.ButtonRemoveOneCharacter_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1728, 906);
+            this.Controls.Add(this.buttonRemoveOneCharacter);
             this.Controls.Add(this.buttonReloadWords);
             this.Controls.Add(this.comboBoxRemoveCharacter);
             this.Controls.Add(this.buttonRemovecharacter);
@@ -495,6 +509,7 @@
         private System.Windows.Forms.Button buttonRemovecharacter;
         private System.Windows.Forms.ComboBox comboBoxRemoveCharacter;
         private System.Windows.Forms.Button buttonReloadWords;
+        private System.Windows.Forms.Button buttonRemoveOneCharacter;
     }
 }
 
