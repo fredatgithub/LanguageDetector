@@ -10,7 +10,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <!--<Authors>Freddy Juhel</Authors>-->
     <Description>AIOne is the first step of an Artificial Intelligence which is to detect language</Description>
-    <Copyright>(c) Freddy Juhel MIT 2020</Copyright>
+    <Copyright>(c) Freddy Juhel MIT 2021</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageTags>AI, artificial, intelligence, language, machine, learning</PackageTags>
     <PackageProjectUrl>https://github.com/fredatgithub/LanguageDetector</PackageProjectUrl>
@@ -21,6 +21,9 @@
     <AssemblyName>AIOne</AssemblyName>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Freddy juhel</Authors>
+    <Version>1.2.0</Version>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
