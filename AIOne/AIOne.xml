@@ -1,20 +1,41 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>AIOneStandard</name>
+        <name>AIOne</name>
     </assembly>
     <members>
-        <member name="T:AIOneStandard.AIHelper">
-            <summary>
-            AI helper class
-            </summary>
+        <member name="T:AIOne.AIHelper">
+            <summary>AI helper class</summary>
         </member>
         <member name="M:AIOne.AIHelper.SortDicoByValue(System.Collections.Generic.Dictionary{System.String,System.Int32})">
-            <summary>
-            Sort a dictionary by value.
-            </summary>
+            <summary>Sort a dictionary by value.</summary>
             <param name="sampleDico"></param>
             <returns>A dictionary sorted by value.</returns>
+        </member>
+        <member name="M:AIOne.AIHelper.SortDicoByKey(System.Collections.Generic.Dictionary{System.String,System.Int32})">
+            <summary>Sort a dictionary by key.</summary>
+            <param name="sampleDico"></param>
+            <returns>A dictionary sorted by key.</returns>
+        </member>
+        <member name="M:AIOne.AIHelper.CountWords(System.String)">
+            <summary>Count the number of words from a phrase.</summary>
+            <param name="phrase">The phrase to count words.</param>
+            <returns>The numner of words.</returns>
+        </member>
+        <member name="M:AIOne.AIHelper.RemoveDigits(System.String)">
+            <summary>Remove the digits from a string.</summary>
+            <param name="theString">The string to be analyzed.</param>
+            <returns>The string sent without any digit.</returns>
+        </member>
+        <member name="M:AIOne.AIHelper.IntentOfSentence(System.String)">
+            <summary>Intention of a sentence.</summary>
+            <param name="sentence">The sentence to be analyzed.</param>
+            <returns>An AiEnumerations intention.</returns>
+        </member>
+        <member name="M:AIOne.AIHelper.GetLanguageDetectionPercentage(System.String)">
+            <summary>Computes a percentage of language detection.</summary>
+            <param name="sentences">One or many sentences to be language detected.</param>
+            <returns>A dictionary of language and their accuracy as a double.</returns>
         </member>
     </members>
 </doc>
