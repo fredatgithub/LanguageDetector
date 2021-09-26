@@ -55,7 +55,6 @@
     <Compile Include="UnitTestCountWordsFromDictionary.cs" />
     <Compile Include="UnitTestIntentOfSentence.cs" />
     <Compile Include="UnitTestRemoveWrongCharacters.cs" />
-    <Compile Include="UnitTestToneLevels.cs" />
     <Compile Include="UnitTestSplitWordsUsingRegex.cs" />
     <Compile Include="UnitTestSplitWords.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
